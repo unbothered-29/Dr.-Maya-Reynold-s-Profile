@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Menu } from 'lucide-react';
-import { navItems } from '../data/homepage';
+import { navItems, siteImages } from '../data/homepage';
 import { MobileMenu } from './MobileMenu';
 
 interface HeaderProps {
@@ -13,7 +13,7 @@ export const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
   return (
     <header
       id="main-header"
-      className="w-full bg-[#F6F4EE] relative z-40 transition-colors lg:h-[176.5px]"
+      className="w-full bg-[#F6F4EE] relative z-40 transition-colors"
     >
       {/* Top 2.5px Plum/Purple Accent Line running full viewport width */}
       <div
@@ -21,20 +21,25 @@ export const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
         className="w-full h-[2.5px] bg-[#49303F] absolute top-0 left-0 right-0 z-50"
       />
 
-      {/* Header Content Container - centered with ~104px margin at 1897px viewport */}
-      <div className="w-full max-w-[1690px] mx-auto px-6 sm:px-10 lg:px-0 lg:w-[calc(100%-208px)] pt-5 lg:pt-[37px] pb-4 flex items-start justify-between">
-        {/* Typographic Logo - noticeably larger editorial serif in beaufort-pro 300 */}
+      {/* Header Content Container - balanced vertical padding matching reference */}
+      <div className="w-full max-w-[1690px] mx-auto px-6 sm:px-10 lg:px-0 lg:w-[calc(100%-208px)] py-4 lg:py-[22px] xl:py-[24px] flex items-center justify-between">
+        {/* Brand Logo - Authentic artwork matching site */}
         <a
           id="site-logo"
           href="#"
-          className="group block text-left select-none"
+          className="header-title-logo group block text-left select-none flex-shrink-0"
         >
-          <span className="block font-serif-editorial text-[30px] sm:text-[34px] lg:text-[36px] font-[300] leading-[1.05] tracking-[0.015em] text-[rgb(43,43,43)] group-hover:opacity-85 transition-opacity">
-            Conejo Valley
-          </span>
-          <span className="block text-[9px] sm:text-[9.5px] lg:text-[10px] uppercase tracking-[0.24em] font-sans-clean font-normal text-[#6E9FA0] mt-1.5">
-            FAMILY COUNSELING
-          </span>
+          <img
+            src={siteImages.logo}
+            alt="Conejo Valley Family Counseling"
+            className="h-[56px] sm:h-[66px] lg:h-[72px] w-auto max-w-[260px] sm:max-w-[300px] object-contain block transition-opacity group-hover:opacity-85"
+            loading="eager"
+            decoding="async"
+            onError={(e) => {
+              e.currentTarget.src =
+                'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/7116bf54-a0e1-4128-81d8-24fd9960c7ed/Conejo+Valley+Counseling+Logo.png?format=1500w';
+            }}
+          />
         </a>
 
         {/* Desktop Navigation & Circular/Oval Outlined Contact Button in Muli */}

@@ -27,6 +27,7 @@ export interface ContactInfo {
 }
 
 export interface SiteImages {
+  logo: string;
   heroFamily: string;
   heroOceanNarrow: string;
   hopeOcean: string;

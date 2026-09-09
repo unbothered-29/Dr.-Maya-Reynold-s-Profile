@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { X } from 'lucide-react';
 import { NavItem } from '../types';
+import { siteImages } from '../data/homepage';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -36,12 +37,15 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
       {/* Header row in mobile menu */}
       <div className="flex items-center justify-between w-full">
         <a href="#" onClick={onClose} className="text-left group inline-block">
-          <span className="block font-serif-editorial text-2xl tracking-wide text-[#252525]">
-            Conejo Valley
-          </span>
-          <span className="block text-[9px] uppercase tracking-[0.24em] font-sans-clean text-[#6E9FA0] mt-0.5">
-            FAMILY COUNSELING
-          </span>
+          <img
+            src={siteImages.logo}
+            alt="Conejo Valley Family Counseling"
+            className="h-[52px] sm:h-[60px] w-auto max-w-[220px] object-contain block"
+            onError={(e) => {
+              e.currentTarget.src =
+                'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/7116bf54-a0e1-4128-81d8-24fd9960c7ed/Conejo+Valley+Counseling+Logo.png?format=1500w';
+            }}
+          />
         </a>
 
         <button

@@ -6,7 +6,7 @@ export const HopeSection: React.FC = () => {
   return (
     <section
       id="about"
-      className="relative w-full py-20 sm:py-28 md:py-36 lg:py-44 bg-[#F4F1EA]"
+      className="relative w-full py-16 sm:py-20 md:py-24 lg:py-28 bg-[#F4F1EA]"
     >
       <div className="max-w-[1440px] mx-auto px-6 sm:px-10 md:px-14 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 xl:gap-20 items-start">

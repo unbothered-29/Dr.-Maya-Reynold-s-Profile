@@ -1,6 +1,8 @@
 import { ContactInfo, NavItem, SiteImages, SpecialtyItem, WhoWeHelpItem } from '../types';
 
 export const siteImages: SiteImages = {
+  // Official brand logo image from the site
+  logo: '/assets/aistudio/logo.png',
   // Original reference photos from the Squarespace site
   heroFamily: 'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/80513bd1-30ee-4a2d-aaf6-782d9be095ce/Jennifer%2BA%2B-%2BImages%2B%2866%29.jpg',
   heroOceanNarrow: 'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/7a40691c-70a5-4307-b9ae-974592087a8f/Jennifer%2BA%2B-%2BImages%2B%283%29.jpg',

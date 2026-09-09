@@ -63,11 +63,19 @@ body {
 
 /* Typography tokens matching exact live site inspection */
 .font-serif-editorial {
-  font-family: 'beaufort-pro', Georgia, serif;
+  font-family: 'beaufort-pro', 'Cormorant Infant', 'Cormorant Garamond', Georgia, serif;
 }
 
 .font-script-accent {
+  font-family: 'PrintedMoments', 'Ms Madi', 'Allison', cursive;
+}
+
+.font-thrive-script {
   font-family: 'PrintedMoments', cursive;
+  font-weight: 300;
+  font-style: normal !important;
+  line-height: 0.7em;
+  letter-spacing: 0em;
 }
 
 .font-sans-clean {
