@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg: #F6F4EE;
+  --color-text: #252525;
+  --color-muted: #6C6B65;
+  --color-accent: #6E9FA0;
+  --color-border: rgba(69, 69, 64, 0.15);
+  --color-border-light: rgba(69, 69, 64, 0.08);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Typography tokens */
+.font-serif-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-script-accent {
+  font-family: 'Parisienne', cursive;
+}
+
+.font-sans-clean {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Subtle image film wash filter to guarantee low saturation and warm highlights */
+.coastal-film-image {
+  filter: contrast(0.96) saturate(0.92) brightness(1.02);
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), filter 0.8s ease;
+}
+
+.coastal-film-image:hover {
+  transform: scale(1.02);
+  filter: contrast(0.98) saturate(0.96) brightness(1.03);
+}
+
+/* Smooth text link underline effect */
+.editorial-underline-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.editorial-underline-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease;
+  opacity: 0.6;
+}
+
+.editorial-underline-link:hover::after {
+  transform: scaleX(1.05);
+  opacity: 1;
+}
+
+/* Custom scrollbar matching ivory palette */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F1EA;
+}
+::-webkit-scrollbar-thumb {
+  background: #D9D5CC;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #BDB9B0;
+}
+
