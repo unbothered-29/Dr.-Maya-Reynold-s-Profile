@@ -76,7 +76,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
               onClose();
               onContactClick();
             }}
-            className="w-[120px] h-[50px] rounded-full border border-[#252525] text-[#252525] text-[11.5px] uppercase tracking-[0.18em] font-sans-clean hover:bg-[#252525] hover:text-[#F6F4EE] transition-all duration-300 flex items-center justify-center mx-auto"
+            className="w-[120px] h-[50px] rounded-[50%] border border-[rgb(43,43,43)] text-[rgb(43,43,43)] text-[12px] uppercase tracking-[0.12em] font-sans-clean hover:bg-[rgb(43,43,43)] hover:text-[#F6F4EE] transition-all duration-300 flex items-center justify-center mx-auto"
           >
             CONTACT
           </button>

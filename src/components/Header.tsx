@@ -23,21 +23,21 @@ export const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
 
       {/* Header Content Container - centered with ~104px margin at 1897px viewport */}
       <div className="w-full max-w-[1690px] mx-auto px-6 sm:px-10 lg:px-0 lg:w-[calc(100%-208px)] pt-5 lg:pt-[37px] pb-4 flex items-start justify-between">
-        {/* Typographic Logo - noticeably larger editorial serif */}
+        {/* Typographic Logo - noticeably larger editorial serif in beaufort-pro 300 */}
         <a
           id="site-logo"
           href="#"
           className="group block text-left select-none"
         >
-          <span className="block font-serif-editorial text-[30px] sm:text-[34px] lg:text-[36px] font-normal leading-[1.05] tracking-[0.015em] text-[#252525] group-hover:opacity-85 transition-opacity">
+          <span className="block font-serif-editorial text-[30px] sm:text-[34px] lg:text-[36px] font-[300] leading-[1.05] tracking-[0.015em] text-[rgb(43,43,43)] group-hover:opacity-85 transition-opacity">
             Conejo Valley
           </span>
-          <span className="block text-[9px] sm:text-[9.5px] lg:text-[10px] uppercase tracking-[0.24em] font-sans-clean font-medium text-[#6E9FA0] mt-1.5">
+          <span className="block text-[9px] sm:text-[9.5px] lg:text-[10px] uppercase tracking-[0.24em] font-sans-clean font-normal text-[#6E9FA0] mt-1.5">
             FAMILY COUNSELING
           </span>
         </a>
 
-        {/* Desktop Navigation & Oval Contact Button */}
+        {/* Desktop Navigation & Circular/Oval Outlined Contact Button in Muli */}
         <div className="hidden lg:flex items-center gap-8 xl:gap-11 pt-1.5">
           <nav
             id="desktop-navigation"
@@ -48,19 +48,19 @@ export const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-[13px] font-sans-clean uppercase tracking-[0.18em] text-[#252525] font-normal hover:text-[#6E9FA0] transition-colors duration-200"
+                className="text-[13px] font-sans-clean uppercase tracking-[0.14em] text-[rgb(43,43,43)] font-normal hover:text-[#6E9FA0] transition-colors duration-200"
               >
                 {item.label}
               </a>
             ))}
           </nav>
 
-          {/* Thin Outlined Oval Contact Button (approx 120px x 50px) */}
+          {/* Thin Outlined Contact Button with authentic oval / ellipse border */}
           <button
             id="header-contact-btn"
             type="button"
             onClick={onContactClick}
-            className="w-[120px] h-[50px] rounded-full border border-[#252525] bg-transparent flex items-center justify-center text-[11.5px] uppercase tracking-[0.18em] font-sans-clean text-[#252525] hover:bg-[#252525] hover:text-[#F6F4EE] transition-all duration-300 cursor-pointer select-none"
+            className="w-[120px] h-[50px] rounded-[50%] border border-[rgb(43,43,43)] bg-transparent flex items-center justify-center text-[12px] uppercase tracking-[0.12em] font-sans-clean text-[rgb(43,43,43)] font-normal hover:bg-[rgb(43,43,43)] hover:text-[#F6F4EE] transition-all duration-300 cursor-pointer select-none"
           >
             CONTACT
           </button>
