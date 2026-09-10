@@ -8,13 +8,13 @@ export const siteImages: SiteImages = {
   heroOceanNarrow: 'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/7a40691c-70a5-4307-b9ae-974592087a8f/Jennifer%2BA%2B-%2BImages%2B%283%29.jpg',
   hopeOcean: 'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/7a40691c-70a5-4307-b9ae-974592087a8f/Jennifer%2BA%2B-%2BImages%2B%283%29.jpg',
   
-  // Who We Help images:
-  // Adults: calm natural coastal setting / walking along water
-  adultsBeach: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80',
-  // Couples: beach couple walking peacefully by the tide
-  couplesBeach: 'https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=1000&q=80',
-  // Children & Teens: playful family beach image
-  childrenBeach: 'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/389808ad-7273-4e03-a32b-c172aa735f12/Jennifer%2BA%2B-%2BImages%2B%286%29.jpg',
+  // Who We Help images (exact photos from reference):
+  // Adults: two women on beach log looking at mountains
+  adultsBeach: 'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/066f60e6-1354-4d47-a586-ab3f2f2ba612/Jennifer+A+-+Images+%288%29.jpg',
+  // Couples: man and woman smiling and embracing on beach
+  couplesBeach: 'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/d0157712-388c-4800-aada-c78db97ee966/Jennifer+A+-+Images+%289%29.jpg',
+  // Children & Teens: older boy carrying younger girl on beach with waves
+  childrenBeach: 'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/d5d62bf4-34a7-4bf4-bf00-e1169863ace7/Jennifer+A+-+Images+%2810%29.jpg',
 
   // How We Work: Woman and child in white dresses on a beach, warm sunset lighting
   howWeWorkBeach: 'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/3643a7ac-ff62-4927-b96e-9e65ecff0521/Jennifer%2BA%2B-%2BImages%2B%2867%29.jpg',
@@ -44,10 +44,11 @@ export const heroContent = {
 
 export const hopeContent = {
   headline: 'You’re holding onto hope that life can be better than it is right now.',
+  subhead: 'AT CONEJO VALLEY FAMILY COUNSELING WE WANT TO MAKE THAT HOPE A REALITY.',
   paragraph1:
-    'At Conejo Valley Family Counseling we want to make that hope a reality. We offer specialized counseling services designed to provide a compassionate and safe space for individuals, couples, and families navigating life’s challenges. Whether you’re an adult seeking personal growth or working through trauma, a couple addressing relationship issues, or a parent seeking support for your child, we are here to walk with you every step of the way.',
+    "Whether you're an adult seeking personal growth, looking to work through your trauma, a couple working on your relationship, or a parent looking for support for your child, we provide a compassionate and safe space to help you navigate all of life's ups and downs.",
   paragraph2:
-    'First and foremost, we believe what you’re going through is real, valid, and worthy of support. Finding the courage to reach out can feel daunting, but you don’t have to carry your burdens in isolation. Together, we will work toward healing, discovering inner resilience, and fostering meaningful connections.',
+    'First and foremost, we believe what you’re going through is real, valid, and worthy of support. Our team offers clients in the Newbury Park area and across CA an environment to discover a new life and a deeper sense of self in the midst of their struggles. As we tap into the power of connection and understanding, you can find your footing again and take a transformative path forward.',
 };
 
 export const whoWeHelpItems: WhoWeHelpItem[] = [

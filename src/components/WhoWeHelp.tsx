@@ -1,51 +1,61 @@
 import React from 'react';
 import { whoWeHelpItems } from '../data/homepage';
-import { ImageBlock } from './ImageBlock';
 
 export const WhoWeHelp: React.FC = () => {
   return (
     <section
       id="who-we-help"
-      className="relative w-full py-16 sm:py-24 md:py-32 bg-[#F4F1EA]"
+      className="relative w-full pt-16 sm:pt-20 md:pt-24 lg:pt-28 xl:pt-32 pb-20 sm:pb-24 md:pb-28 lg:pb-32 bg-white"
     >
-      <div className="max-w-[1440px] mx-auto px-6 sm:px-10 md:px-14 lg:px-16">
-        {/* Section Title */}
-        <h2
-          id="who-we-help-title"
-          className="font-serif-editorial text-[38px] sm:text-[46px] md:text-[52px] leading-[1.1] text-[#454540] font-normal tracking-[-0.01em] mb-14 sm:mb-20 text-left"
-        >
-          Who we help
-        </h2>
+      <div className="w-full max-w-[1500px] mx-auto px-6 sm:px-8 md:px-[4vw]">
+        {/* Section Title: "Who we" in Beaufort Pro serif + "help" in PrintedMoments script #86B3B3 */}
+        <div className="mb-10 sm:mb-12 md:mb-14">
+          <h2
+            id="who-we-help-title"
+            className="font-beaufort text-[36px] sm:text-[42px] md:text-[48px] lg:text-[52px] xl:text-[54px] leading-tight text-[#2B2B2B] font-[300] tracking-[-0.01em] text-left"
+          >
+            <span>Who we</span>
+            <span className="inline-block ml-3 sm:ml-4 md:ml-5 font-printed-moments font-[300] text-[#86B3B3] not-italic">
+              help
+            </span>
+          </h2>
+        </div>
 
-        {/* Editorial 3-Part Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 lg:gap-12 items-start">
-          {whoWeHelpItems.map((item, index) => {
-            // Apply slight editorial vertical stagger for the second column on desktop
-            const staggerClass = index === 1 ? 'md:translate-y-8' : '';
-
+        {/* 3-Column Grid: Indented by 12.5% on desktop (col 5 of 24) matching the exact left/right spacing in reference figure, with 20px between cards */}
+        <div className="w-full md:ml-[12.5%] md:w-[87.5%] grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-[20px] items-start">
+          {whoWeHelpItems.map((item) => {
             return (
               <article
                 key={item.id}
                 id={`who-we-help-${item.id}`}
-                className={`flex flex-col text-left ${staggerClass}`}
+                className="flex flex-col text-left"
               >
-                {/* Photography with varying crop proportions */}
-                <div className="w-full mb-6">
-                  <ImageBlock
-                    src={item.imageUrl}
-                    alt={item.imageAlt}
-                    aspectRatioClassName={item.aspectRatio}
-                    className="hover:scale-[1.02]"
-                  />
+                {/* Image card with exact 4/5 portrait aspect ratio matching reference figure */}
+                <div className="w-full overflow-hidden mb-8 sm:mb-9 md:mb-10">
+                  <div className="w-full aspect-[4/5] overflow-hidden bg-stone-100">
+                    <img
+                      src={item.imageUrl}
+                      alt={item.imageAlt}
+                      className={`w-full h-full object-cover transition-transform duration-500 hover:scale-[1.02] ${
+                        item.id === 'adults'
+                          ? 'object-[50%_65%]'
+                          : item.id === 'children-teens'
+                          ? 'object-[50%_55%]'
+                          : 'object-center'
+                      }`}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
                 </div>
 
-                {/* Small Serif Title */}
-                <h3 className="font-serif-editorial text-[26px] sm:text-[28px] leading-tight text-[#454540] font-normal tracking-[0.01em] mb-3">
+                {/* Subtitle in Beaufort Pro with exact vertical spacing matching reference */}
+                <h3 className="font-beaufort text-[26px] sm:text-[28px] md:text-[30px] leading-tight text-[#2B2B2B] font-[300] tracking-normal mb-5 sm:mb-6 md:mb-[26px]">
                   {item.title}
                 </h3>
 
-                {/* Descriptive Paragraph */}
-                <p className="font-sans-clean text-[15px] sm:text-[15.5px] leading-[1.75] text-[#6C6B65] font-normal">
+                {/* Descriptive Paragraph with spacious leading matching reference */}
+                <p className="font-muli text-[15px] sm:text-[15.5px] leading-[28px] sm:leading-[30px] text-[#2B2B2B] font-[300]">
                   {item.description}
                 </p>
               </article>
