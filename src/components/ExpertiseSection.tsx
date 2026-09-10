@@ -5,23 +5,17 @@ export const ExpertiseSection: React.FC = () => {
   return (
     <section
       id="expertise"
-      className="relative w-full py-24 sm:py-32 md:py-40 bg-[#F4F1EA]"
+      className="relative w-full py-20 sm:py-24 md:py-28 bg-[#F4F1EA]"
     >
       <div className="max-w-[1200px] mx-auto px-6 sm:px-10 md:px-14 lg:px-16">
-        {/* Large Statement Headline / Visual Pause */}
-        <div className="max-w-[980px] mb-20 sm:mb-28 md:mb-36 text-left">
-          <blockquote className="font-serif-editorial text-[32px] sm:text-[42px] md:text-[50px] lg:text-[54px] leading-[1.12] text-[#454540] font-normal tracking-[-0.01em]">
-            “{statementContent.quote}”
-          </blockquote>
-        </div>
-
         {/* Section Heading: Our areas of expertise */}
         <div className="text-left mb-10 sm:mb-12">
           <h3
             id="areas-of-expertise-title"
-            className="font-serif-editorial text-[30px] sm:text-[36px] md:text-[40px] text-[#454540] font-normal tracking-[0.01em]"
+            className="font-beaufort text-[32px] sm:text-[38px] md:text-[44px] text-[#2B2B2B] font-[300] tracking-[-0.01em]"
           >
-            {statementContent.areasTitle}
+            Our areas of{' '}
+            <span className="italic font-[400] text-[#3A5F5F]">expertise</span>
           </h3>
         </div>
 

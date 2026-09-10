@@ -49,13 +49,13 @@ export const WhoWeHelp: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Subtitle in Beaufort Pro with exact vertical spacing matching reference */}
-                <h3 className="font-beaufort text-[26px] sm:text-[28px] md:text-[30px] leading-tight text-[#2B2B2B] font-[300] tracking-normal mb-5 sm:mb-6 md:mb-[26px]">
+                {/* Subtitle in Beaufort Pro matching Squarespace heading 4 (1.7rem = 25.5px) */}
+                <h3 className="font-beaufort text-[24px] sm:text-[25px] md:text-[25.5px] leading-tight text-[#2B2B2B] font-[300] tracking-normal mb-5 sm:mb-6 md:mb-[26px]">
                   {item.title}
                 </h3>
 
-                {/* Descriptive Paragraph with spacious leading matching reference */}
-                <p className="font-muli text-[15px] sm:text-[15.5px] leading-[28px] sm:leading-[30px] text-[#2B2B2B] font-[300]">
+                {/* Descriptive Paragraph in Muli Light with exact 16.5px (1.1rem) font size and 1.8em leading matching reference figure */}
+                <p className="font-muli text-[16px] md:text-[16.5px] leading-[1.8] text-[#2B2B2B] font-[300] tracking-[0em]">
                   {item.description}
                 </p>
               </article>

@@ -8,6 +8,7 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { HopeSection } from './components/HopeSection';
 import { WhoWeHelp } from './components/WhoWeHelp';
+import { StoryQuoteBanner } from './components/StoryQuoteBanner';
 import { ExpertiseSection } from './components/ExpertiseSection';
 import { HowWeWork } from './components/HowWeWork';
 import { Specialties } from './components/Specialties';
@@ -49,6 +50,9 @@ export default function App() {
 
         {/* Section 6: Who We Help */}
         <WhoWeHelp />
+
+        {/* Section 6b: Story Quote Banner (Beach Ocean Panorama) */}
+        <StoryQuoteBanner />
 
         {/* Section 7: Large Statement / Expertise Intro */}
         <ExpertiseSection />

@@ -64,6 +64,11 @@ body {
 }
 
 /* Typography tokens matching exact live site inspection */
+.font-cormorant-infant,
+.font-cormorant {
+  font-family: 'Cormorant Infant', 'Cormorant Garamond', 'beaufort-pro', Georgia, serif;
+}
+
 .font-serif-editorial,
 .font-beaufort {
   font-family: 'beaufort-pro', Georgia, serif;
