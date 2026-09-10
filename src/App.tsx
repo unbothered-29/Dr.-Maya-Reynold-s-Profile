@@ -11,6 +11,7 @@ import { WhoWeHelp } from './components/WhoWeHelp';
 import { StoryQuoteBanner } from './components/StoryQuoteBanner';
 import { ExpertiseSection } from './components/ExpertiseSection';
 import { HowWeWork } from './components/HowWeWork';
+import { HonoringSection } from './components/HonoringSection';
 import { Specialties } from './components/Specialties';
 import { AppointmentSection } from './components/AppointmentSection';
 import { Footer } from './components/Footer';
@@ -59,6 +60,9 @@ export default function App() {
 
         {/* Section 8: How We Work */}
         <HowWeWork onLearnMoreClick={() => handleOpenContact('Learn More About CVFC')} />
+
+        {/* Section 8b: Honoring Where You've Been */}
+        <HonoringSection />
 
         {/* Section 9: Specialties */}
         <Specialties onLearnMore={handleSpecialtyClick} />
