@@ -16,8 +16,8 @@ export const siteImages: SiteImages = {
   // Children & Teens: older boy carrying younger girl on beach with waves
   childrenBeach: 'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/d5d62bf4-34a7-4bf4-bf00-e1169863ace7/Jennifer+A+-+Images+%2810%29.jpg',
 
-  // How We Work: Woman and child in white dresses on a beach, warm sunset lighting
-  howWeWorkBeach: 'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/3643a7ac-ff62-4927-b96e-9e65ecff0521/Jennifer%2BA%2B-%2BImages%2B%2867%29.jpg',
+  // How We Work: Mother and child in white dresses dancing on beach
+  howWeWorkBeach: 'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/389808ad-7273-4e03-a32b-c172aa735f12/Jennifer+A+-+Images+%286%29.jpg?format=1500w',
   
   // Specialties section: wide coastal family / peaceful beach shoreline
   specialtiesBeach: 'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/80513bd1-30ee-4a2d-aaf6-782d9be095ce/Jennifer%2BA%2B-%2BImages%2B%2866%29.jpg',
