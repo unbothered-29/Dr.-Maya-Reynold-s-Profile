@@ -28,6 +28,7 @@ export interface ContactInfo {
 
 export interface SiteImages {
   logo: string;
+  logoTrimmed?: string;
   heroFamily: string;
   heroOceanNarrow: string;
   hopeOcean: string;
