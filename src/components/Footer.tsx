@@ -16,11 +16,11 @@ export const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
       className="w-full bg-white text-[rgb(43,43,43)]"
     >
       {/* Main Footer Container */}
-      <div className="w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24 pt-16 sm:pt-20 lg:pt-24 pb-14 sm:pb-16 lg:pb-20">
-        <div className="flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-8 xl:gap-14">
+      <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-8 md:px-12 lg:px-12 xl:px-16 pt-16 sm:pt-20 lg:pt-24 pb-14 sm:pb-16 lg:pb-20">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-12 xl:gap-20">
           
-          {/* Brand Column: Official Brand Logo & Narrative */}
-          <div className="w-full lg:w-[42%] xl:w-[44%] text-left">
+          {/* Brand Column: Official Brand Logo & Narrative (Shifted left) */}
+          <div className="w-full lg:w-[40%] xl:w-[42%] text-left lg:-translate-x-2 xl:-translate-x-3">
             <a href="#" className="inline-block select-none group focus:outline-none">
               <img
                 src={siteImages.logoTrimmed || siteImages.logo}
@@ -46,7 +46,7 @@ export const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
           </div>
 
           {/* Three Navigation Columns: NAVIGATE, OUR TEAM, CONTACT */}
-          <div className="w-full lg:w-[58%] xl:w-[56%] grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-8 lg:gap-12 xl:gap-16 text-left">
+          <div className="w-full lg:w-[56%] xl:w-[54%] grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-8 lg:gap-12 xl:gap-16 text-left">
             
             {/* Column 1: NAVIGATE */}
             <div>
