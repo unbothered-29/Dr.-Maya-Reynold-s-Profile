@@ -146,3 +146,19 @@ body {
   background: #BDB9B0;
 }
 
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/muli/v34/7Aulp_0qiz-aVz7u3PJLcUMYOFmQkHkw.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/muli/v34/7Aulp_0qiz-aVz7u3PJLcUMYOFnOkHkw.ttf') format('truetype');
+}
+

@@ -19,11 +19,16 @@ export const siteImages: SiteImages = {
   // How We Work: Mother and child in white dresses dancing on beach
   howWeWorkBeach: 'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/389808ad-7273-4e03-a32b-c172aa735f12/Jennifer+A+-+Images+%286%29.jpg?format=1500w',
   
+  // Honoring Where You've Been: Family walking into ocean surf
+  honoringFamily: 'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/6f1501bf-74a5-4c57-a957-8ce4c5876848/Jennifer+A+-+Images+%285%29.jpg?format=2500w',
+
   // Specialties section: wide coastal family / peaceful beach shoreline
   specialtiesBeach: 'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/80513bd1-30ee-4a2d-aaf6-782d9be095ce/Jennifer%2BA%2B-%2BImages%2B%2866%29.jpg',
 
   // Appointment / Final CTA: serene vast Pacific beach shoreline
   appointmentBeach: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80',
+  appointmentLeftSand: 'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/1b9495e0-ce39-4826-9df9-e24de99da82f/Jennifer+A+-+Images+%2812%29.jpg',
+  appointmentRightPointing: 'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/7557312a-044d-4489-a9d1-6f43ee9888b1/Jennifer+A+-+Images+%2811%29.jpg',
 };
 
 export const navItems: NavItem[] = [
@@ -114,36 +119,35 @@ export const howWeWorkContent = {
 };
 
 export const specialtiesContent = {
-  heading: 'Honoring where you’ve been & helping shape where you’re headed.',
-  subheading: 'Our specialties include…',
+  heading: 'Our specialties include…',
   items: [
     {
       id: 'trauma',
-      title: 'TRAUMA',
+      title: 'Trauma',
       description:
         'We don’t always know when and how we’ve experienced trauma. In therapy, we’ll work together to help you process your past, understand what’s causing you to stay “stuck,” and regain a sense of safety, control, and hope. You don’t have to carry your burdens alone.',
-      href: '#specialties-trauma',
-    },
-    {
-      id: 'dissociation',
-      title: 'DISSOCIATION',
-      description:
-        'The feeling of losing time, hearing conflicting voices, or questioning your sense of self can be overwhelming. In therapy, we’ll help you understand these experiences, recognize your own triggers, and create a sense of balance and identity so that you can feel more grounded.',
-      href: '#specialties-dissociation',
+      href: '/trauma-counseling-newbury-park',
     },
     {
       id: 'emdr',
       title: 'EMDR',
       description:
         'Eye Movement Desensitization and Reprocessing (EMDR) is a powerful therapeutic technique that helps process and heal trauma by reworking how painful memories are stored in your brain. This allows you to find relief and move toward lasting healing.',
-      href: '#specialties-emdr',
+      href: '/emdr-therapy-newbury-park',
+    },
+    {
+      id: 'dissociation',
+      title: 'Dissociation',
+      description:
+        'The feeling of losing time, hearing conflicting voices, or questioning your sense of self can be overwhelming. In therapy, we’ll help you understand these experiences, recognize your own triggers, and create a sense of balance and identity so that you can feel more grounded.',
+      href: '/dissociative-identity-disorder-therapist-newbury-park',
     },
     {
       id: 'special-needs-parenting',
-      title: 'SPECIAL NEEDS PARENTING',
+      title: 'Special Needs Parenting',
       description:
         'Parenting a child with special needs presents unique challenges and complex emotions. We provide compassionate support through lived experience and expertise to help you navigate this journey with tools, understanding, and self-care.',
-      href: '#specialties-special-needs',
+      href: '/counseling-special-needs-parents-newbury-park',
     },
   ] as SpecialtyItem[],
 };
