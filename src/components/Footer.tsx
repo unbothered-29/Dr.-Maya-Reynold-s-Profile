@@ -16,11 +16,11 @@ export const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
       className="w-full bg-white text-[rgb(43,43,43)]"
     >
       {/* Main Footer Container */}
-      <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-8 md:px-12 lg:px-12 xl:px-16 pt-16 sm:pt-20 lg:pt-24 pb-14 sm:pb-16 lg:pb-20">
+      <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20 pt-16 sm:pt-20 lg:pt-24 pb-14 sm:pb-16 lg:pb-20">
         <div className="flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-12 xl:gap-20">
           
-          {/* Brand Column: Official Brand Logo & Narrative (Shifted left) */}
-          <div className="w-full lg:w-[40%] xl:w-[42%] text-left lg:-translate-x-2 xl:-translate-x-3">
+          {/* Brand Column: Official Brand Logo & Narrative */}
+          <div className="w-full lg:w-[40%] xl:w-[42%] text-left">
             <a href="#" className="inline-block select-none group focus:outline-none">
               <img
                 src={siteImages.logoTrimmed || siteImages.logo}
@@ -141,8 +141,8 @@ export const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
       </div>
 
       {/* Sub-Footer: Teal Bottom Bar with Legal & Attribution */}
-      <div className="w-full bg-[#78A4A0] py-3.5 sm:py-4 px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24">
-        <div className="max-w-[1440px] mx-auto text-left">
+      <div className="w-full bg-[#78A4A0] py-3.5 sm:py-4 px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20">
+        <div className="max-w-[1600px] mx-auto text-left">
           <p
             className="text-white text-[12px] sm:text-[12.5px] lg:text-[13px] font-[300] tracking-normal"
             style={{ fontFamily: "'Muli', 'Mulish', sans-serif" }}
