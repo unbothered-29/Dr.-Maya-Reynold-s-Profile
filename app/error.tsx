@@ -14,18 +14,18 @@ export default function Error({
   }, [error]);
 
   return (
-    <div className="min-h-screen bg-[#F6F4EE] flex items-center justify-center p-6 text-center">
+    <div className="min-h-screen bg-[#F7F5F1] flex items-center justify-center p-6 text-center">
       <div className="max-w-md">
-        <h2 className="font-beaufort text-[32px] text-[rgb(43,43,43)] font-[300] mb-4">
+        <h2 className="font-playfair text-[32px] text-[#302B2A] font-normal mb-4">
           Something went wrong
         </h2>
-        <p className="font-muli text-[15px] text-[rgb(43,43,43)] font-[300] mb-8 leading-relaxed">
+        <p className="font-montserrat text-[15px] text-[#756D68] font-normal mb-8 leading-relaxed">
           An unexpected error occurred. Please try refreshing the page.
         </p>
         <button
           type="button"
           onClick={() => reset()}
-          className="inline-flex items-center justify-center px-6 py-2.5 rounded-[50px] border border-[rgb(43,43,43)] text-[12px] uppercase tracking-[0.14em] font-muli text-[rgb(43,43,43)] hover:bg-[rgb(43,43,43)] hover:text-white transition-colors"
+          className="btn-pill-primary text-[12px] tracking-[0.16em] inline-flex items-center justify-center px-8 py-3"
         >
           Try Again
         </button>

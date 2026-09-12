@@ -14,7 +14,7 @@ export const SectionEyebrow: React.FC<SectionEyebrowProps> = ({
   return (
     <p
       id={id}
-      className={`text-[11px] sm:text-[11.5px] uppercase tracking-[0.18em] font-sans-clean text-[#6C6B65] font-normal leading-relaxed ${className}`}
+      className={`text-[11px] sm:text-[11.5px] uppercase tracking-[0.18em] font-montserrat text-[#756D68] font-medium leading-relaxed ${className}`}
     >
       {children}
     </p>

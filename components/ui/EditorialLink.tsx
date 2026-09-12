@@ -17,7 +17,7 @@ export const EditorialLink: React.FC<EditorialLinkProps> = ({
   id,
   isButton = false,
 }) => {
-  const commonClasses = `group inline-flex items-center gap-1.5 text-[11px] sm:text-[12px] uppercase tracking-[0.18em] font-sans-clean text-[#454540] hover:text-[#252522] transition-colors duration-300 font-medium cursor-pointer ${className}`;
+  const commonClasses = `group inline-flex items-center gap-1.5 text-[11px] sm:text-[12px] uppercase tracking-[0.18em] font-montserrat text-[#593D4B] hover:text-[#3B2932] transition-colors duration-300 font-medium cursor-pointer ${className}`;
 
   if (isButton || onClick) {
     return (

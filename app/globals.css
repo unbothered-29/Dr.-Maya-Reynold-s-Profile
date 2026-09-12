@@ -1,25 +1,47 @@
 @import "tailwindcss";
 
-:root {
-  /* Exact Extracted Color Palette */
-  --bg-light: #F6F4F0;
-  --text-primary: #2B2B2B;
-  --accent-tan: #E1D7CB;
-  --accent-sage: #86B3B3;
-  --white: #FFFFFF;
+@theme {
+  --color-porcelain: #F7F5F1;
+  --color-warm-stone: #E8E1D9;
+  --color-espresso: #302B2A;
+  --color-taupe-gray: #756D68;
+  --color-deep-plum: #593D4B;
+  --color-dusty-rose: #B98D8D;
+  --color-mauve-mist: #D8C8C8;
+  --color-aubergine: #3B2932;
 
-  --color-bg: var(--bg-light);
-  --color-text: var(--text-primary);
-  --color-muted: #6C6B65;
-  --color-accent: var(--accent-sage);
-  --color-border: rgba(69, 69, 64, 0.15);
-  --color-border-light: rgba(69, 69, 64, 0.08);
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-script: 'Allura', cursive;
+
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-montserrat: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-allura: 'Allura', cursive;
+}
+
+:root {
+  /* Exact Analyzed Color Palette from Design Specification */
+  --bg-porcelain: #F7F5F1;
+  --bg-warm-stone: #E8E1D9;
+  --text-espresso: #302B2A;
+  --text-taupe-gray: #756D68;
+  --accent-deep-plum: #593D4B;
+  --accent-dusty-rose: #B98D8D;
+  --accent-mauve-mist: #D8C8C8;
+  --dark-aubergine: #3B2932;
+
+  --color-bg: var(--bg-porcelain);
+  --color-text: var(--text-espresso);
+  --color-muted: var(--text-taupe-gray);
+  --color-accent: var(--accent-deep-plum);
+  --color-border: rgba(48, 43, 42, 0.12);
+  --color-border-light: rgba(48, 43, 42, 0.06);
 }
 
 body {
-  background-color: var(--bg-light);
-  color: var(--text-primary);
-  font-family: 'gravesend-sans', 'Mulish', 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-porcelain);
+  color: var(--text-espresso);
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
@@ -115,24 +137,80 @@ body {
   font-family: 'beaufort-pro', Georgia, serif;
 }
 
-.font-heading-h2 {
-  font-family: 'beaufort-pro', Georgia, serif;
-  font-weight: 300;
-  letter-spacing: -0.01em;
+.font-heading-h2,
+.font-beaufort,
+.font-serif-editorial,
+.font-serif-heading,
+.font-playfair {
+  font-family: 'Playfair Display', Georgia, serif !important;
 }
 
 .font-script-accent,
 .font-printed-moments,
-.font-thrive-script {
-  font-family: 'PrintedMoments', 'Ms Madi', 'Allison', cursive;
-  font-weight: 300;
-  font-style: normal !important;
-  letter-spacing: 0em;
+.font-thrive-script,
+.font-allura {
+  font-family: 'Allura', cursive !important;
+  font-style: normal;
+  letter-spacing: 0.02em;
 }
 
 .font-muli,
-.font-sans-clean {
-  font-family: 'Muli', 'Mulish', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+.font-sans-clean,
+.font-sans-body,
+.font-montserrat {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* Button styles matching design specification */
+.btn-pill-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: #593D4B;
+  color: #FFFFFF;
+  font-family: 'Montserrat', -apple-system, sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  padding: 14px 34px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid #593D4B;
+  text-decoration: none;
+}
+.btn-pill-primary:hover {
+  background-color: #3B2932;
+  border-color: #3B2932;
+  color: #FFFFFF;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 41, 50, 0.15);
+}
+
+.btn-pill-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: transparent;
+  color: #302B2A;
+  border: 1px solid #593D4B;
+  font-family: 'Montserrat', -apple-system, sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  padding: 14px 34px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-pill-secondary:hover {
+  background-color: #593D4B;
+  color: #FFFFFF;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(89, 61, 75, 0.15);
 }
 
 /* Subtle image film wash filter to guarantee low saturation and warm highlights */

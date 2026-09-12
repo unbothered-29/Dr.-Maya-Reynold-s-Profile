@@ -34,7 +34,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F6F4EE] text-[#252525] flex flex-col selection:bg-[#6E9FA0]/20 selection:text-[#252525] font-sans-clean antialiased">
+    <div className="min-h-screen bg-[#F7F5F1] text-[#302B2A] flex flex-col selection:bg-[#593D4B]/20 selection:text-[#302B2A] font-sans-body antialiased">
       {/* Header / Navigation */}
       <Header onContactClick={() => handleOpenContact('General Inquiry')} />
 

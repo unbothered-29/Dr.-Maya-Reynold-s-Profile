@@ -39,12 +39,12 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
   return (
     <div
       id="mobile-menu-overlay"
-      className="fixed inset-0 z-50 bg-[#F6F4EE] flex flex-col justify-start transition-all duration-300 overflow-y-auto"
+      className="fixed inset-0 z-50 bg-[#F7F5F1] flex flex-col justify-start transition-all duration-300 overflow-y-auto"
     >
-      {/* Top 3px Plum/Purple Accent Line */}
+      {/* Top 3px Deep Plum Accent Line */}
       <div
         id="menu-top-accent-bar"
-        className="w-full h-[3px] bg-[#49303F] absolute top-0 left-0 right-0 z-50"
+        className="w-full h-[3px] bg-[#593D4B] absolute top-0 left-0 right-0 z-50"
       />
 
       {/* Header row in mobile menu matching main header */}
@@ -71,7 +71,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
           type="button"
           onClick={onClose}
           aria-label="Close navigation menu"
-          className="p-1 text-[#151617] hover:opacity-70 transition-opacity focus:outline-none cursor-pointer flex items-center justify-center translate-y-[-1px]"
+          className="p-1 text-[#302B2A] hover:text-[#593D4B] transition-colors focus:outline-none cursor-pointer flex items-center justify-center translate-y-[-1px]"
         >
           <X className="w-[22px] h-[22px] min-[390px]:w-[24px] min-[390px]:h-[24px] stroke-[1.25]" />
         </button>
@@ -87,8 +87,8 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
             key={item.label}
             href={item.href}
             onClick={onClose}
-            className="group flex items-center text-[30px] min-[375px]:text-[33px] min-[390px]:text-[35px] min-[430px]:text-[38px] uppercase tracking-[0.03em] text-[#151617] font-[300] hover:text-[#6E9FA0] transition-colors select-none leading-none"
-            style={{ fontFamily: "'gravesend-sans', 'Jost', 'Century Gothic', 'Mulish', sans-serif" }}
+            className="group flex items-center text-[30px] min-[375px]:text-[33px] min-[390px]:text-[35px] min-[430px]:text-[38px] uppercase tracking-[0.03em] text-[#302B2A] font-[400] hover:text-[#593D4B] transition-colors select-none leading-none"
+            style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
             <span>{item.label}</span>
             {item.hasChevron && (
@@ -98,7 +98,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
                 viewBox="0 0 13 23"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="ml-[18px] min-[390px]:ml-[22px] text-[#151617] stroke-current transition-transform group-hover:translate-x-1"
+                className="ml-[18px] min-[390px]:ml-[22px] stroke-current text-[#302B2A] group-hover:text-[#593D4B] transition-all group-hover:translate-x-1"
               >
                 <path
                   d="M1.5 1.5L11.5 11.5L1.5 21.5"

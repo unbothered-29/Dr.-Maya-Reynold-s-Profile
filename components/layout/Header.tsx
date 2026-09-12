@@ -15,12 +15,12 @@ export const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
   return (
     <header
       id="main-header"
-      className="w-full bg-[#F6F4EE] relative z-40 transition-colors"
+      className="w-full bg-[#F7F5F1] relative z-40 transition-colors lg:mb-12"
     >
-      {/* Top 3px Plum/Purple Accent Line running full viewport width */}
+      {/* Top 3px Deep Plum Accent Line running full viewport width */}
       <div
         id="top-accent-bar"
-        className="w-full h-[3px] bg-[#49303F] absolute top-0 left-0 right-0 z-50"
+        className="w-full h-[3px] bg-[#593D4B] absolute top-0 left-0 right-0 z-50"
       />
 
       {/* Header Content Container - balanced vertical padding matching reference */}
@@ -34,7 +34,7 @@ export const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
           <img
             src={siteImages.logoTrimmed || siteImages.logo}
             alt="Conejo Valley Family Counseling"
-            className="h-[52px] sm:h-[58px] lg:h-[64px] xl:h-[68px] w-auto max-w-[225px] sm:max-w-[260px] lg:max-w-[290px] object-contain block transition-opacity group-hover:opacity-85"
+            className="h-[52px] sm:h-[58px] lg:h-[44px] xl:h-[46px] w-auto max-w-[225px] sm:max-w-[260px] lg:max-w-[220px] object-contain block transition-opacity group-hover:opacity-85"
             loading="eager"
             decoding="async"
             onError={(e) => {
@@ -44,7 +44,7 @@ export const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
           />
         </a>
 
-        {/* Desktop Navigation & Circular/Oval Outlined Contact Button in Muli */}
+        {/* Desktop Navigation & Pill Outlined Contact Button */}
         <div className="hidden lg:flex items-center gap-8 xl:gap-11 pt-1.5">
           <nav
             id="desktop-navigation"
@@ -55,19 +55,19 @@ export const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-[13px] font-sans-clean uppercase tracking-[0.14em] text-[rgb(43,43,43)] font-normal hover:text-[#6E9FA0] transition-colors duration-200"
+                className="text-[13px] font-sans-body uppercase tracking-[0.14em] text-[#302B2A] font-medium hover:text-[#593D4B] transition-colors duration-200"
               >
                 {item.label}
               </a>
             ))}
           </nav>
 
-          {/* Thin Outlined Contact Button with authentic oval / ellipse border */}
+          {/* Outlined Pill Contact Button matching design specification */}
           <button
             id="header-contact-btn"
             type="button"
             onClick={onContactClick}
-            className="w-[120px] h-[50px] rounded-[50%] border border-[rgb(43,43,43)] bg-transparent flex items-center justify-center text-[12px] uppercase tracking-[0.12em] font-sans-clean text-[rgb(43,43,43)] font-normal hover:bg-[rgb(43,43,43)] hover:text-[#F6F4EE] transition-all duration-300 cursor-pointer select-none"
+            className="px-6 py-2.5 rounded-[50%] border border-[#593D4B] bg-transparent flex items-center justify-center text-[12px] uppercase tracking-[0.14em] font-sans-body text-[#302B2A] font-medium hover:bg-[#593D4B] hover:text-[#F7F5F1] transition-all duration-300 cursor-pointer select-none"
           >
             CONTACT
           </button>
@@ -79,7 +79,7 @@ export const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
           type="button"
           onClick={() => setMobileMenuOpen(true)}
           aria-label="Open Navigation Menu"
-          className="lg:hidden p-1 text-[rgb(43,43,43)] hover:opacity-70 transition-opacity focus:outline-none cursor-pointer flex items-center"
+          className="lg:hidden p-1 text-[#302B2A] hover:text-[#593D4B] transition-colors focus:outline-none cursor-pointer flex items-center"
         >
           <svg
             width="28"
