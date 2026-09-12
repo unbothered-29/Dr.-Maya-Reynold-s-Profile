@@ -165,7 +165,7 @@ export const AppointmentSection: React.FC<AppointmentSectionProps> = ({
               <span className="inline-flex items-baseline whitespace-nowrap mt-1">
                 <span>fit for</span>
                 <span
-                  className="font-[300] not-italic text-[rgb(134,179,179)] text-[40px] min-[420px]:text-[46px] sm:text-[52px] md:text-[56px] lg:text-[54px] xl:text-[62px] 2xl:text-[68px] leading-[0.8] inline-block ml-2.5 sm:ml-3 select-none align-baseline"
+                  className="font-[300] not-italic text-[rgb(134,179,179)] text-[40px] min-[420px]:text-[46px] sm:text-[52px] md:text-[56px] lg:text-[36px] xl:text-[42px] 2xl:text-[46px] leading-[0.8] inline-block ml-2.5 sm:ml-3 select-none align-baseline"
                   style={{ fontFamily: "'PrintedMoments', cursive" }}
                 >
                   you
