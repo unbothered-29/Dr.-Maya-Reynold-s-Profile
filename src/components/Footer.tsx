@@ -16,16 +16,16 @@ export const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
       className="w-full bg-white text-[rgb(43,43,43)]"
     >
       {/* Main Footer Container */}
-      <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20 pt-16 sm:pt-20 lg:pt-24 pb-14 sm:pb-16 lg:pb-20">
-        <div className="flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-12 xl:gap-20">
+      <div className="w-full mx-auto px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20 pt-16 sm:pt-20 lg:pt-24 pb-24 sm:pb-28 lg:pb-[145px] xl:pb-[155px]">
+        <div className="mx-auto w-fit max-w-full flex flex-col lg:flex-row justify-center items-center lg:items-start gap-12 sm:gap-14 lg:gap-20 xl:gap-28 2xl:gap-32">
           
-          {/* Brand Column: Official Brand Logo & Narrative */}
-          <div className="w-full lg:w-[40%] xl:w-[42%] text-left">
+          {/* Part 1: Conejo Valley Brand & Narrative Unit */}
+          <div className="w-auto max-w-[480px] xl:max-w-[500px] flex-shrink-0 text-left">
             <a href="#" className="inline-block select-none group focus:outline-none">
               <img
                 src={siteImages.logoTrimmed || siteImages.logo}
                 alt="Conejo Valley Family Counseling"
-                className="w-[300px] min-[420px]:w-[340px] sm:w-[380px] lg:w-[400px] xl:w-[420px] h-auto object-contain block transition-opacity group-hover:opacity-85"
+                className="w-[260px] min-[420px]:w-[280px] sm:w-[310px] lg:w-[325px] xl:w-[335px] h-auto object-contain block transition-opacity group-hover:opacity-85"
                 loading="lazy"
                 decoding="async"
                 onError={(e) => {
@@ -35,34 +35,34 @@ export const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
               />
             </a>
             <p
-              className="text-[13.5px] sm:text-[14px] leading-[1.75] text-[rgb(43,43,43)] font-[300] mt-3.5 sm:mt-4 max-w-[440px]"
+              className="font-sans-clean text-[14.5px] sm:text-[15px] leading-[29px] sm:leading-[30px] text-[rgb(43,43,43)] font-[300] mt-3.5 sm:mt-4"
               style={{ fontFamily: "'Muli', 'Mulish', sans-serif" }}
             >
-              <span className="block">We want to make getting started simple. You&apos;re welcome to</span>
-              <span className="block">come into our office in Newbury Park or schedule virtual</span>
-              <span className="block">appointments from anywhere in CA&mdash;whatever works best for</span>
+              <span className="block sm:whitespace-nowrap">We want to make getting started simple. You&apos;re welcome to</span>
+              <span className="block sm:whitespace-nowrap">come into our office in Newbury Park or schedule virtual</span>
+              <span className="block sm:whitespace-nowrap">appointments from anywhere in CA&mdash;whatever works best for</span>
               <span className="block">you.</span>
             </p>
           </div>
 
-          {/* Three Navigation Columns: NAVIGATE, OUR TEAM, CONTACT */}
-          <div className="w-full lg:w-[56%] xl:w-[54%] grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-8 lg:gap-12 xl:gap-16 text-left">
+          {/* Part 2: Navigation Unit (Navigate, Our Team, Contact) */}
+          <div className="w-auto grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 lg:gap-4 xl:gap-5 text-left lg:-mt-2.5">
             
             {/* Column 1: NAVIGATE */}
-            <div>
+            <div className="sm:pl-3.5 md:pl-4 lg:pl-5">
               <h4
-                className="text-[12.5px] sm:text-[13px] uppercase tracking-[0.16em] font-[400] text-[rgb(43,43,43)] mb-1.5 sm:mb-2"
+                className="font-sans-clean text-[12px] sm:text-[12.5px] uppercase tracking-[0.2em] font-normal text-[rgb(43,43,43)] mb-[14px] sm:mb-[16px]"
                 style={{ fontFamily: "'Muli', 'Mulish', sans-serif" }}
               >
                 NAVIGATE
               </h4>
-              <ul className="space-y-[3px]">
+              <ul className="list-none p-0 m-0">
                 {footerNavigateLinks.map((link) => (
-                  <li key={link.label}>
+                  <li key={link.label} className="leading-[19px] sm:leading-[20px]">
                     <a
                       href={link.href}
                       onClick={link.label === 'Contact' ? (e) => { e.preventDefault(); onContactClick(); } : undefined}
-                      className="text-[13.5px] sm:text-[14px] text-[rgb(43,43,43)] hover:text-[#6E9FA0] font-[300] transition-colors inline-block leading-[1.25]"
+                      className="font-sans-clean text-[13px] sm:text-[13.5px] text-[rgb(43,43,43)] hover:text-[#6E9FA0] font-[300] transition-colors inline-block leading-[19px] sm:leading-[20px]"
                       style={{ fontFamily: "'Muli', 'Mulish', sans-serif" }}
                     >
                       {link.label}
@@ -75,19 +75,19 @@ export const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
             {/* Column 2: OUR TEAM */}
             <div id="team">
               <h4
-                className="text-[12.5px] sm:text-[13px] uppercase tracking-[0.16em] font-[400] text-[rgb(43,43,43)] mb-1.5 sm:mb-2"
+                className="font-sans-clean text-[12px] sm:text-[12.5px] uppercase tracking-[0.2em] font-normal text-[rgb(43,43,43)] mb-[14px] sm:mb-[16px]"
                 style={{ fontFamily: "'Muli', 'Mulish', sans-serif" }}
               >
                 OUR TEAM
               </h4>
-              <ul className="space-y-2 sm:space-y-2.5">
+              <ul className="list-none p-0 m-0">
                 {teamMembers.map((member) => (
                   <li
                     key={member}
-                    className="text-[13.5px] sm:text-[14px] text-[rgb(43,43,43)] hover:text-[#6E9FA0] font-[300] transition-colors leading-normal"
+                    className="font-sans-clean text-[13px] sm:text-[13.5px] text-[rgb(43,43,43)] font-[300] leading-[19px] sm:leading-[20px]"
                     style={{ fontFamily: "'Muli', 'Mulish', sans-serif" }}
                   >
-                    <a href="#team" className="hover:underline">
+                    <a href="#team" className="hover:text-[#6E9FA0] transition-colors">
                       {member}
                     </a>
                   </li>
@@ -98,39 +98,38 @@ export const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
             {/* Column 3: CONTACT */}
             <div id="contact">
               <h4
-                className="text-[12.5px] sm:text-[13px] uppercase tracking-[0.16em] font-[400] text-[rgb(43,43,43)] mb-1.5 sm:mb-2"
+                className="font-sans-clean text-[12px] sm:text-[12.5px] uppercase tracking-[0.2em] font-normal text-[rgb(43,43,43)] mb-[14px] sm:mb-[16px]"
                 style={{ fontFamily: "'Muli', 'Mulish', sans-serif" }}
               >
                 CONTACT
               </h4>
               <div
-                className="space-y-4 text-[13.5px] sm:text-[14px] text-[rgb(43,43,43)] font-[300] leading-relaxed"
+                className="font-sans-clean text-[13px] sm:text-[13.5px] text-[rgb(43,43,43)] font-[300]"
                 style={{ fontFamily: "'Muli', 'Mulish', sans-serif" }}
               >
-                <div className="space-y-1">
-                  <p>925 Broadbeck Dr</p>
-                  <p>Suites 200 and 225</p>
-                  <p>Newbury Park, CA 91320</p>
-                </div>
-
-                <div className="space-y-1">
+                <div className="leading-[19px] sm:leading-[20px]">925 Broadbeck Dr</div>
+                <div className="leading-[19px] sm:leading-[20px]">Suites 200 and 225</div>
+                <div className="leading-[19px] sm:leading-[20px]">Newbury Park, CA 91320</div>
+                <div className="leading-[19px] sm:leading-[20px]">
                   <a
                     href="mailto:info@conejovalleycounseling.com"
-                    className="block hover:text-[#6E9FA0] transition-colors hover:underline"
+                    className="hover:text-[#6E9FA0] transition-colors block leading-[19px] sm:leading-[20px]"
                   >
                     info@conejovalleycounseling.com
                   </a>
+                </div>
+                <div className="leading-[19px] sm:leading-[20px]">
                   <a
                     href="tel:8052423120"
-                    className="block hover:text-[#6E9FA0] transition-colors hover:underline"
+                    className="hover:text-[#6E9FA0] transition-colors block leading-[19px] sm:leading-[20px]"
                   >
                     805.242.3120
                   </a>
                 </div>
 
-                <div className="pt-2 space-y-1">
-                  <p>Serving Thousand Oaks, Westlake Village,</p>
-                  <p>Camarillo, Moorpark, &amp; Simi Valley</p>
+                <div className="mt-[18px] sm:mt-[20px]">
+                  <div className="leading-[19px] sm:leading-[20px] whitespace-nowrap">Serving Thousand Oaks, Westlake Village,</div>
+                  <div className="leading-[19px] sm:leading-[20px] whitespace-nowrap">Camarillo, Moorpark, &amp; Simi Valley</div>
                 </div>
               </div>
             </div>
@@ -141,26 +140,18 @@ export const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
       </div>
 
       {/* Sub-Footer: Teal Bottom Bar with Legal & Attribution */}
-      <div className="w-full bg-[#78A4A0] py-3.5 sm:py-4 px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20">
+      <div className="w-full bg-[#86B3B3] py-2.5 sm:py-3 px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20">
         <div className="max-w-[1600px] mx-auto text-left">
           <p
-            className="text-white text-[12px] sm:text-[12.5px] lg:text-[13px] font-[300] tracking-normal"
+            className="text-white text-[12px] sm:text-[12.5px] font-[300] tracking-normal"
             style={{ fontFamily: "'Muli', 'Mulish', sans-serif" }}
           >
-            <a href="#terms" className="hover:underline">Terms</a>
-            <span className="mx-2 opacity-80">|</span>
-            <a href="#privacy" className="hover:underline">Privacy Policy</a>
-            <span className="mx-2 opacity-80">|</span>
-            <a href="#disclaimer" className="hover:underline">Disclaimer</a>
-            <span className="mx-2 opacity-80">|</span>
-            <a
+            <a href="#terms" className="hover:underline">Terms</a><span className="mx-[3.5px] opacity-80">|</span><a href="#privacy" className="hover:underline">Privacy Policy</a><span className="mx-[3.5px] opacity-80">|</span><a href="#disclaimer" className="hover:underline">Disclaimer</a><span className="mx-[3.5px] opacity-80">|</span><a
               href="https://walkerstrategyco.com"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline"
-            >
-              Website by Walker Strategy Co.
-            </a>
+            >Website by Walker Strategy Co.</a>
           </p>
         </div>
       </div>
