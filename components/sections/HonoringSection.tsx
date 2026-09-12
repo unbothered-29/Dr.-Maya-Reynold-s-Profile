@@ -6,7 +6,7 @@ export const HonoringSection: React.FC = () => {
     <section
       id="honoring-section"
       aria-label="Honoring where you've been"
-      className="relative w-full py-12 sm:py-16 md:py-20 lg:py-28 xl:py-32 bg-[#F7F5F1] lg:bg-white overflow-hidden"
+      className="relative w-full py-12 sm:py-16 md:py-20 lg:py-28 xl:py-32 bg-[#F7F5F1] lg:bg-[#F7F5F1] overflow-hidden"
     >
       {/* ========================================= */}
       {/* MOBILE VIEW ELEMENTS (< 1024px)         */}
@@ -18,11 +18,10 @@ export const HonoringSection: React.FC = () => {
           <div className="w-full overflow-hidden shadow-none bg-[#F7F5F1] flex justify-end">
             <img
               id="honoring-family-image-mobile"
-              src={siteImages.honoringFamily || siteImages.heroFamily}
-              alt="Family standing hand-in-hand in ocean surf, viewed from behind looking towards horizon"
-              className="block w-full h-[300px] sm:h-[400px] md:h-[480px] object-cover object-center select-none opacity-[0.92] contrast-[0.98] brightness-[1.01]"
+              src={siteImages.honoringFamily}
+              alt="Books on the healing process and restoring yourself beside an armchair in warm sunlight"
+              className="block w-full h-[300px] sm:h-[400px] md:h-[480px] object-cover object-[center_38%] select-none shadow-sm"
               loading="lazy"
-              referrerPolicy="no-referrer"
             />
           </div>
         </div>
@@ -32,26 +31,22 @@ export const HonoringSection: React.FC = () => {
           <div className="w-full max-w-[640px] text-left">
             <h2
               id="honoring-heading-mobile"
-              className="font-playfair font-normal not-italic tracking-[-0.01em] text-[#302B2A] text-left text-[30px] min-[400px]:text-[34px] sm:text-[40px] leading-[1.2]"
+              className="font-playfair font-normal not-italic tracking-[-0.01em] text-[#302A29] text-left text-[30px] min-[400px]:text-[34px] sm:text-[40px] leading-[1.2]"
             >
-              {/* Mobile View Headline (< lg): Preserved exactly as before */}
               <span className="block">
-                <span className="block whitespace-nowrap">
-                  Honoring where you’ve
-                </span>
-                <span className="block whitespace-nowrap mt-1">
-                  been
+                <span>Helping you understand what’s happening</span>{' '}
+                <span className="inline-flex items-baseline whitespace-nowrap mt-1">
+                  <span>and move</span>{' '}
                   <span
-                    id="honoring-ampersand-mobile"
-                    className="font-allura not-italic text-[#B98D8D] mx-2 sm:mx-2.5 inline-block select-none transform translate-y-[-2px] text-[36px] min-[400px]:text-[40px] sm:text-[48px] leading-[1]"
+                    id="honoring-sustainable-mobile"
+                    className="font-allura not-italic text-[#5A3E4B] mx-2 sm:mx-2.5 inline-block select-none transform translate-y-[-2px] text-[36px] min-[400px]:text-[40px] sm:text-[48px] leading-[1]"
+                    style={{ color: '#5A3E4B' }}
                   >
-                    &
+                    toward
                   </span>
-                  helping shape
+                  <span>a more</span>
                 </span>
-                <span className="block whitespace-nowrap mt-1">
-                  where you’re headed.
-                </span>
+                <span className="block mt-1">sustainable way of living.</span>
               </span>
             </h2>
           </div>
@@ -66,51 +61,47 @@ export const HonoringSection: React.FC = () => {
         
         {/* Left Column: Image touching the left side of the screen */}
         <div className="w-full lg:w-[53.5%] xl:w-[52.5%] 2xl:w-[52.5%] max-w-[850px] xl:max-w-[920px] 2xl:max-w-[980px] flex-shrink-0">
-          <div className="w-full overflow-hidden shadow-none bg-white">
+          <div className="w-full overflow-hidden shadow-none bg-[#F7F5F1]">
             <img
               id="honoring-family-image-desktop"
-              src={siteImages.honoringFamily || siteImages.heroFamily}
-              alt="Family standing hand-in-hand in ocean surf, viewed from behind looking towards horizon"
-              className="w-full lg:h-[475px] xl:h-[505px] 2xl:h-[535px] object-cover object-center select-none opacity-[0.89] contrast-[0.96] brightness-[1.02]"
+              src={siteImages.honoringFamily}
+              alt="Books on the healing process and restoring yourself beside an armchair in warm sunlight"
+              className="w-full lg:h-[475px] xl:h-[505px] 2xl:h-[535px] object-cover object-[center_38%] select-none"
               loading="lazy"
-              referrerPolicy="no-referrer"
             />
           </div>
         </div>
 
         {/* Right Column: Editorial Heading */}
         <div className="w-full lg:flex-1 flex flex-col justify-end items-start lg:pl-12 xl:pl-16 lg:pr-6 xl:pr-8 lg:pb-2 lg:transform lg:translate-y-3">
-          <div className="w-full max-w-[595px] text-left">
+          <div className="w-full max-w-[640px] text-left">
             <h2
               id="honoring-heading-desktop"
-              className="font-beaufort font-[300] not-italic tracking-[-0.01em] text-[rgb(43,43,43)] text-left lg:text-[38px] xl:text-[48px] lg:leading-[62px]"
-              style={{
-                fontFamily: "'beaufort-pro', serif",
-                color: 'rgb(43, 43, 43)',
-                fontWeight: 300,
-                fontStyle: 'normal',
-              }}
+              className="desktop-section-heading text-[#302A29] text-left"
             >
               <span className="block whitespace-nowrap">
-                Honoring where you’ve been
+                Helping you understand what’s
               </span>
               <span className="block whitespace-nowrap mt-0.5">
+                happening and move
+              </span>
+              <span className="block whitespace-nowrap mt-0.5">
+                toward a more sustainable
+              </span>
+              <span className="inline-flex items-baseline whitespace-nowrap mt-0.5">
+                <span>way of</span>{' '}
                 <span
-                  id="honoring-ampersand-desktop"
-                  className="font-printed-moments font-[300] not-italic text-[rgb(134,179,179)] mr-3.5 inline-block select-none transform translate-y-[-2px] lg:text-[42px] xl:text-[48px] leading-[1]"
+                  id="honoring-living-desktop"
+                  className="font-script-accent not-italic text-[#5A3E4B] ml-3.5 inline-block select-none transform translate-y-[-2px] text-[58px] xl:text-[64px] leading-[1]"
                   style={{
-                    fontFamily: "'PrintedMoments', cursive",
-                    color: 'rgb(134, 179, 179)',
-                    fontWeight: 300,
+                    fontFamily: "'Allura', cursive",
                     fontStyle: 'normal',
+                    color: '#5A3E4B',
                   }}
                 >
-                  &
+                  living
                 </span>
-                helping shape where you’re
-              </span>
-              <span className="block whitespace-nowrap mt-0.5">
-                headed.
+                <span className="text-[#302A29]">.</span>
               </span>
             </h2>
           </div>

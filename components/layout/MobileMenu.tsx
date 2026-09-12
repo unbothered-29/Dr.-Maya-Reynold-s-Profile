@@ -44,7 +44,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
       {/* Top 3px Deep Plum Accent Line */}
       <div
         id="menu-top-accent-bar"
-        className="w-full h-[3px] bg-[#593D4B] absolute top-0 left-0 right-0 z-50"
+        className="w-full h-[3px] bg-[#5A3E4B] absolute top-0 left-0 right-0 z-50"
       />
 
       {/* Header row in mobile menu matching main header */}
@@ -52,17 +52,14 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
         <a
           href="#"
           onClick={onClose}
-          className="header-title-logo group block text-left select-none flex-shrink-0 transform translate-y-[3px]"
+          className="header-title-logo group block text-left select-none flex-shrink-0"
         >
-          <img
-            src={siteImages.logoTrimmed || siteImages.logo}
-            alt="Conejo Valley Family Counseling"
-            className="h-[48px] min-[390px]:h-[52px] sm:h-[58px] w-auto max-w-[210px] min-[390px]:max-w-[235px] sm:max-w-[260px] object-contain block"
-            onError={(e) => {
-              e.currentTarget.src =
-                'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/7116bf54-a0e1-4128-81d8-24fd9960c7ed/Conejo+Valley+Counseling+Logo.png?format=1500w';
-            }}
-          />
+          <span className="block font-serif text-[21px] min-[390px]:text-[23px] sm:text-[25px] font-normal leading-tight text-[#302A29] tracking-normal">
+            Dr. Maya Reynolds, PsyD
+          </span>
+          <span className="block font-sans text-[10px] min-[390px]:text-[10.5px] sm:text-[11px] uppercase tracking-[0.18em] text-[#756C67] font-medium mt-0.5">
+            LICENSED CLINICAL PSYCHOLOGIST
+          </span>
         </a>
 
         {/* Close Button X */}
@@ -71,7 +68,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
           type="button"
           onClick={onClose}
           aria-label="Close navigation menu"
-          className="p-1 text-[#302B2A] hover:text-[#593D4B] transition-colors focus:outline-none cursor-pointer flex items-center justify-center translate-y-[-1px]"
+          className="p-1 text-[#302A29] hover:text-[#5A3E4B] transition-colors focus:outline-none cursor-pointer flex items-center justify-center translate-y-[-1px]"
         >
           <X className="w-[22px] h-[22px] min-[390px]:w-[24px] min-[390px]:h-[24px] stroke-[1.25]" />
         </button>
@@ -87,8 +84,8 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
             key={item.label}
             href={item.href}
             onClick={onClose}
-            className="group flex items-center text-[30px] min-[375px]:text-[33px] min-[390px]:text-[35px] min-[430px]:text-[38px] uppercase tracking-[0.03em] text-[#302B2A] font-[400] hover:text-[#593D4B] transition-colors select-none leading-none"
-            style={{ fontFamily: "'Montserrat', sans-serif" }}
+            className="group flex items-center text-[30px] min-[375px]:text-[33px] min-[390px]:text-[35px] min-[430px]:text-[38px] uppercase tracking-[0.03em] text-[#302A29] font-[400] hover:text-[#5A3E4B] transition-colors select-none leading-none"
+            style={{ fontFamily: "'Source Sans 3', sans-serif" }}
           >
             <span>{item.label}</span>
             {item.hasChevron && (
@@ -98,7 +95,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
                 viewBox="0 0 13 23"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="ml-[18px] min-[390px]:ml-[22px] stroke-current text-[#302B2A] group-hover:text-[#593D4B] transition-all group-hover:translate-x-1"
+                className="ml-[18px] min-[390px]:ml-[22px] stroke-current text-[#302A29] group-hover:text-[#5A3E4B] transition-all group-hover:translate-x-1"
               >
                 <path
                   d="M1.5 1.5L11.5 11.5L1.5 21.5"

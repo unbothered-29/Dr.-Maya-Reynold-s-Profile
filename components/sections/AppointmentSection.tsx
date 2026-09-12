@@ -13,7 +13,7 @@ export const AppointmentSection: React.FC<AppointmentSectionProps> = ({
   return (
     <section
       id="appointment"
-      className="relative w-full bg-[#F7F5F1] lg:bg-[#F6F4EE] py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden"
+      className="relative w-full bg-[#F7F5F1] lg:bg-[#F7F5F1] py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden"
     >
       <div className="w-full mx-auto pl-0 pr-0 sm:px-4 md:px-6 lg:px-0">
         <div className="flex flex-col lg:flex-row items-center lg:items-stretch justify-between gap-10 lg:gap-0">
@@ -24,7 +24,7 @@ export const AppointmentSection: React.FC<AppointmentSectionProps> = ({
           
           {/* Mobile Left Image */}
           <div className="flex lg:hidden w-[190px] sm:w-[230px] md:w-[270px] shrink-0 items-center self-start order-1 ml-0 mt-3 sm:mt-4 mb-6 sm:mb-8">
-            <div className="w-full aspect-square overflow-hidden bg-[#D8C8C8]/30">
+            <div className="w-full aspect-square overflow-hidden bg-[#D9C9C9]/30">
               <img
                 id="appointment-left-image-mobile"
                 src={siteImages.appointmentLeftSand || 'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/1b9495e0-ce39-4826-9df9-e24de99da82f/Jennifer+A+-+Images+%2812%29.jpg'}
@@ -54,7 +54,7 @@ export const AppointmentSection: React.FC<AppointmentSectionProps> = ({
             <div className="mt-0 mb-6 sm:mb-8">
               <span
                 id="appointment-eyebrow-mobile"
-                className="inline-block font-montserrat text-[13px] sm:text-[14px] uppercase tracking-[0.16em] font-medium text-[#756D68]"
+                className="inline-block font-montserrat text-[13px] sm:text-[14px] uppercase tracking-[0.16em] font-medium text-[#756C67]"
               >
                 {appointmentContent.eyebrow}
               </span>
@@ -63,18 +63,18 @@ export const AppointmentSection: React.FC<AppointmentSectionProps> = ({
             {/* Editorial Heading */}
             <h2
               id="appointment-heading-mobile"
-              className="font-playfair text-[32px] min-[420px]:text-[36px] sm:text-[42px] md:text-[48px] text-[#302B2A] font-normal leading-[1.25] mb-6 sm:mb-8"
+              className="font-playfair text-[32px] min-[420px]:text-[36px] sm:text-[42px] md:text-[48px] text-[#302A29] font-normal leading-[1.25] mb-6 sm:mb-8"
             >
               <span className="block">
                 <span className="block">Find a therapist who is</span>
                 <span className="block mt-1">
                   <span className="inline-block mr-2.5 sm:mr-3">the right fit for</span>
                   <span
-                    className="font-allura not-italic text-[#593D4B] text-[42px] min-[420px]:text-[48px] sm:text-[58px] leading-[0.8] inline-block select-none align-baseline"
+                    className="font-allura not-italic text-[#5A3E4B] text-[42px] min-[420px]:text-[48px] sm:text-[58px] leading-[0.8] inline-block select-none align-baseline"
                   >
                     you
                   </span>
-                  <span className="text-[#302B2A]">.</span>
+                  <span className="text-[#302A29]">.</span>
                 </span>
               </span>
             </h2>
@@ -82,22 +82,20 @@ export const AppointmentSection: React.FC<AppointmentSectionProps> = ({
             {/* Body Paragraph 1 */}
             <p
               id="appointment-body-mobile"
-              className="font-montserrat text-[15px] sm:text-[16px] leading-[1.8] text-[#756D68] font-normal mb-5 sm:mb-6"
+              className="font-montserrat text-[15px] sm:text-[16px] leading-[1.8] text-[#756C67] font-normal mb-5 sm:mb-6"
             >
-              Coming to therapy is a courageous decision, and connecting with the right kind of{' '}
-              therapist makes all the difference. We understand that your journey is personal, and we&apos;re{' '}
-              here to support you with care and understanding every step of the way. Each member of{' '}
-              our team brings dedicated expertise and a commitment to support you in your struggles.{' '}
-              We want you to feel prioritized, understood, and empowered.
+              {appointmentContent.paragraph1}
             </p>
 
             {/* Body Prompt Paragraph 2 */}
-            <p
-              id="appointment-prompt-mobile"
-              className="font-montserrat text-[15px] sm:text-[16px] leading-[1.7] text-[#302B2A] font-medium mb-6 whitespace-normal sm:whitespace-nowrap"
-            >
-              {appointmentContent.prompt}
-            </p>
+            {appointmentContent.prompt && (
+              <p
+                id="appointment-prompt-mobile"
+                className="font-montserrat text-[15px] sm:text-[16px] leading-[1.7] text-[#302A29] font-medium mb-6 whitespace-normal sm:whitespace-nowrap"
+              >
+                {appointmentContent.prompt}
+              </p>
+            )}
 
             {/* CTA Button */}
             <div className="pt-4 sm:pt-6">
@@ -105,7 +103,7 @@ export const AppointmentSection: React.FC<AppointmentSectionProps> = ({
                 id="appointment-book-now-btn-mobile"
                 type="button"
                 onClick={onBookClick}
-                className="btn-pill-primary inline-flex items-center justify-center text-[13px] tracking-[0.16em] px-9 py-3.5 focus:outline-none cursor-pointer"
+                className="btn-pill-primary inline-flex items-center justify-center text-[13px] tracking-[0.16em] px-10 py-3.5 sm:px-12 focus:outline-none cursor-pointer"
               >
                 {appointmentContent.ctaText}
               </button>
@@ -148,8 +146,7 @@ export const AppointmentSection: React.FC<AppointmentSectionProps> = ({
             <div className="mt-2 sm:mt-4 lg:-mt-16 xl:-mt-20 mb-6 sm:mb-8 lg:mb-16 xl:mb-20">
               <span
                 id="appointment-eyebrow-desktop"
-                className="inline-block text-[10.5px] sm:text-[11px] lg:text-[11.5px] uppercase tracking-[0.2em] font-[400] text-[rgb(43,43,43)]"
-                style={{ fontFamily: "'Muli', 'Mulish', sans-serif" }}
+                className="desktop-eyebrow text-[#756C67]"
               >
                 {appointmentContent.eyebrow}
               </span>
@@ -158,52 +155,47 @@ export const AppointmentSection: React.FC<AppointmentSectionProps> = ({
             {/* Editorial Heading: Find a therapist who is the right fit for you. */}
             <h2
               id="appointment-heading-desktop"
-              className="text-[26px] min-[420px]:text-[30px] sm:text-[34px] md:text-[38px] lg:text-[36px] xl:text-[42px] 2xl:text-[46px] text-[rgb(43,43,43)] font-[300] leading-[1.25] mb-6 sm:mb-8 lg:mb-14 xl:mb-16"
-              style={{ fontFamily: "'beaufort-pro', serif" }}
+              className="desktop-section-heading text-[#302A29] mb-6 sm:mb-8 lg:mb-14 xl:mb-16"
             >
-              <span className="block whitespace-nowrap">Find a therapist who is the right</span>
+              <span className="block whitespace-nowrap">Find a therapist who is the</span>
               <span className="inline-flex items-baseline whitespace-nowrap mt-1">
-                <span>fit for</span>
+                <span>right fit for</span>
                 <span
-                  className="font-[300] not-italic text-[rgb(134,179,179)] text-[40px] min-[420px]:text-[46px] sm:text-[52px] md:text-[56px] lg:text-[36px] xl:text-[42px] 2xl:text-[46px] leading-[0.8] inline-block ml-2.5 sm:ml-3 select-none align-baseline"
-                  style={{ fontFamily: "'PrintedMoments', cursive" }}
+                  className="font-script-accent not-italic text-[#5A3E4B] text-[58px] xl:text-[66px] leading-[0.8] inline-block ml-2.5 sm:ml-3 select-none align-baseline"
+                  style={{ fontFamily: "'Allura', cursive" }}
                 >
                   you
                 </span>
-                <span className="text-[rgb(43,43,43)]">.</span>
+                <span className="text-[#302A29]">.</span>
               </span>
             </h2>
 
             {/* Body Paragraph 1 */}
             <p
               id="appointment-body-desktop"
-              className="text-[13px] sm:text-[13.5px] lg:text-[13.5px] xl:text-[14px] 2xl:text-[14.5px] leading-[1.8] text-[rgb(43,43,43)] font-[300] mb-5 sm:mb-6"
-              style={{ fontFamily: "'Muli', 'Mulish', sans-serif" }}
+              className="desktop-body-long text-[#302A29] mb-6 lg:max-w-[580px] xl:max-w-[620px]"
             >
-              <span className="lg:block">Coming to therapy is a courageous decision, and connecting with the right kind of</span>{' '}
-              <span className="lg:block">therapist makes all the difference. We understand that your journey is personal, and we&apos;re</span>{' '}
-              <span className="lg:block">here to support you with care and understanding every step of the way. Each member of</span>{' '}
-              <span className="lg:block">our team brings dedicated expertise and a commitment to support you in your struggles.</span>{' '}
-              <span className="lg:block">We want you to feel prioritized, understood, and empowered.</span>
+              {appointmentContent.paragraph1}
             </p>
 
             {/* Body Prompt Paragraph 2 */}
-            <p
-              id="appointment-prompt-desktop"
-              className="text-[13px] sm:text-[13.5px] lg:text-[13.5px] xl:text-[14px] 2xl:text-[14.5px] leading-[1.7] text-[rgb(43,43,43)] font-[300] mb-6 sm:mb-8 lg:mb-12 whitespace-normal sm:whitespace-nowrap"
-              style={{ fontFamily: "'Muli', 'Mulish', sans-serif" }}
-            >
-              {appointmentContent.prompt}
-            </p>
+            {appointmentContent.prompt && (
+              <p
+                id="appointment-prompt-desktop"
+                className="desktop-body-long text-[#756C67] mb-6 sm:mb-8 lg:mb-12 lg:max-w-[580px] xl:max-w-[620px]"
+              >
+                {appointmentContent.prompt}
+              </p>
+            )}
 
-            {/* Oval CTA Button: BOOK NOW */}
-            <div className="pt-4 sm:pt-6 lg:pt-16 xl:pt-20">
+            {/* CTA Button */}
+            <div className="pt-6 sm:pt-8 lg:pt-12 xl:pt-14">
               <button
                 id="appointment-book-now-btn-desktop"
                 type="button"
                 onClick={onBookClick}
-                className="inline-flex items-center justify-center w-[98px] h-[35px] sm:w-[106px] sm:h-[37px] rounded-[50%] border border-[rgb(43,43,43)] text-[8.5px] sm:text-[9px] uppercase tracking-[0.18em] font-[400] text-[rgb(43,43,43)] hover:bg-[rgb(43,43,43)] hover:text-white transition-all duration-300 focus:outline-none cursor-pointer"
-                style={{ fontFamily: "'Muli', 'Mulish', sans-serif" }}
+                className="inline-flex items-center justify-center px-10 py-3.5 sm:px-12 lg:px-12 lg:py-3.5 rounded-[50%] border border-[#302A29] desktop-btn-text text-[#302A29] hover:bg-[#302A29] hover:text-[#F7F5F1] transition-all duration-300 focus:outline-none cursor-pointer whitespace-nowrap"
+                style={{ fontFamily: "'Source Sans 3', sans-serif" }}
               >
                 {appointmentContent.ctaText}
               </button>

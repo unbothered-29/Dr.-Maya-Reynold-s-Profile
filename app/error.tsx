@@ -16,10 +16,10 @@ export default function Error({
   return (
     <div className="min-h-screen bg-[#F7F5F1] flex items-center justify-center p-6 text-center">
       <div className="max-w-md">
-        <h2 className="font-playfair text-[32px] text-[#302B2A] font-normal mb-4">
+        <h2 className="font-playfair text-[32px] text-[#302A29] font-normal mb-4">
           Something went wrong
         </h2>
-        <p className="font-montserrat text-[15px] text-[#756D68] font-normal mb-8 leading-relaxed">
+        <p className="font-montserrat text-[15px] text-[#756C67] font-normal mb-8 leading-relaxed">
           An unexpected error occurred. Please try refreshing the page.
         </p>
         <button

@@ -11,6 +11,7 @@ import { HowWeWork } from '@/components/sections/HowWeWork';
 import { HonoringSection } from '@/components/sections/HonoringSection';
 import { Specialties } from '@/components/sections/Specialties';
 import { AppointmentSection } from '@/components/sections/AppointmentSection';
+import { OurOfficeSection } from '@/components/sections/OurOfficeSection';
 import { Footer } from '@/components/layout/Footer';
 import { ContactModal } from '@/components/ui/ContactModal';
 
@@ -25,16 +26,15 @@ export default function HomePage() {
 
   const handleSpecialtyClick = (specialtyId: string) => {
     const focusMap: Record<string, string> = {
-      trauma: 'Trauma / EMDR',
-      dissociation: 'Dissociation',
-      emdr: 'Trauma / EMDR',
-      'special-needs-parenting': 'Special Needs Parenting',
+      'anxiety-panic': 'Anxiety & Panic',
+      trauma: 'Trauma',
+      'burnout-perfectionism': 'Burnout & Perfectionism',
     };
     handleOpenContact(focusMap[specialtyId] || 'Specialized Therapy');
   };
 
   return (
-    <div className="min-h-screen bg-[#F7F5F1] text-[#302B2A] flex flex-col selection:bg-[#593D4B]/20 selection:text-[#302B2A] font-sans-body antialiased">
+    <div className="min-h-screen bg-[#F7F5F1] text-[#302A29] flex flex-col selection:bg-[#5A3E4B]/20 selection:text-[#302A29] font-sans-body antialiased">
       {/* Header / Navigation */}
       <Header onContactClick={() => handleOpenContact('General Inquiry')} />
 
@@ -55,8 +55,8 @@ export default function HomePage() {
         {/* Large Statement / Expertise Intro */}
         <ExpertiseSection />
 
-        {/* How We Work */}
-        <HowWeWork onLearnMoreClick={() => handleOpenContact('Learn More About CVFC')} />
+        {/* How We Work (About Maya) */}
+        <HowWeWork onLearnMoreClick={() => handleOpenContact('Learn More About Dr. Maya Reynolds')} />
 
         {/* Honoring Where You've Been */}
         <HonoringSection />
@@ -66,6 +66,9 @@ export default function HomePage() {
 
         {/* Appointment / Final CTA */}
         <AppointmentSection onBookClick={() => handleOpenContact('New Appointment')} />
+
+        {/* Our Office Section */}
+        <OurOfficeSection />
       </main>
 
       {/* Footer */}

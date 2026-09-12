@@ -4,10 +4,10 @@ export default function NotFound() {
   return (
     <div className="min-h-screen bg-[#F7F5F1] flex items-center justify-center p-6 text-center">
       <div className="max-w-md">
-        <h1 className="font-playfair text-[48px] text-[#302B2A] font-normal mb-4">
+        <h1 className="font-playfair text-[48px] text-[#302A29] font-normal mb-4">
           404
         </h1>
-        <p className="font-montserrat text-[15px] text-[#756D68] font-normal mb-8 leading-relaxed">
+        <p className="font-montserrat text-[15px] text-[#756C67] font-normal mb-8 leading-relaxed">
           The page you are looking for could not be found.
         </p>
         <Link

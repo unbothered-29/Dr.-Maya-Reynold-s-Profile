@@ -1,6 +1,6 @@
-# Conejo Valley Family Counseling (Dr. Maya Reynolds Profile)
+# Dr. Maya Reynolds, PsyD - Licensed Clinical Psychologist
 
-A production-grade, highly responsive, and accessible Next.js web application for Conejo Valley Family Counseling, honoring the practice of Dr. Maya Reynolds and her clinical team in Newbury Park and across California.
+A production-grade, highly responsive, and accessible Next.js web application for Dr. Maya Reynolds, PsyD, Licensed Clinical Psychologist in Santa Monica and across California.
 
 ## Features & Highlights
 

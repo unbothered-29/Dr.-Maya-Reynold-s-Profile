@@ -1,35 +1,17 @@
 import React from 'react';
-
-interface ExpertiseItem {
-  name: string;
-  href?: string;
-  isItalic?: boolean;
-}
-
-const leftColumnItems: ExpertiseItem[] = [
-  { name: 'DISSOCIATION', href: '#specialty-dissociation' },
-  { name: 'TRAUMA', href: '#specialty-trauma' },
-  { name: 'FAMILY CONFLICT', href: '#specialty-family-conflict' },
-  { name: 'SPECIAL NEEDS PARENTING', href: '#specialty-special-needs-parenting' },
-  { name: 'DEPRESSION', href: '#specialty-depression' },
-  { name: 'MARRIAGE', href: '#specialty-marriage' },
-];
-
-const rightColumnItems: ExpertiseItem[] = [
-  { name: 'ANXIETY', href: '#specialty-anxiety' },
-  { name: 'RELATIONSHIPS', href: '#specialty-relationships' },
-  { name: 'CHILDREN', href: '#specialty-children' },
-  { name: 'TEENS', href: '#specialty-teens' },
-  { name: 'INTIMACY & CONNECTION', href: '#specialty-intimacy-connection' },
-  { name: '...AND MORE.', isItalic: true },
-];
+import { statementContent } from '@/data/homepage';
 
 export const ExpertiseSection: React.FC = () => {
+  // Split the expertise list from homepage.ts into two columns as requested by the PDF
+  const list = statementContent.expertiseList;
+  const leftColumnItems = list.slice(0, 6);
+  const rightColumnItems = list.slice(6);
+
   return (
     <section
       id="expertise"
       aria-labelledby="areas-of-expertise-title"
-      className="relative w-full pt-10 pb-20 sm:pt-16 sm:pb-28 md:pt-20 md:pb-32 lg:py-36 bg-[#F7F5F1] lg:bg-white"
+      className="relative w-full pt-10 pb-20 sm:pt-16 sm:pb-28 md:pt-20 md:pb-32 lg:py-36 bg-[#F7F5F1]"
     >
       <div className="max-w-[1400px] mx-auto px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20">
         
@@ -41,16 +23,9 @@ export const ExpertiseSection: React.FC = () => {
           <div className="pt-1 sm:pt-2">
             <h2
               id="areas-of-expertise-title-mobile"
-              className="font-serif-heading text-[32px] sm:text-[38px] md:text-[42px] leading-[42px] sm:leading-[50px] md:leading-[55px] text-[#302B2A] font-normal tracking-normal"
-              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              className="font-serif text-[32px] sm:text-[38px] md:text-[42px] leading-[42px] sm:leading-[50px] md:leading-[55px] text-[#302A29] font-normal tracking-normal"
             >
-              Our areas of
-              <span
-                className="inline-block ml-3 font-script-accent text-[42px] sm:text-[48px] md:text-[54px] leading-[25px] sm:leading-[27px] md:leading-[29px] text-[#B98D8D] font-normal select-none align-baseline"
-                style={{ fontFamily: "'Allura', cursive" }}
-              >
-                expertise
-              </span>
+              {statementContent.areasTitle}
             </h2>
           </div>
 
@@ -64,27 +39,14 @@ export const ExpertiseSection: React.FC = () => {
                   const isLast = index === leftColumnItems.length - 1;
                   return (
                     <div
-                      key={item.name}
+                      key={item}
                       className={`pt-[20px] pb-[22px] sm:pt-[24px] sm:pb-[28px] ${
-                        !isLast ? 'border-b border-[#D8C8C8]' : 'border-b border-[#D8C8C8] md:border-b-0'
+                        !isLast ? 'border-b border-[#D9C9C9]' : 'border-b border-[#D9C9C9] md:border-b-0'
                       } flex items-center min-h-[68px] sm:min-h-[80px]`}
                     >
-                      {item.href ? (
-                        <a
-                          href={item.href}
-                          className="font-sans-body text-[15px] sm:text-[16px] leading-[25px] sm:leading-[27px] font-medium tracking-[0.14em] uppercase text-[#302B2A] hover:text-[#593D4B] transition-colors duration-200 block"
-                          style={{ fontFamily: "'Montserrat', sans-serif" }}
-                        >
-                          {item.name}
-                        </a>
-                      ) : (
-                        <span
-                          className="font-sans-body text-[15px] sm:text-[16px] leading-[25px] sm:leading-[27px] font-medium tracking-[0.14em] uppercase text-[#302B2A]"
-                          style={{ fontFamily: "'Montserrat', sans-serif" }}
-                        >
-                          {item.name}
-                        </span>
-                      )}
+                      <span className="font-sans text-[15px] sm:text-[16px] leading-[25px] sm:leading-[27px] font-medium tracking-[0.14em] uppercase text-[#302A29]">
+                        {item}
+                      </span>
                     </div>
                   );
                 })}
@@ -96,29 +58,14 @@ export const ExpertiseSection: React.FC = () => {
                   const isLast = index === rightColumnItems.length - 1;
                   return (
                     <div
-                      key={item.name}
+                      key={item}
                       className={`pt-[20px] pb-[22px] sm:pt-[24px] sm:pb-[28px] ${
-                        !isLast ? 'border-b border-[#D8C8C8]' : ''
+                        !isLast ? 'border-b border-[#D9C9C9]' : ''
                       } flex items-center min-h-[68px] sm:min-h-[80px]`}
                     >
-                      {item.href ? (
-                        <a
-                          href={item.href}
-                          className="font-sans-body text-[15px] sm:text-[16px] leading-[25px] sm:leading-[27px] font-medium tracking-[0.14em] uppercase text-[#302B2A] hover:text-[#593D4B] transition-colors duration-200 block"
-                          style={{ fontFamily: "'Montserrat', sans-serif" }}
-                        >
-                          {item.name}
-                        </a>
-                      ) : (
-                        <span
-                          className={`font-sans-body text-[15px] sm:text-[16px] leading-[25px] sm:leading-[27px] font-medium tracking-[0.14em] uppercase text-[#302B2A] ${
-                            item.isItalic ? 'italic text-[#756D68]' : ''
-                          }`}
-                          style={{ fontFamily: "'Montserrat', sans-serif" }}
-                        >
-                          {item.name}
-                        </span>
-                      )}
+                      <span className="font-sans text-[15px] sm:text-[16px] leading-[25px] sm:leading-[27px] font-medium tracking-[0.14em] uppercase text-[#302A29]">
+                        {item}
+                      </span>
                     </div>
                   );
                 })}
@@ -136,12 +83,9 @@ export const ExpertiseSection: React.FC = () => {
           <div className="col-span-5 xl:col-span-4 pt-2">
             <h2
               id="areas-of-expertise-title-desktop"
-              className="font-beaufort text-[36px] xl:text-[42px] leading-[50px] xl:leading-[55px] text-[rgb(43,43,43)] font-[300] tracking-normal"
+              className="desktop-section-heading text-[#302A29] tracking-normal"
             >
-              Our areas of
-              <span className="block font-thrive-script text-[36px] xl:text-[42px] leading-[27px] xl:leading-[29px] text-[#70A19F] font-[300] select-none mt-2">
-                expertise
-              </span>
+              {statementContent.areasTitle}
             </h2>
           </div>
 
@@ -155,23 +99,14 @@ export const ExpertiseSection: React.FC = () => {
                   const isLast = index === leftColumnItems.length - 1;
                   return (
                     <div
-                      key={item.name}
+                      key={item}
                       className={`pt-[24px] pb-[28px] ${
-                        !isLast ? 'border-b border-[#EDE8E1]' : ''
+                        !isLast ? 'border-b border-[#D9C9C9]' : ''
                       } flex items-center min-h-[80px]`}
                     >
-                      {item.href ? (
-                        <a
-                          href={item.href}
-                          className="font-muli text-[15px] leading-[27px] font-[400] tracking-[0.14em] uppercase text-[rgb(43,43,43)] hover:text-[#5E9B97] transition-colors duration-200 block"
-                        >
-                          {item.name}
-                        </a>
-                      ) : (
-                        <span className="font-muli text-[15px] leading-[27px] font-[400] tracking-[0.14em] uppercase text-[rgb(43,43,43)]">
-                          {item.name}
-                        </span>
-                      )}
+                      <span className="desktop-supporting-text font-medium tracking-[0.14em] uppercase text-[#302A29]">
+                        {item}
+                      </span>
                     </div>
                   );
                 })}
@@ -183,27 +118,14 @@ export const ExpertiseSection: React.FC = () => {
                   const isLast = index === rightColumnItems.length - 1;
                   return (
                     <div
-                      key={item.name}
+                      key={item}
                       className={`pt-[24px] pb-[28px] ${
-                        !isLast ? 'border-b border-[#EDE8E1]' : ''
+                        !isLast ? 'border-b border-[#D9C9C9]' : ''
                       } flex items-center min-h-[80px]`}
                     >
-                      {item.href ? (
-                        <a
-                          href={item.href}
-                          className="font-muli text-[15px] leading-[27px] font-[400] tracking-[0.14em] uppercase text-[rgb(43,43,43)] hover:text-[#5E9B97] transition-colors duration-200 block"
-                        >
-                          {item.name}
-                        </a>
-                      ) : (
-                        <span
-                          className={`font-muli text-[15px] leading-[27px] font-[400] tracking-[0.14em] uppercase text-[rgb(43,43,43)] ${
-                            item.isItalic ? 'italic text-[#75736E]' : ''
-                          }`}
-                        >
-                          {item.name}
-                        </span>
-                      )}
+                      <span className="desktop-supporting-text font-medium tracking-[0.14em] uppercase text-[#302A29]">
+                        {item}
+                      </span>
                     </div>
                   );
                 })}

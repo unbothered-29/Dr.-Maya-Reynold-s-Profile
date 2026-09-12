@@ -26,7 +26,7 @@ export const ImageBlock: React.FC<ImageBlockProps> = ({
   return (
     <div
       id={id}
-      className={`relative overflow-hidden bg-[#ECE8DF] ${aspectRatioClassName} ${containerClassName}`}
+      className={`relative overflow-hidden bg-[#E7DED4] ${aspectRatioClassName} ${containerClassName}`}
     >
       <img
         src={src}
