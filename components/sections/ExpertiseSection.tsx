@@ -29,7 +29,7 @@ export const ExpertiseSection: React.FC = () => {
     <section
       id="expertise"
       aria-labelledby="areas-of-expertise-title"
-      className="relative w-full py-20 sm:py-28 md:py-32 lg:py-36 bg-white"
+      className="relative w-full pt-10 pb-20 sm:pt-16 sm:pb-28 md:pt-20 md:pb-32 lg:pt-24 lg:pb-36 bg-white"
     >
       <div className="max-w-[1400px] mx-auto px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20">
         {/* 3-Column / Beside Layout: Title on the left, 2 columns of items on the right */}
@@ -42,7 +42,7 @@ export const ExpertiseSection: React.FC = () => {
               className="font-beaufort text-[32px] sm:text-[38px] md:text-[42px] leading-[42px] sm:leading-[50px] md:leading-[55px] text-[rgb(43,43,43)] font-[300] tracking-normal"
             >
               Our areas of
-              <span className="block font-thrive-script text-[32px] sm:text-[38px] md:text-[42px] leading-[25px] sm:leading-[27px] md:leading-[29px] text-[#70A19F] font-[300] select-none mt-1 sm:mt-2">
+              <span className="inline-block ml-2 font-thrive-script text-[32px] sm:text-[38px] md:text-[42px] leading-[25px] sm:leading-[27px] md:leading-[29px] text-[#70A19F] font-[300] select-none">
                 expertise
               </span>
             </h2>
@@ -66,12 +66,12 @@ export const ExpertiseSection: React.FC = () => {
                       {item.href ? (
                         <a
                           href={item.href}
-                          className="font-muli text-[14px] sm:text-[15px] leading-[25px] sm:leading-[27px] font-[400] tracking-[0.14em] uppercase text-[rgb(43,43,43)] hover:text-[#5E9B97] transition-colors duration-200 block"
+                          className="font-muli text-[16px] sm:text-[17px] leading-[25px] sm:leading-[27px] font-[400] tracking-[0.14em] uppercase text-[rgb(43,43,43)] hover:text-[#5E9B97] transition-colors duration-200 block"
                         >
                           {item.name}
                         </a>
                       ) : (
-                        <span className="font-muli text-[14px] sm:text-[15px] leading-[25px] sm:leading-[27px] font-[400] tracking-[0.14em] uppercase text-[rgb(43,43,43)]">
+                        <span className="font-muli text-[16px] sm:text-[17px] leading-[25px] sm:leading-[27px] font-[400] tracking-[0.14em] uppercase text-[rgb(43,43,43)]">
                           {item.name}
                         </span>
                       )}
@@ -94,13 +94,13 @@ export const ExpertiseSection: React.FC = () => {
                       {item.href ? (
                         <a
                           href={item.href}
-                          className="font-muli text-[14px] sm:text-[15px] leading-[25px] sm:leading-[27px] font-[400] tracking-[0.14em] uppercase text-[rgb(43,43,43)] hover:text-[#5E9B97] transition-colors duration-200 block"
+                          className="font-muli text-[16px] sm:text-[17px] leading-[25px] sm:leading-[27px] font-[400] tracking-[0.14em] uppercase text-[rgb(43,43,43)] hover:text-[#5E9B97] transition-colors duration-200 block"
                         >
                           {item.name}
                         </a>
                       ) : (
                         <span
-                          className={`font-muli text-[14px] sm:text-[15px] leading-[25px] sm:leading-[27px] font-[400] tracking-[0.14em] uppercase text-[rgb(43,43,43)] ${
+                          className={`font-muli text-[16px] sm:text-[17px] leading-[25px] sm:leading-[27px] font-[400] tracking-[0.14em] uppercase text-[rgb(43,43,43)] ${
                             item.isItalic ? 'italic text-[#75736E]' : ''
                           }`}
                         >

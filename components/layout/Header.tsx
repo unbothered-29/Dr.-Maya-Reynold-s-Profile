@@ -17,24 +17,24 @@ export const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
       id="main-header"
       className="w-full bg-[#F6F4EE] relative z-40 transition-colors"
     >
-      {/* Top 2.5px Plum/Purple Accent Line running full viewport width */}
+      {/* Top 3px Plum/Purple Accent Line running full viewport width */}
       <div
         id="top-accent-bar"
-        className="w-full h-[2.5px] bg-[#49303F] absolute top-0 left-0 right-0 z-50"
+        className="w-full h-[3px] bg-[#49303F] absolute top-0 left-0 right-0 z-50"
       />
 
       {/* Header Content Container - balanced vertical padding matching reference */}
-      <div className="w-full max-w-[1690px] mx-auto px-6 sm:px-10 lg:px-0 lg:w-[calc(100%-208px)] py-4 lg:py-[22px] xl:py-[24px] flex items-center justify-between">
+      <div className="w-full max-w-[1690px] mx-auto px-6 sm:px-10 lg:px-0 lg:w-[calc(100%-208px)] pt-5 pb-4 lg:py-[22px] xl:py-[24px] flex items-center justify-between">
         {/* Brand Logo - Authentic artwork matching site */}
         <a
           id="site-logo"
           href="#"
-          className="header-title-logo group block text-left select-none flex-shrink-0"
+          className="header-title-logo group block text-left select-none flex-shrink-0 transform translate-y-[6px] sm:translate-y-[7px] transition-transform"
         >
           <img
-            src={siteImages.logo}
+            src={siteImages.logoTrimmed || siteImages.logo}
             alt="Conejo Valley Family Counseling"
-            className="h-[56px] sm:h-[66px] lg:h-[72px] w-auto max-w-[260px] sm:max-w-[300px] object-contain block transition-opacity group-hover:opacity-85"
+            className="h-[52px] sm:h-[58px] lg:h-[64px] xl:h-[68px] w-auto max-w-[225px] sm:max-w-[260px] lg:max-w-[290px] object-contain block transition-opacity group-hover:opacity-85"
             loading="eager"
             decoding="async"
             onError={(e) => {
@@ -79,9 +79,20 @@ export const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
           type="button"
           onClick={() => setMobileMenuOpen(true)}
           aria-label="Open Navigation Menu"
-          className="lg:hidden p-2 text-[#252525] hover:opacity-75 transition-opacity mt-1"
+          className="lg:hidden p-1 text-[rgb(43,43,43)] hover:opacity-70 transition-opacity focus:outline-none cursor-pointer flex items-center"
         >
-          <Menu className="w-6 h-6 stroke-[1.5]" />
+          <svg
+            width="28"
+            height="17"
+            viewBox="0 0 28 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="stroke-current"
+          >
+            <line x1="0" y1="1.5" x2="28" y2="1.5" strokeWidth="1.5" strokeLinecap="round" />
+            <line x1="0" y1="8.5" x2="28" y2="8.5" strokeWidth="1.5" strokeLinecap="round" />
+            <line x1="0" y1="15.5" x2="28" y2="15.5" strokeWidth="1.5" strokeLinecap="round" />
+          </svg>
         </button>
       </div>
 

@@ -18,8 +18,8 @@ export const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
       className="w-full bg-white text-[rgb(43,43,43)]"
     >
       {/* Main Footer Container */}
-      <div className="w-full mx-auto px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20 pt-16 sm:pt-20 lg:pt-24 pb-24 sm:pb-28 lg:pb-[145px] xl:pb-[155px]">
-        <div className="mx-auto w-fit max-w-full flex flex-col lg:flex-row justify-center items-center lg:items-start gap-12 sm:gap-14 lg:gap-20 xl:gap-28 2xl:gap-32">
+      <div className="w-full mx-auto px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20 pt-24 sm:pt-28 lg:pt-32 pb-24 sm:pb-28 lg:pb-[145px] xl:pb-[155px]">
+        <div className="mx-auto w-fit max-w-full flex flex-col lg:flex-row justify-center items-center lg:items-start gap-9 sm:gap-11 lg:gap-11 xl:gap-14 2xl:gap-16">
           
           {/* Part 1: Conejo Valley Brand & Narrative Unit */}
           <div className="w-auto max-w-[480px] xl:max-w-[500px] flex-shrink-0 text-left">
@@ -37,34 +37,35 @@ export const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
               />
             </a>
             <p
-              className="font-sans-clean text-[14.5px] sm:text-[15px] leading-[29px] sm:leading-[30px] text-[rgb(43,43,43)] font-[300] mt-3.5 sm:mt-4"
+              className="font-sans-clean text-[16px] sm:text-[17px] leading-[32px] sm:leading-[34px] text-[rgb(43,43,43)] font-[300] mt-4 sm:mt-5"
               style={{ fontFamily: "'Muli', 'Mulish', sans-serif" }}
             >
-              <span className="block sm:whitespace-nowrap">We want to make getting started simple. You&apos;re welcome to</span>
-              <span className="block sm:whitespace-nowrap">come into our office in Newbury Park or schedule virtual</span>
-              <span className="block sm:whitespace-nowrap">appointments from anywhere in CA&mdash;whatever works best for</span>
-              <span className="block">you.</span>
+              <span className="block sm:whitespace-nowrap">We want to make getting started simple.</span>
+              <span className="block sm:whitespace-nowrap">You&apos;re welcome to come into our office in</span>
+              <span className="block sm:whitespace-nowrap">Newbury Park or schedule virtual</span>
+              <span className="block sm:whitespace-nowrap">appointments from anywhere in CA&mdash;</span>
+              <span className="block sm:whitespace-nowrap">whatever works best for you.</span>
             </p>
           </div>
 
           {/* Part 2: Navigation Unit (Navigate, Our Team, Contact) */}
-          <div className="w-auto grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-4 lg:gap-4 xl:gap-5 text-left lg:-mt-2.5">
+          <div className="w-auto grid grid-cols-1 sm:grid-cols-3 gap-7 sm:gap-7 lg:gap-10 xl:gap-12 text-left lg:-mt-2.5 pl-0">
             
             {/* Column 1: NAVIGATE */}
-            <div className="sm:pl-3.5 md:pl-4 lg:pl-5">
+            <div className="sm:pl-2 md:pl-3">
               <h4
-                className="font-sans-clean text-[12px] sm:text-[12.5px] uppercase tracking-[0.2em] font-normal text-[rgb(43,43,43)] mb-[14px] sm:mb-[16px]"
+                className="font-sans-clean text-[14px] sm:text-[15px] uppercase tracking-[0.2em] font-normal text-[rgb(43,43,43)] mb-[14px] sm:mb-[16px]"
                 style={{ fontFamily: "'Muli', 'Mulish', sans-serif" }}
               >
                 NAVIGATE
               </h4>
-              <ul className="list-none p-0 m-0">
+              <ul className="list-none p-0 m-0 space-y-1 sm:space-y-1.5">
                 {footerNavigateLinks.map((link) => (
-                  <li key={link.label} className="leading-[19px] sm:leading-[20px]">
+                  <li key={link.label}>
                     <a
                       href={link.href}
                       onClick={link.label === 'Contact' ? (e) => { e.preventDefault(); onContactClick(); } : undefined}
-                      className="font-sans-clean text-[13px] sm:text-[13.5px] text-[rgb(43,43,43)] hover:text-[#6E9FA0] font-[300] transition-colors inline-block leading-[19px] sm:leading-[20px]"
+                      className="font-sans-clean text-[15px] sm:text-[16px] text-[rgb(43,43,43)] hover:text-[#6E9FA0] font-[300] transition-colors inline-block leading-[22px] sm:leading-[24px]"
                       style={{ fontFamily: "'Muli', 'Mulish', sans-serif" }}
                     >
                       {link.label}
@@ -74,39 +75,16 @@ export const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
               </ul>
             </div>
 
-            {/* Column 2: OUR TEAM */}
-            <div id="team">
-              <h4
-                className="font-sans-clean text-[12px] sm:text-[12.5px] uppercase tracking-[0.2em] font-normal text-[rgb(43,43,43)] mb-[14px] sm:mb-[16px]"
-                style={{ fontFamily: "'Muli', 'Mulish', sans-serif" }}
-              >
-                OUR TEAM
-              </h4>
-              <ul className="list-none p-0 m-0">
-                {teamMembers.map((member) => (
-                  <li
-                    key={member}
-                    className="font-sans-clean text-[13px] sm:text-[13.5px] text-[rgb(43,43,43)] font-[300] leading-[19px] sm:leading-[20px]"
-                    style={{ fontFamily: "'Muli', 'Mulish', sans-serif" }}
-                  >
-                    <a href="#team" className="hover:text-[#6E9FA0] transition-colors">
-                      {member}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Column 3: CONTACT */}
+            {/* Column 2: CONTACT */}
             <div id="contact">
               <h4
-                className="font-sans-clean text-[12px] sm:text-[12.5px] uppercase tracking-[0.2em] font-normal text-[rgb(43,43,43)] mb-[14px] sm:mb-[16px]"
+                className="font-sans-clean text-[14px] sm:text-[15px] uppercase tracking-[0.2em] font-normal text-[rgb(43,43,43)] mb-[14px] sm:mb-[16px]"
                 style={{ fontFamily: "'Muli', 'Mulish', sans-serif" }}
               >
                 CONTACT
               </h4>
               <div
-                className="font-sans-clean text-[13px] sm:text-[13.5px] text-[rgb(43,43,43)] font-[300]"
+                className="font-sans-clean text-[15px] sm:text-[16px] text-[rgb(43,43,43)] font-[300] space-y-1 sm:space-y-1.5"
                 style={{ fontFamily: "'Muli', 'Mulish', sans-serif" }}
               >
                 <div className="leading-[19px] sm:leading-[20px]">925 Broadbeck Dr</div>
@@ -129,11 +107,35 @@ export const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
                   </a>
                 </div>
 
-                <div className="mt-[18px] sm:mt-[20px]">
-                  <div className="leading-[19px] sm:leading-[20px] whitespace-normal sm:whitespace-nowrap">Serving Thousand Oaks, Westlake Village,</div>
-                  <div className="leading-[19px] sm:leading-[20px] whitespace-normal sm:whitespace-nowrap">Camarillo, Moorpark, &amp; Simi Valley</div>
+                <div className="mt-[18px] sm:mt-[20px] mb-1 leading-[23px] sm:leading-[25px]">
+                  Serving Thousand Oaks, Westlake<br />
+                  Village, Camarillo, Moorpark, &amp; Simi<br />
+                  Valley
                 </div>
               </div>
+            </div>
+
+            {/* Column 3: OUR TEAM */}
+            <div id="team">
+              <h4
+                className="font-sans-clean text-[14px] sm:text-[15px] uppercase tracking-[0.2em] font-normal text-[rgb(43,43,43)] mb-[14px] sm:mb-[16px]"
+                style={{ fontFamily: "'Muli', 'Mulish', sans-serif" }}
+              >
+                OUR TEAM
+              </h4>
+              <ul className="list-none p-0 m-0 space-y-1 sm:space-y-1.5">
+                {teamMembers.map((member) => (
+                  <li
+                    key={member}
+                    className="font-sans-clean text-[15px] sm:text-[16px] text-[rgb(43,43,43)] font-[300] leading-[22px] sm:leading-[24px]"
+                    style={{ fontFamily: "'Muli', 'Mulish', sans-serif" }}
+                  >
+                    <a href="#team" className="hover:text-[#6E9FA0] transition-colors">
+                      {member}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
 
           </div>

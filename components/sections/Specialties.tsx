@@ -44,24 +44,22 @@ export const Specialties: React.FC<SpecialtiesProps> = ({ onLearnMore }) => {
       className="relative w-full py-20 sm:py-24 md:py-28 lg:py-32 xl:py-36 bg-white overflow-hidden"
     >
       <div className="max-w-[1440px] mx-auto px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-12 lg:gap-y-0 gap-x-8 lg:gap-x-12 xl:gap-x-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-20 lg:gap-y-0 gap-x-8 lg:gap-x-12 xl:gap-x-16 items-start">
           {/* Column 1: Section Heading */}
           <div className="w-full min-w-0 lg:min-w-max lg:col-span-4 xl:col-span-3 pr-0 lg:pr-4 xl:pr-6 text-left lg:-ml-4 xl:-ml-8">
             <h2
               id="specialties-heading"
-              className="text-[24px] sm:text-[27px] md:text-[30px] lg:text-[32px] text-[rgb(43,43,43)] font-[300] leading-[1.25]"
+              className="text-[30px] sm:text-[34px] md:text-[38px] lg:text-[42px] text-[rgb(43,43,43)] font-[300] leading-[1.25] whitespace-nowrap"
               style={{ fontFamily: "'beaufort-pro', serif" }}
             >
-              <span className="inline-flex items-baseline whitespace-nowrap">
-                <span>Our</span>
-                <span
-                  className="font-[300] not-italic text-[rgb(134,179,179)] text-[28px] sm:text-[31px] md:text-[34px] lg:text-[36px] leading-[24px] inline-block ml-3 sm:ml-4 md:ml-[18px] select-none align-baseline"
-                  style={{ fontFamily: "'PrintedMoments', cursive" }}
-                >
-                  specialties
-                </span>
+              <span>Our</span>
+              <span
+                className="font-[300] not-italic text-[rgb(134,179,179)] inline-block mx-2 sm:mx-3 md:mx-[12px] select-none align-baseline"
+                style={{ fontFamily: "'PrintedMoments', cursive" }}
+              >
+                specialties
               </span>
-              <span className="block mt-1 sm:mt-1.5 font-[300]">
+              <span className="inline-block font-[300]">
                 include…
               </span>
             </h2>
@@ -81,11 +79,9 @@ export const Specialties: React.FC<SpecialtiesProps> = ({ onLearnMore }) => {
                     <div>
                       <h4
                         id={`specialty-title-${item.id}`}
-                        className="text-[25px] leading-[35px] text-[rgb(43,43,43)] font-[300] tracking-normal not-italic"
+                        className="text-[22px] sm:text-[24px] leading-[28px] sm:leading-[32px] text-[rgb(43,43,43)] font-[300] tracking-normal not-italic"
                         style={{
                           fontFamily: "'beaufort-pro', serif",
-                          fontSize: '25px',
-                          lineHeight: '35px',
                           fontWeight: 300,
                           color: 'rgb(43, 43, 43)',
                           fontStyle: 'normal',
@@ -95,7 +91,7 @@ export const Specialties: React.FC<SpecialtiesProps> = ({ onLearnMore }) => {
                       </h4>
 
                       <div
-                        className="text-[14px] xl:text-[14.5px] leading-[25px] xl:leading-[26px] text-[rgb(43,43,43)] font-[300] not-italic mt-5 sm:mt-6"
+                        className="text-[16px] sm:text-[18px] xl:text-[19px] leading-[30px] xl:leading-[34px] text-[rgb(43,43,43)] font-[300] not-italic mt-8 sm:mt-10"
                         style={{
                           fontFamily: "'Muli', 'Mulish', sans-serif",
                           fontWeight: 300,
@@ -126,10 +122,9 @@ export const Specialties: React.FC<SpecialtiesProps> = ({ onLearnMore }) => {
                       <button
                         type="button"
                         onClick={() => onLearnMore && onLearnMore(item.id)}
-                        className="group inline-block text-[9.5px] uppercase tracking-[0.18em] text-[rgb(43,43,43)] font-[400] border-b border-[rgb(81,81,81)] pb-[2px] hover:text-[rgb(134,179,179)] hover:border-[rgb(134,179,179)] transition-colors duration-200 cursor-pointer text-left focus:outline-none"
+                        className="group inline-block text-[12px] sm:text-[13px] md:text-[14px] uppercase tracking-[0.18em] text-[rgb(43,43,43)] font-[400] border-b border-[rgb(81,81,81)] pb-[2px] hover:text-[rgb(134,179,179)] hover:border-[rgb(134,179,179)] transition-colors duration-200 cursor-pointer text-left focus:outline-none"
                         style={{
                           fontFamily: "'Muli', 'Mulish', sans-serif",
-                          fontSize: '9.5px',
                           lineHeight: 'normal',
                           fontWeight: 400,
                           color: 'rgb(43, 43, 43)',
