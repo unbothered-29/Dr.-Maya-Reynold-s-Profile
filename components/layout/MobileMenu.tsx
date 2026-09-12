@@ -1,7 +1,9 @@
+'use client';
+
 import React, { useEffect } from 'react';
 import { X } from 'lucide-react';
-import { NavItem } from '../types';
-import { siteImages } from '../data/homepage';
+import { NavItem } from '@/types';
+import { siteImages } from '@/data/homepage';
 
 interface MobileMenuProps {
   isOpen: boolean;

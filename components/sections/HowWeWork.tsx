@@ -1,5 +1,7 @@
+'use client';
+
 import React from 'react';
-import { howWeWorkContent, siteImages } from '../data/homepage';
+import { howWeWorkContent, siteImages } from '@/data/homepage';
 
 interface HowWeWorkProps {
   onLearnMoreClick?: () => void;
@@ -12,32 +14,32 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ onLearnMoreClick }) => {
       aria-labelledby="how-we-work-heading"
       className="relative w-full py-10 sm:py-12 md:py-14 lg:py-14 bg-[#E3D9CA] overflow-hidden"
     >
-      <div className="w-full pl-6 sm:pl-10 md:pl-12 lg:pl-14 xl:pl-[120px] 2xl:pl-[140px] pr-0">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-10 xl:gap-14 2xl:gap-16">
+      <div className="w-full px-6 sm:px-10 lg:pl-14 xl:pl-[120px] 2xl:pl-[140px] lg:pr-0">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-10 xl:gap-14 2xl:gap-16">
           
-          {/* Left / Main Content */}
-          <div className="flex-1 flex flex-col justify-between max-w-[1140px] xl:max-w-[1180px] pt-1">
+          {/* Main Content */}
+          <div className="w-full flex-1 flex flex-col justify-between max-w-[1140px] xl:max-w-[1180px] pt-1 order-2 lg:order-1">
             
             {/* Top Group */}
             <div>
               {/* Eyebrow: Muli 300, 15px, line-height 27px, color rgb(0,0,0) */}
               <span
                 id="how-we-work-eyebrow"
-                className="font-muli text-[15px] leading-[27px] tracking-[0.06em] uppercase text-[rgb(0,0,0)] font-[300] mb-[85px] sm:mb-[100px] md:mb-[115px] lg:mb-[135px] block"
+                className="font-muli text-[14px] sm:text-[15px] leading-[25px] sm:leading-[27px] tracking-[0.06em] uppercase text-[rgb(0,0,0)] font-[300] mb-6 sm:mb-8 lg:mb-[135px] block text-left"
               >
                 {howWeWorkContent.eyebrow}
               </span>
 
-              {/* Main Headline: beaufort-pro 300, slightly increased font size */}
+              {/* Main Headline: beaufort-pro 300 */}
               <h2
                 id="how-we-work-heading"
-                className="font-beaufort text-[30px] sm:text-[36px] md:text-[41px] lg:text-[46px] leading-[1.22] lg:leading-[58px] text-[rgb(0,0,0)] font-[300] tracking-[-0.015em] mb-11 sm:mb-12 md:mb-14 lg:mb-[58px] max-w-[840px]"
+                className="font-beaufort text-[28px] sm:text-[36px] md:text-[41px] lg:text-[46px] leading-[1.24] lg:leading-[58px] text-[rgb(0,0,0)] font-[300] tracking-[-0.015em] mb-8 sm:mb-10 lg:mb-[58px] max-w-[840px] text-left"
               >
                 {howWeWorkContent.heading}
               </h2>
 
-              {/* Two Columns of Text side-by-side matching screenshot line breaks */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 lg:gap-x-12 xl:gap-x-14 gap-y-8">
+              {/* Two Columns of Text */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 lg:gap-x-12 xl:gap-x-14 gap-y-6 sm:gap-y-8 text-left">
                 {/* Column 1: Uppercase opening statement + Second paragraph */}
                 <div className="flex flex-col max-w-[490px]">
                   <p className="font-muli uppercase tracking-[0.035em] text-[13px] sm:text-[13.5px] leading-[23px] sm:leading-[24px] text-[rgb(0,0,0)] font-[400] mb-5">
@@ -55,7 +57,7 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ onLearnMoreClick }) => {
                   </p>
                 </div>
 
-                {/* Column 2: Third and fourth paragraphs combined matching line breaks */}
+                {/* Column 2: Third and fourth paragraphs combined */}
                 <div className="flex flex-col max-w-[530px]">
                   <p className="font-muli text-[13.5px] sm:text-[14px] lg:text-[14.5px] leading-[24px] sm:leading-[26px] lg:leading-[27px] text-[rgb(0,0,0)] font-[300]">
                     <span className="block xl:whitespace-nowrap">Sometimes we may gently challenge you to look at things differently</span>
@@ -72,7 +74,7 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ onLearnMoreClick }) => {
             </div>
 
             {/* Bottom CTA Link: LEARN MORE ABOUT US */}
-            <div className="pt-16 sm:pt-20 md:pt-28 lg:pt-[130px] xl:pt-[150px] pb-1">
+            <div className="pt-10 sm:pt-14 md:pt-20 lg:pt-[130px] xl:pt-[150px] pb-1 text-left">
               <a
                 id="how-we-work-cta"
                 href="#about"
@@ -89,9 +91,9 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ onLearnMoreClick }) => {
             </div>
           </div>
 
-          {/* Right: Full Beach Photo centered vertically and shifted more towards right */}
-          <div className="flex justify-center lg:justify-end shrink-0 lg:ml-auto self-center my-auto lg:translate-x-10 xl:translate-x-16 2xl:translate-x-20">
-            <div className="w-full sm:w-[350px] md:w-[375px] lg:w-[395px] xl:w-[420px] 2xl:w-[440px] h-[500px] sm:h-[560px] md:h-[620px] lg:h-[670px] xl:h-[710px] overflow-hidden">
+          {/* Beach Photo: On mobile appears first, on desktop on right */}
+          <div className="w-full lg:w-auto flex justify-center lg:justify-end shrink-0 lg:ml-auto self-center my-auto lg:translate-x-10 xl:translate-x-16 2xl:translate-x-20 order-1 lg:order-2">
+            <div className="w-full sm:w-[380px] md:w-[420px] lg:w-[395px] xl:w-[420px] 2xl:w-[440px] h-[360px] sm:h-[480px] md:h-[560px] lg:h-[670px] xl:h-[710px] overflow-hidden">
               <img
                 id="how-we-work-image"
                 src={siteImages.howWeWorkBeach}

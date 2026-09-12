@@ -1,6 +1,8 @@
+'use client';
+
 import React, { useEffect, useState } from 'react';
 import { X, Check } from 'lucide-react';
-import { contactInfo } from '../data/homepage';
+import { contactInfo } from '@/data/homepage';
 
 interface ContactModalProps {
   isOpen: boolean;

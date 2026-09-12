@@ -39,10 +39,10 @@ export const ExpertiseSection: React.FC = () => {
           <div className="lg:col-span-5 xl:col-span-4 pt-1 sm:pt-2">
             <h2
               id="areas-of-expertise-title"
-              className="font-beaufort text-[34px] sm:text-[38px] md:text-[42px] leading-[44px] sm:leading-[50px] md:leading-[55px] text-[rgb(43,43,43)] font-[300] tracking-normal whitespace-nowrap"
+              className="font-beaufort text-[32px] sm:text-[38px] md:text-[42px] leading-[42px] sm:leading-[50px] md:leading-[55px] text-[rgb(43,43,43)] font-[300] tracking-normal"
             >
               Our areas of
-              <span className="block font-thrive-script text-[34px] sm:text-[38px] md:text-[42px] leading-[25px] sm:leading-[27px] md:leading-[29px] text-[#70A19F] font-[300] select-none mt-1 sm:mt-2">
+              <span className="block font-thrive-script text-[32px] sm:text-[38px] md:text-[42px] leading-[25px] sm:leading-[27px] md:leading-[29px] text-[#70A19F] font-[300] select-none mt-1 sm:mt-2">
                 expertise
               </span>
             </h2>
@@ -59,19 +59,19 @@ export const ExpertiseSection: React.FC = () => {
                   return (
                     <div
                       key={item.name}
-                      className={`pt-[22px] pb-[26px] sm:pt-[24px] sm:pb-[28px] ${
-                        !isLast ? 'border-b border-[#EDE8E1]' : ''
-                      } flex items-center min-h-[76px] sm:min-h-[80px]`}
+                      className={`pt-[20px] pb-[22px] sm:pt-[24px] sm:pb-[28px] ${
+                        !isLast ? 'border-b border-[#EDE8E1]' : 'border-b border-[#EDE8E1] md:border-b-0'
+                      } flex items-center min-h-[68px] sm:min-h-[80px]`}
                     >
                       {item.href ? (
                         <a
                           href={item.href}
-                          className="font-muli text-[15px] leading-[27px] font-[400] tracking-[0.14em] uppercase text-[rgb(43,43,43)] hover:text-[#5E9B97] transition-colors duration-200 block"
+                          className="font-muli text-[14px] sm:text-[15px] leading-[25px] sm:leading-[27px] font-[400] tracking-[0.14em] uppercase text-[rgb(43,43,43)] hover:text-[#5E9B97] transition-colors duration-200 block"
                         >
                           {item.name}
                         </a>
                       ) : (
-                        <span className="font-muli text-[15px] leading-[27px] font-[400] tracking-[0.14em] uppercase text-[rgb(43,43,43)]">
+                        <span className="font-muli text-[14px] sm:text-[15px] leading-[25px] sm:leading-[27px] font-[400] tracking-[0.14em] uppercase text-[rgb(43,43,43)]">
                           {item.name}
                         </span>
                       )}
@@ -87,20 +87,20 @@ export const ExpertiseSection: React.FC = () => {
                   return (
                     <div
                       key={item.name}
-                      className={`pt-[22px] pb-[26px] sm:pt-[24px] sm:pb-[28px] ${
+                      className={`pt-[20px] pb-[22px] sm:pt-[24px] sm:pb-[28px] ${
                         !isLast ? 'border-b border-[#EDE8E1]' : ''
-                      } flex items-center min-h-[76px] sm:min-h-[80px]`}
+                      } flex items-center min-h-[68px] sm:min-h-[80px]`}
                     >
                       {item.href ? (
                         <a
                           href={item.href}
-                          className="font-muli text-[15px] leading-[27px] font-[400] tracking-[0.14em] uppercase text-[rgb(43,43,43)] hover:text-[#5E9B97] transition-colors duration-200 block"
+                          className="font-muli text-[14px] sm:text-[15px] leading-[25px] sm:leading-[27px] font-[400] tracking-[0.14em] uppercase text-[rgb(43,43,43)] hover:text-[#5E9B97] transition-colors duration-200 block"
                         >
                           {item.name}
                         </a>
                       ) : (
                         <span
-                          className={`font-muli text-[15px] leading-[27px] font-[400] tracking-[0.14em] uppercase text-[rgb(43,43,43)] ${
+                          className={`font-muli text-[14px] sm:text-[15px] leading-[25px] sm:leading-[27px] font-[400] tracking-[0.14em] uppercase text-[rgb(43,43,43)] ${
                             item.isItalic ? 'italic text-[#75736E]' : ''
                           }`}
                         >
@@ -120,4 +120,3 @@ export const ExpertiseSection: React.FC = () => {
     </section>
   );
 };
-

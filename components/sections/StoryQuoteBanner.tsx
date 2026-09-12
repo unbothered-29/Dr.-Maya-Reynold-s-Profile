@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 
 export const StoryQuoteBanner: React.FC = () => {
@@ -31,20 +33,20 @@ export const StoryQuoteBanner: React.FC = () => {
       </div>
 
       {/* Content Container aligned with site grid and minimal left margin matching the reference figure */}
-      <div className="relative z-10 w-full max-w-[1500px] mx-auto px-5 sm:px-8 md:px-10 lg:px-12 xl:px-16 pt-24 sm:pt-32 md:pt-36 lg:pt-40 pb-10 sm:pb-12 md:pb-14 lg:pb-16">
+      <div className="relative z-10 w-full max-w-[1500px] mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 pt-20 sm:pt-28 md:pt-36 lg:pt-40 pb-12 sm:pb-12 md:pb-14 lg:pb-16">
         <div className="max-w-[1100px] text-left">
           <h2
             id="story-quote-heading"
-            className="font-beaufort text-[24px] sm:text-[30px] md:text-[36px] lg:text-[43px] xl:text-[49px] 2xl:text-[51px] leading-[1.26] sm:leading-[1.28] md:leading-[1.31] text-[#f6f4ee] font-[300] tracking-[-0.01em] select-text"
+            className="font-beaufort text-[24px] sm:text-[30px] md:text-[36px] lg:text-[43px] xl:text-[49px] 2xl:text-[51px] leading-[1.3] md:leading-[1.31] text-[#f6f4ee] font-[300] tracking-[-0.01em] select-text"
           >
-            <span className="block whitespace-nowrap">You deserve a place where your story is heard,</span>
-            <span className="block whitespace-nowrap">
+            <span className="block whitespace-normal md:whitespace-nowrap">You deserve a place where your story is heard,</span>
+            <span className="block whitespace-normal md:whitespace-nowrap">
               valued, and understood.{' '}
               <em className="font-beaufort italic font-[300] text-[#f6f4ee]">
                 Nothing will be too
               </em>
             </span>
-            <span className="block whitespace-nowrap">
+            <span className="block whitespace-normal md:whitespace-nowrap">
               <em className="font-beaufort italic font-[300] text-[#f6f4ee]">
                 heavy for us to carry together.
               </em>

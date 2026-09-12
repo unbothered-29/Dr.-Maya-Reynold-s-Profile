@@ -1,9 +1,11 @@
+'use client';
+
 import React from 'react';
 import {
   footerNavigateLinks,
   siteImages,
   teamMembers,
-} from '../data/homepage';
+} from '@/data/homepage';
 
 interface FooterProps {
   onContactClick: () => void;
@@ -46,7 +48,7 @@ export const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
           </div>
 
           {/* Part 2: Navigation Unit (Navigate, Our Team, Contact) */}
-          <div className="w-auto grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 lg:gap-4 xl:gap-5 text-left lg:-mt-2.5">
+          <div className="w-auto grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-4 lg:gap-4 xl:gap-5 text-left lg:-mt-2.5">
             
             {/* Column 1: NAVIGATE */}
             <div className="sm:pl-3.5 md:pl-4 lg:pl-5">
@@ -128,8 +130,8 @@ export const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
                 </div>
 
                 <div className="mt-[18px] sm:mt-[20px]">
-                  <div className="leading-[19px] sm:leading-[20px] whitespace-nowrap">Serving Thousand Oaks, Westlake Village,</div>
-                  <div className="leading-[19px] sm:leading-[20px] whitespace-nowrap">Camarillo, Moorpark, &amp; Simi Valley</div>
+                  <div className="leading-[19px] sm:leading-[20px] whitespace-normal sm:whitespace-nowrap">Serving Thousand Oaks, Westlake Village,</div>
+                  <div className="leading-[19px] sm:leading-[20px] whitespace-normal sm:whitespace-nowrap">Camarillo, Moorpark, &amp; Simi Valley</div>
                 </div>
               </div>
             </div>
@@ -143,8 +145,12 @@ export const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
       <div className="w-full bg-[#86B3B3] py-2.5 sm:py-3 px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20">
         <div className="max-w-[1600px] mx-auto text-left">
           <p
-            className="text-white text-[12px] sm:text-[12.5px] font-[300] tracking-normal"
-            style={{ fontFamily: "'Muli', 'Mulish', sans-serif" }}
+            className="text-white text-[13px] sm:text-[15px] leading-[22px] sm:leading-[27px] font-[300] tracking-normal"
+            style={{
+              fontFamily: "'Muli', 'Mulish', sans-serif",
+              fontWeight: 300,
+              fontStyle: 'normal',
+            }}
           >
             <a href="#terms" className="hover:underline">Terms</a><span className="mx-[3.5px] opacity-80">|</span><a href="#privacy" className="hover:underline">Privacy Policy</a><span className="mx-[3.5px] opacity-80">|</span><a href="#disclaimer" className="hover:underline">Disclaimer</a><span className="mx-[3.5px] opacity-80">|</span><a
               href="https://walkerstrategyco.com"
@@ -158,4 +164,3 @@ export const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
     </footer>
   );
 };
-

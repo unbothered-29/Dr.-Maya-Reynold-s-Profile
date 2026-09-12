@@ -1,23 +1,20 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
+'use client';
 
 import { useState } from 'react';
-import { Header } from './components/Header';
-import { Hero } from './components/Hero';
-import { HopeSection } from './components/HopeSection';
-import { WhoWeHelp } from './components/WhoWeHelp';
-import { StoryQuoteBanner } from './components/StoryQuoteBanner';
-import { ExpertiseSection } from './components/ExpertiseSection';
-import { HowWeWork } from './components/HowWeWork';
-import { HonoringSection } from './components/HonoringSection';
-import { Specialties } from './components/Specialties';
-import { AppointmentSection } from './components/AppointmentSection';
-import { Footer } from './components/Footer';
-import { ContactModal } from './components/ContactModal';
+import { Header } from '@/components/layout/Header';
+import { Hero } from '@/components/sections/Hero';
+import { HopeSection } from '@/components/sections/HopeSection';
+import { WhoWeHelp } from '@/components/sections/WhoWeHelp';
+import { StoryQuoteBanner } from '@/components/sections/StoryQuoteBanner';
+import { ExpertiseSection } from '@/components/sections/ExpertiseSection';
+import { HowWeWork } from '@/components/sections/HowWeWork';
+import { HonoringSection } from '@/components/sections/HonoringSection';
+import { Specialties } from '@/components/sections/Specialties';
+import { AppointmentSection } from '@/components/sections/AppointmentSection';
+import { Footer } from '@/components/layout/Footer';
+import { ContactModal } from '@/components/ui/ContactModal';
 
-export default function App() {
+export default function HomePage() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const [selectedFocus, setSelectedFocus] = useState('Adult Therapy');
 
@@ -43,35 +40,35 @@ export default function App() {
 
       {/* Semantic Main Content */}
       <main id="main-content" className="flex-grow">
-        {/* Section 4: Hero */}
+        {/* Hero Section */}
         <Hero onBookClick={() => handleOpenContact('General Inquiry')} />
 
-        {/* Section 5: Intro / Hope Section */}
+        {/* Intro / Hope Section */}
         <HopeSection />
 
-        {/* Section 6: Who We Help */}
+        {/* Who We Help */}
         <WhoWeHelp />
 
-        {/* Section 6b: Story Quote Banner (Beach Ocean Panorama) */}
+        {/* Story Quote Banner (Beach Ocean Panorama) */}
         <StoryQuoteBanner />
 
-        {/* Section 7: Large Statement / Expertise Intro */}
+        {/* Large Statement / Expertise Intro */}
         <ExpertiseSection />
 
-        {/* Section 8: How We Work */}
+        {/* How We Work */}
         <HowWeWork onLearnMoreClick={() => handleOpenContact('Learn More About CVFC')} />
 
-        {/* Section 8b: Honoring Where You've Been */}
+        {/* Honoring Where You've Been */}
         <HonoringSection />
 
-        {/* Section 9: Specialties */}
+        {/* Specialties */}
         <Specialties onLearnMore={handleSpecialtyClick} />
 
-        {/* Section 10: Appointment / Final CTA */}
+        {/* Appointment / Final CTA */}
         <AppointmentSection onBookClick={() => handleOpenContact('New Appointment')} />
       </main>
 
-      {/* Section 11: Footer */}
+      {/* Footer */}
       <Footer onContactClick={() => handleOpenContact('General Inquiry')} />
 
       {/* Interactive Consultation / Appointment Dialog */}

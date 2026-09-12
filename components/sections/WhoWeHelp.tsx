@@ -1,5 +1,5 @@
 import React from 'react';
-import { whoWeHelpItems } from '../data/homepage';
+import { whoWeHelpItems } from '@/data/homepage';
 
 export const WhoWeHelp: React.FC = () => {
   return (
@@ -22,7 +22,7 @@ export const WhoWeHelp: React.FC = () => {
         </div>
 
         {/* 3-Column Grid: Indented by 12.5% on desktop (col 5 of 24) matching the exact left/right spacing in reference figure, with 20px between cards */}
-        <div className="w-full md:ml-[12.5%] md:w-[87.5%] grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-[20px] items-start">
+        <div className="w-full md:ml-[12.5%] md:w-[87.5%] grid grid-cols-1 md:grid-cols-3 gap-14 sm:gap-16 md:gap-[20px] items-start">
           {whoWeHelpItems.map((item) => {
             return (
               <article

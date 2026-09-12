@@ -1,5 +1,7 @@
+'use client';
+
 import React from 'react';
-import { specialtiesContent } from '../data/homepage';
+import { specialtiesContent } from '@/data/homepage';
 
 interface SpecialtiesProps {
   onLearnMore?: (specialtyId: string) => void;
@@ -44,7 +46,7 @@ export const Specialties: React.FC<SpecialtiesProps> = ({ onLearnMore }) => {
       <div className="max-w-[1440px] mx-auto px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-12 lg:gap-y-0 gap-x-8 lg:gap-x-12 xl:gap-x-16 items-start">
           {/* Column 1: Section Heading */}
-          <div className="lg:col-span-4 xl:col-span-3 pr-0 lg:pr-4 xl:pr-6 text-left min-w-max lg:-ml-4 xl:-ml-8">
+          <div className="w-full min-w-0 lg:min-w-max lg:col-span-4 xl:col-span-3 pr-0 lg:pr-4 xl:pr-6 text-left lg:-ml-4 xl:-ml-8">
             <h2
               id="specialties-heading"
               className="text-[24px] sm:text-[27px] md:text-[30px] lg:text-[32px] text-[rgb(43,43,43)] font-[300] leading-[1.25]"
@@ -67,7 +69,7 @@ export const Specialties: React.FC<SpecialtiesProps> = ({ onLearnMore }) => {
 
           {/* Columns 2 & 3: 2x2 Grid of Specialties */}
           <div className="lg:col-span-8 xl:col-span-9 lg:pl-16 xl:pl-24 2xl:pl-32">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-12 xl:gap-x-16 gap-y-20 md:gap-y-24 lg:gap-y-28 xl:gap-y-32">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-12 xl:gap-x-16 gap-y-14 sm:gap-y-18 md:gap-y-24 lg:gap-y-28 xl:gap-y-32">
               {specialtiesContent.items.map((item) => {
                 const isRightCol = item.id === 'emdr' || item.id === 'special-needs-parenting';
                 return (
@@ -86,61 +88,61 @@ export const Specialties: React.FC<SpecialtiesProps> = ({ onLearnMore }) => {
                           lineHeight: '35px',
                           fontWeight: 300,
                           color: 'rgb(43, 43, 43)',
-                          fontStyle: 'normal'
+                          fontStyle: 'normal',
                         }}
                       >
                         {item.title}
                       </h4>
 
-                    <div
-                      className="text-[14px] xl:text-[14.5px] leading-[25px] xl:leading-[26px] text-[rgb(43,43,43)] font-[300] not-italic mt-5 sm:mt-6"
-                      style={{
-                        fontFamily: "'Muli', 'Mulish', sans-serif",
-                        fontWeight: 300,
-                        color: 'rgb(43, 43, 43)',
-                        fontStyle: 'normal',
-                      }}
-                    >
-                      {formattedSpecialtyLines[item.id] ? (
-                        <>
-                          <div className="hidden sm:block">
-                            {formattedSpecialtyLines[item.id].map((line, idx) => (
-                              <span key={idx} className="block sm:whitespace-nowrap">
-                                {line}
-                              </span>
-                            ))}
-                          </div>
-                          <p className="block sm:hidden">
-                            {item.description}
-                          </p>
-                        </>
-                      ) : (
-                        <p>{item.description}</p>
-                      )}
+                      <div
+                        className="text-[14px] xl:text-[14.5px] leading-[25px] xl:leading-[26px] text-[rgb(43,43,43)] font-[300] not-italic mt-5 sm:mt-6"
+                        style={{
+                          fontFamily: "'Muli', 'Mulish', sans-serif",
+                          fontWeight: 300,
+                          color: 'rgb(43, 43, 43)',
+                          fontStyle: 'normal',
+                        }}
+                      >
+                        {formattedSpecialtyLines[item.id] ? (
+                          <>
+                            <div className="hidden sm:block">
+                              {formattedSpecialtyLines[item.id].map((line, idx) => (
+                                <span key={idx} className="block sm:whitespace-nowrap">
+                                  {line}
+                                </span>
+                              ))}
+                            </div>
+                            <p className="block sm:hidden">
+                              {item.description}
+                            </p>
+                          </>
+                        ) : (
+                          <p>{item.description}</p>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="mt-16 sm:mt-20 md:mt-24 lg:mt-28">
+                      <button
+                        type="button"
+                        onClick={() => onLearnMore && onLearnMore(item.id)}
+                        className="group inline-block text-[9.5px] uppercase tracking-[0.18em] text-[rgb(43,43,43)] font-[400] border-b border-[rgb(81,81,81)] pb-[2px] hover:text-[rgb(134,179,179)] hover:border-[rgb(134,179,179)] transition-colors duration-200 cursor-pointer text-left focus:outline-none"
+                        style={{
+                          fontFamily: "'Muli', 'Mulish', sans-serif",
+                          fontSize: '9.5px',
+                          lineHeight: 'normal',
+                          fontWeight: 400,
+                          color: 'rgb(43, 43, 43)',
+                          fontStyle: 'normal',
+                        }}
+                      >
+                        LEARN MORE
+                      </button>
                     </div>
                   </div>
-
-                  <div className="mt-16 sm:mt-20 md:mt-24 lg:mt-28">
-                    <button
-                      type="button"
-                      onClick={() => onLearnMore && onLearnMore(item.id)}
-                      className="group inline-block text-[9.5px] uppercase tracking-[0.18em] text-[rgb(43,43,43)] font-[400] border-b border-[rgb(81,81,81)] pb-[2px] hover:text-[rgb(134,179,179)] hover:border-[rgb(134,179,179)] transition-colors duration-200 cursor-pointer text-left focus:outline-none"
-                      style={{
-                        fontFamily: "'Muli', 'Mulish', sans-serif",
-                        fontSize: '9.5px',
-                        lineHeight: 'normal',
-                        fontWeight: 400,
-                        color: 'rgb(43, 43, 43)',
-                        fontStyle: 'normal'
-                      }}
-                    >
-                      LEARN MORE
-                    </button>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
