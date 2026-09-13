@@ -105,9 +105,12 @@ export const Specialties: React.FC<SpecialtiesProps> = ({ onLearnMore }) => {
                         <button
                           type="button"
                           onClick={() => onLearnMore && onLearnMore(item.id)}
-                          className="group inline-block font-montserrat text-[12px] sm:text-[13px] md:text-[13.5px] uppercase tracking-[0.16em] text-[#5A3E4B] font-semibold border-b border-[#5A3E4B] pb-[2px] hover:text-[#392831] hover:border-[#392831] transition-colors duration-200 cursor-pointer text-left focus:outline-none"
+                          className="group inline-flex flex-col items-start bg-transparent border-0 p-0 cursor-pointer select-none text-left focus:outline-none"
                         >
-                          LEARN MORE
+                          <span className="font-montserrat text-[12px] sm:text-[13px] md:text-[13.5px] uppercase tracking-[0.16em] text-[#5A3E4B] font-semibold group-hover:text-[#392831] transition-colors duration-200">
+                            LEARN MORE
+                          </span>
+                          <span className="h-[1.25px] bg-[#5A3E4B] w-full group-hover:w-0 group-hover:opacity-0 transition-all duration-600 ease-in-out mt-1" />
                         </button>
                       </div>
                     </div>

@@ -77,7 +77,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
       {/* Navigation list matching reference screenshot */}
       <nav
         aria-label="Mobile Navigation"
-        className="w-full px-7 min-[390px]:px-9 sm:px-10 mt-[190px] min-[375px]:mt-[202px] min-[390px]:mt-[214px] min-[430px]:mt-[228px] flex flex-col items-start text-left space-y-[44px] min-[375px]:space-y-[48px] min-[390px]:space-y-[52px] min-[430px]:space-y-[56px]"
+        className="w-full px-7 min-[390px]:px-9 sm:px-10 mt-[100px] min-[375px]:mt-[112px] min-[390px]:mt-[124px] min-[430px]:mt-[136px] flex flex-col items-start text-left space-y-[40px] min-[375px]:space-y-[44px] min-[390px]:space-y-[48px] min-[430px]:space-y-[52px]"
       >
         {mobileMenuItems.map((item) => (
           <a

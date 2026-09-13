@@ -57,12 +57,13 @@ export const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
             ))}
           </nav>
 
-          {/* Outlined Pill Contact Button matching design specification */}
+          {/* Outlined Oval Contact Button matching reference image and current color palette */}
           <button
             id="header-contact-btn"
             type="button"
             onClick={onContactClick}
-            className="px-6 py-2.5 rounded-[50%] bg-[#5A3E4B] flex items-center justify-center desktop-btn-text text-[#F7F5F1] font-medium hover:bg-[#392831] transition-all duration-300 cursor-pointer select-none"
+            className="w-[124px] h-[50px] rounded-[50%] border border-[#302A29] bg-transparent flex items-center justify-center font-sans text-[12.5px] uppercase tracking-[0.14em] text-[#302A29] font-medium hover:bg-[#302A29] hover:border-[#302A29] hover:text-[#F7F5F1] transition-all duration-300 cursor-pointer select-none"
+            style={{ fontFamily: "'Source Sans 3', sans-serif" }}
           >
             CONTACT
           </button>

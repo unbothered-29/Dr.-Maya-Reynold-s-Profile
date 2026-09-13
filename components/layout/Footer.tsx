@@ -21,8 +21,8 @@ export const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
         className="w-full bg-[#392831] text-[#F7F5F1] lg:hidden"
       >
         {/* Main Footer Container */}
-        <div className="w-full mx-auto px-6 sm:px-10 md:px-12 pt-24 sm:pt-28 pb-24 sm:pb-28">
-          <div className="mx-auto w-fit max-w-full flex flex-col justify-center items-start gap-9 sm:gap-11">
+        <div className="w-full mx-auto pl-16 sm:pl-20 md:pl-24 pr-6 sm:pr-8 md:pr-10 pt-24 sm:pt-28 pb-24 sm:pb-28">
+          <div className="w-full max-w-[540px] flex flex-col justify-start items-start gap-9 sm:gap-11 text-left">
             
             {/* Part 1: Narrative Unit */}
             <div className="w-auto max-w-[480px] flex-shrink-0 text-left">
@@ -93,7 +93,7 @@ export const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
         </div>
 
         {/* Sub-Footer */}
-        <div className="w-full bg-[#392831] border-t border-[#F7F5F1]/10 py-4 px-6 sm:px-10 md:px-12">
+        <div className="w-full bg-[#392831] border-t border-[#F7F5F1]/10 py-4 pl-16 sm:pl-20 md:pl-24 pr-6 sm:pr-8 md:pr-10">
           <div className="max-w-[1600px] mx-auto text-left">
             <p className="font-sans text-[#D9C9C9] text-[13px] sm:text-[14px] font-light tracking-wide">
               <a href="#terms" className="hover:underline">Terms</a><span className="mx-3 text-[#B88B89]">|</span>

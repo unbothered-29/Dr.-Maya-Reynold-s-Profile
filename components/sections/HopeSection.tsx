@@ -15,9 +15,17 @@ export const HopeSection: React.FC = () => {
           <div className="flex flex-col text-left">
             <h2
               id="mobile-hope-headline"
-              className="font-serif text-[clamp(32px,8.8vw,42px)] sm:text-[46px] md:text-[52px] leading-[1.38] min-[390px]:leading-[1.42] text-[#302A29] font-normal tracking-[-0.01em]"
+              className="font-serif-heading text-[clamp(32px,8.8vw,42px)] sm:text-[46px] md:text-[52px] leading-[1.25] text-[#302A29] font-normal tracking-[-0.01em]"
+              style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
             >
-              {hopeContent.headline}
+              <span>You’re not alone in feeling this</span>{' '}
+              <span
+                className="inline-block ml-1 font-script-accent font-normal text-[#5A3E4B] not-italic text-[48px] sm:text-[58px] md:text-[68px]"
+                style={{ fontFamily: "'Allura', cursive" }}
+              >
+                way
+              </span>
+              <span className="text-[#302A29]">.</span>
             </h2>
 
             <p
@@ -64,7 +72,14 @@ export const HopeSection: React.FC = () => {
                 id="hope-headline-desktop"
                 className="desktop-section-heading text-[#302A29] tracking-tight text-left max-w-[800px]"
               >
-                {hopeContent.headline}
+                <span>You’re not alone in feeling this</span>{' '}
+                <span
+                  className="inline-block ml-2 md:ml-3 font-script-accent text-[64px] xl:text-[72px] font-normal text-[#5A3E4B] not-italic"
+                  style={{ fontFamily: "'Allura', cursive" }}
+                >
+                  way
+                </span>
+                <span className="text-[#302A29]">.</span>
               </h2>
 
               {/* Two-Column Text Grid */}

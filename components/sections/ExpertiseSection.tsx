@@ -23,9 +23,16 @@ export const ExpertiseSection: React.FC = () => {
           <div className="pt-1 sm:pt-2">
             <h2
               id="areas-of-expertise-title-mobile"
-              className="font-serif text-[32px] sm:text-[38px] md:text-[42px] leading-[42px] sm:leading-[50px] md:leading-[55px] text-[#302A29] font-normal tracking-normal"
+              className="font-serif-heading text-[38px] sm:text-[46px] md:text-[56px] font-normal leading-[1.2] tracking-tight text-[#302A29] text-left"
+              style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
             >
-              {statementContent.areasTitle}
+              <span>Our areas of</span>
+              <span
+                className="inline-block ml-3 sm:ml-4 font-script-accent font-normal text-[#5A3E4B] not-italic text-[48px] sm:text-[58px] md:text-[68px]"
+                style={{ fontFamily: "'Allura', cursive" }}
+              >
+                support
+              </span>
             </h2>
           </div>
 
@@ -83,9 +90,15 @@ export const ExpertiseSection: React.FC = () => {
           <div className="col-span-5 xl:col-span-4 pt-2">
             <h2
               id="areas-of-expertise-title-desktop"
-              className="desktop-section-heading text-[#302A29] tracking-normal"
+              className="desktop-section-heading text-[#302A29] tracking-tight text-left"
             >
-              {statementContent.areasTitle}
+              <span>Our areas of</span>
+              <span
+                className="inline-block md:ml-4 font-script-accent text-[64px] xl:text-[72px] font-normal text-[#5A3E4B] not-italic"
+                style={{ fontFamily: "'Allura', cursive" }}
+              >
+                support
+              </span>
             </h2>
           </div>
 

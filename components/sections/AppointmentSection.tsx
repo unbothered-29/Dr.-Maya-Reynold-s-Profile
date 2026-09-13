@@ -103,7 +103,8 @@ export const AppointmentSection: React.FC<AppointmentSectionProps> = ({
                 id="appointment-book-now-btn-mobile"
                 type="button"
                 onClick={onBookClick}
-                className="btn-pill-primary inline-flex items-center justify-center text-[13px] tracking-[0.16em] px-10 py-3.5 sm:px-12 focus:outline-none cursor-pointer"
+                className="inline-flex items-center justify-center px-6 py-2.5 sm:px-8 sm:py-3 rounded-[50%] border border-[#302A29] text-[11px] sm:text-[12px] tracking-[0.14em] text-[#302A29] bg-transparent hover:bg-[#302A29] hover:text-[#F7F5F1] transition-all duration-300 focus:outline-none cursor-pointer whitespace-nowrap"
+                style={{ fontFamily: "'Source Sans 3', sans-serif" }}
               >
                 {appointmentContent.ctaText}
               </button>

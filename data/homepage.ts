@@ -42,7 +42,7 @@ export const heroContent = {
   headingLead: 'Feel more grounded and like ',
   headingScriptAccent: 'yourself again.',
   subheading: 'Therapy for anxiety, stress, trauma, and burnout.',
-  ctaText: 'SCHEDULE A CONSULTATION',
+  ctaText: 'BOOK AN APPOINTMENT',
 };
 
 export const hopeContent = {

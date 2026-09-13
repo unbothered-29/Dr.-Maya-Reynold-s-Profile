@@ -102,7 +102,7 @@ body {
   border-radius: 50%;
   background-color: transparent;
   color: #302A29;
-  border: 1px solid #5A3E4B;
+  border: 1px solid #302A29;
   font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-weight: 500;
   font-size: 13px;
@@ -115,10 +115,11 @@ body {
   white-space: nowrap;
 }
 .btn-pill-secondary:hover {
-  background-color: #5A3E4B;
-  color: #FFFFFF;
+  background-color: #302A29;
+  border-color: #302A29;
+  color: #F7F5F1;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(90, 62, 75, 0.15);
+  box-shadow: 0 4px 12px rgba(48, 42, 41, 0.15);
 }
 
 /* ==========================================================================

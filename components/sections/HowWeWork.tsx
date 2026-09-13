@@ -37,9 +37,12 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ onLearnMoreClick }) => {
               {/* Main Headline: Playfair Display */}
               <h2
                 id="how-we-work-heading-mobile"
-                className="font-playfair text-[36px] sm:text-[44px] md:text-[52px] leading-[1.2] text-[#302A29] font-normal tracking-[-0.015em] mb-12 sm:mb-16 text-left"
+                className="font-serif-heading text-[36px] sm:text-[44px] md:text-[52px] leading-[1.25] text-[#302A29] font-normal tracking-[-0.015em] mb-12 sm:mb-16 text-left"
+                style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
               >
-                {howWeWorkContent.heading}
+                <span className="block">A warm, collaborative,</span>
+                <span className="block">and grounded</span>
+                <span className="block">approach.</span>
               </h2>
 
               {/* Mobile-only Beach Photo */}
@@ -66,7 +69,7 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ onLearnMoreClick }) => {
               </div>
             </div>
 
-            {/* Bottom CTA Button: LEARN MORE ABOUT US */}
+            {/* Bottom CTA Link with shrink-and-disappear hover animation */}
             <div className="pt-10 sm:pt-14 md:pt-18 pb-8 sm:pb-12 text-left">
               <a
                 id="how-we-work-cta-mobile"
@@ -77,9 +80,13 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ onLearnMoreClick }) => {
                     onLearnMoreClick();
                   }
                 }}
-                className="btn-pill-secondary inline-flex items-center justify-center text-[13px] tracking-[0.14em]"
+                className="group inline-flex flex-col items-start bg-transparent border-0 p-0 cursor-pointer select-none"
+                style={{ fontFamily: "'Source Sans 3', sans-serif" }}
               >
-                {howWeWorkContent.ctaText}
+                <span className="font-sans text-[12.5px] sm:text-[13px] uppercase tracking-[0.16em] text-[#302A29] font-medium group-hover:text-[#5A3E4B] transition-colors duration-200">
+                  {howWeWorkContent.ctaText}
+                </span>
+                <span className="h-[1.25px] bg-[#302A29] w-full group-hover:w-0 group-hover:opacity-0 transition-all duration-600 ease-in-out mt-1.5" />
               </a>
             </div>
           </div>
@@ -108,7 +115,7 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ onLearnMoreClick }) => {
                 id="how-we-work-heading-desktop"
                 className="desktop-section-heading text-[#302A29] mb-[58px] max-w-[840px] text-left"
               >
-                {howWeWorkContent.heading}
+                A warm, collaborative, and grounded approach.
               </h2>
 
               {/* Two Columns of Text */}
@@ -129,7 +136,7 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ onLearnMoreClick }) => {
               </div>
             </div>
 
-            {/* Bottom CTA Link */}
+            {/* Bottom CTA Link with shrink-and-disappear hover animation */}
             <div className="pt-[130px] xl:pt-[150px] pb-1 text-left">
               <a
                 id="how-we-work-cta-desktop"
@@ -140,9 +147,13 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ onLearnMoreClick }) => {
                     onLearnMoreClick();
                   }
                 }}
-                className="inline-block desktop-btn-text desktop-btn-learn-more text-[#302A29] border-b border-[#302A29] pb-1 transition-colors duration-200 hover:text-[#5A3E4B] hover:border-[#5A3E4B]"
+                className="group inline-flex flex-col items-start bg-transparent border-0 p-0 cursor-pointer select-none"
+                style={{ fontFamily: "'Source Sans 3', sans-serif" }}
               >
-                {howWeWorkContent.ctaText}
+                <span className="font-sans desktop-btn-text desktop-btn-learn-more text-[#302A29] font-medium group-hover:text-[#5A3E4B] transition-colors duration-200">
+                  {howWeWorkContent.ctaText}
+                </span>
+                <span className="h-[1.25px] bg-[#302A29] w-full group-hover:w-0 group-hover:opacity-0 transition-all duration-600 ease-in-out mt-1.5" />
               </a>
             </div>
           </div>

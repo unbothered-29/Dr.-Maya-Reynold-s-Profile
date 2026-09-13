@@ -35,18 +35,18 @@ export const HonoringSection: React.FC = () => {
             >
               <span className="block">
                 <span>Helping you understand what’s happening</span>{' '}
+                <span className="block mt-1">and move toward a more</span>{' '}
                 <span className="inline-flex items-baseline whitespace-nowrap mt-1">
-                  <span>and move</span>{' '}
+                  <span>sustainable way of</span>{' '}
                   <span
-                    id="honoring-sustainable-mobile"
-                    className="font-allura not-italic text-[#5A3E4B] mx-2 sm:mx-2.5 inline-block select-none transform translate-y-[-2px] text-[36px] min-[400px]:text-[40px] sm:text-[48px] leading-[1]"
-                    style={{ color: '#5A3E4B' }}
+                    id="honoring-living-mobile"
+                    className="font-allura not-italic text-[#5A3E4B] ml-2 sm:ml-2.5 inline-block select-none transform translate-y-[-2px] text-[36px] min-[400px]:text-[40px] sm:text-[48px] leading-[1]"
+                    style={{ fontFamily: "'Allura', cursive", color: '#5A3E4B' }}
                   >
-                    toward
+                    living
                   </span>
-                  <span>a more</span>
+                  <span className="text-[#302A29]">.</span>
                 </span>
-                <span className="block mt-1">sustainable way of living.</span>
               </span>
             </h2>
           </div>
@@ -77,13 +77,14 @@ export const HonoringSection: React.FC = () => {
           <div className="w-full max-w-[640px] text-left">
             <h2
               id="honoring-heading-desktop"
-              className="desktop-section-heading text-[#302A29] text-left"
+              className="font-serif-heading text-[42px] xl:text-[52px] 2xl:text-[58px] leading-[1.08] text-[#302A29] text-left"
+              style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
             >
               <span className="block whitespace-nowrap">
-                Helping you understand what’s
+                Helping you understand
               </span>
               <span className="block whitespace-nowrap mt-0.5">
-                happening and move
+                what’s happening and move
               </span>
               <span className="block whitespace-nowrap mt-0.5">
                 toward a more sustainable
@@ -92,7 +93,7 @@ export const HonoringSection: React.FC = () => {
                 <span>way of</span>{' '}
                 <span
                   id="honoring-living-desktop"
-                  className="font-script-accent not-italic text-[#5A3E4B] ml-3.5 inline-block select-none transform translate-y-[-2px] text-[58px] xl:text-[64px] leading-[1]"
+                  className="font-script-accent not-italic text-[#5A3E4B] ml-3.5 inline-block select-none transform translate-y-[-2px] text-[48px] xl:text-[58px] 2xl:text-[64px] leading-[1]"
                   style={{
                     fontFamily: "'Allura', cursive",
                     fontStyle: 'normal',

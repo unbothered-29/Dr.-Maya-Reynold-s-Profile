@@ -27,16 +27,16 @@ export const Hero: React.FC<HeroProps> = ({ onBookClick }) => {
         </div>
 
         {/* Center Column: Text Composition with generous spacing and strict left alignment on single axis */}
-        <div className="flex-1 min-w-0 pl-12 lg:pl-[64px] xl:pl-[84px] 2xl:pl-[104px] pr-4 lg:pr-6 xl:pr-8 text-left pt-0.5 relative z-20 flex flex-col justify-start items-start">
+        <div className="flex-1 min-w-0 pl-12 lg:pl-[96px] xl:pl-[128px] 2xl:pl-[156px] pr-4 lg:pr-6 xl:pr-8 text-left pt-0.5 relative z-20 flex flex-col justify-start items-start">
           {/* Eyebrow - In Source Sans 3, Taupe Gray */}
-          <div id="hero-eyebrow" className="w-full max-w-[600px] text-left">
+          <div id="hero-eyebrow" className="w-full max-w-[600px] text-left lg:pt-[24px] xl:pt-[28px]">
             <p className="desktop-eyebrow text-[#756C67] leading-[27px]">
               {heroContent.eyebrow}
             </p>
           </div>
 
           {/* Headline - In Cormorant Garamond */}
-          <div className="mt-[116px] lg:mt-[126px] xl:mt-[136px] w-full max-w-[840px] text-left">
+          <div className="lg:mt-[176px] xl:mt-[188px] 2xl:mt-[198px] w-full max-w-[840px] text-left">
             <h1
               id="hero-headline"
               className="desktop-h1 tracking-tight text-[#302A29] text-left"
@@ -71,15 +71,19 @@ export const Hero: React.FC<HeroProps> = ({ onBookClick }) => {
             </p>
           </div>
 
-          {/* Button Style: Primary Pill Button in Deep Plum matching design specification */}
-          <div className="mt-[32px] lg:mt-[38px] xl:mt-[42px] text-left">
+          {/* Hero CTA: Underlined text link where line remains and smoothly decreases/disappears on hover */}
+          <div className="mt-[32px] lg:mt-[48px] xl:mt-[56px] text-left">
             <button
               id="hero-cta-btn"
               type="button"
               onClick={onBookClick}
-              className="btn-pill-primary desktop-btn-text"
+              className="group inline-flex flex-col items-start bg-transparent border-0 p-0 cursor-pointer select-none"
+              style={{ fontFamily: "'Source Sans 3', sans-serif" }}
             >
-              {heroContent.ctaText}
+              <span className="font-sans text-[12.5px] lg:text-[11.5px] xl:text-[12px] uppercase tracking-[0.18em] text-[#302A29] font-medium group-hover:text-[#5A3E4B] transition-colors duration-200">
+                {heroContent.ctaText}
+              </span>
+              <span className="h-[1.25px] bg-[#302A29] w-full group-hover:w-0 group-hover:opacity-0 transition-all duration-600 ease-in-out mt-1.5" />
             </button>
           </div>
         </div>
@@ -145,15 +149,19 @@ export const Hero: React.FC<HeroProps> = ({ onBookClick }) => {
           {heroContent.subheading}
         </p>
 
-        {/* Primary Pill Button */}
-        <div className="mt-7 sm:mt-8">
+        {/* Hero CTA Mobile: Underlined text link where line remains and smoothly decreases/disappears on hover */}
+        <div className="mt-7 sm:mt-8 text-left">
           <button
             id="mobile-hero-cta-btn"
             type="button"
             onClick={onBookClick}
-            className="btn-pill-primary"
+            className="group inline-flex flex-col items-start bg-transparent border-0 p-0 cursor-pointer select-none"
+            style={{ fontFamily: "'Source Sans 3', sans-serif" }}
           >
-            SCHEDULE A CONSULTATION
+            <span className="font-sans text-[12.5px] sm:text-[13px] uppercase tracking-[0.16em] text-[#302A29] font-medium group-hover:text-[#5A3E4B] transition-colors duration-200">
+              {heroContent.ctaText}
+            </span>
+            <span className="h-[1.25px] bg-[#302A29] w-full group-hover:w-0 group-hover:opacity-0 transition-all duration-600 ease-in-out mt-1.5" />
           </button>
         </div>
 

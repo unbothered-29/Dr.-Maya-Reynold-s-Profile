@@ -88,7 +88,10 @@ export const WhoWeHelp: React.FC = () => {
             className="desktop-section-heading text-[#302A29] tracking-tight text-left"
           >
             <span>Who I</span>
-            <span className="inline-block md:ml-5 font-script-accent text-[64px] xl:text-[72px] font-normal text-[#5A3E4B] not-italic">
+            <span
+              className="inline-block md:ml-5 font-script-accent text-[64px] xl:text-[72px] font-normal text-[#5A3E4B] not-italic"
+              style={{ fontFamily: "'Allura', cursive" }}
+            >
               help
             </span>
           </h2>
