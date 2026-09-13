@@ -6,13 +6,13 @@ export const siteImages: SiteImages = {
   logoTrimmed: '/logo-trimmed.png',
   // Dr. Maya Reynolds portrait for Hero left photo
   heroFamily: '/images/dr-maya-reynolds.jpg',
-  heroOceanNarrow: 'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/3643a7ac-ff62-4927-b96e-9e65ecff0521/Jennifer+A+-+Images+%2867%29.jpg?format=2500w',
+  heroOceanNarrow: '/images/journal-writing-tea.jpg',
   hopeOcean: 'https://images.unsplash.com/photo-1709402740413-4e6ed30e49ef?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   
-  // Who We Help images (exact photos from reference):
-  adultsBeach: 'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/066f60e6-1354-4d47-a586-ab3f2f2ba612/Jennifer+A+-+Images+%288%29.jpg',
-  couplesBeach: 'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/d0157712-388c-4800-aada-c78db97ee966/Jennifer+A+-+Images+%289%29.jpg',
-  childrenBeach: 'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/d5d62bf4-34a7-4bf4-bf00-e1169863ace7/Jennifer+A+-+Images+%2810%29.jpg',
+  // Who We Help images:
+  adultsBeach: '/images/who-we-help-adults.png',
+  couplesBeach: '/images/who-we-help-professionals.jpg',
+  childrenBeach: '/images/who-we-help-trauma.png',
 
   // How We Work: Dr. Maya Reynolds in collaborative therapy session
   howWeWorkBeach: '/images/dr-maya-therapy-session.jpg',
@@ -25,8 +25,8 @@ export const siteImages: SiteImages = {
 
   // Appointment / Final CTA: serene vast Pacific beach shoreline
   appointmentBeach: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80',
-  appointmentLeftSand: 'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/1b9495e0-ce39-4826-9df9-e24de99da82f/Jennifer+A+-+Images+%2812%29.jpg',
-  appointmentRightPointing: 'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/7557312a-044d-4489-a9d1-6f43ee9888b1/Jennifer+A+-+Images+%2811%29.jpg',
+  appointmentLeftSand: '/images/appointment-left-flower.png',
+  appointmentRightPointing: '/images/find-therapist-hands.jpg',
 };
 
 export const navItems: NavItem[] = [

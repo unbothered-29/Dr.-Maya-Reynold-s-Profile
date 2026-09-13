@@ -19,95 +19,179 @@ export const AppointmentSection: React.FC<AppointmentSectionProps> = ({
         <div className="flex flex-col lg:flex-row items-center lg:items-stretch justify-between gap-10 lg:gap-0">
           
           {/* ========================================= */}
-          {/* MOBILE VIEW ELEMENTS (< 1024px)         */}
+          {/* MOBILE VIEW ELEMENTS (< 768px)           */}
           {/* ========================================= */}
-          
-          {/* Mobile Left Image */}
-          <div className="flex lg:hidden w-[190px] sm:w-[230px] md:w-[270px] shrink-0 items-center self-start order-1 ml-0 mt-3 sm:mt-4 mb-6 sm:mb-8">
-            <div className="w-full aspect-square overflow-hidden bg-[#D9C9C9]/30">
-              <img
-                id="appointment-left-image-mobile"
-                src={siteImages.appointmentLeftSand || 'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/1b9495e0-ce39-4826-9df9-e24de99da82f/Jennifer+A+-+Images+%2812%29.jpg'}
-                alt="A person picking up seashells on a sandy beach"
-                className="w-full h-full object-cover object-center opacity-75 hover:opacity-100 transition-all duration-500"
-                loading="lazy"
-              />
+          <div className="flex md:hidden flex-col items-center justify-between gap-10 w-full">
+            {/* Mobile Left Image */}
+            <div className="w-[190px] sm:w-[230px] shrink-0 items-center self-start order-1 ml-0 mt-3 sm:mt-4 mb-6 sm:mb-8">
+              <div className="w-full aspect-square overflow-hidden">
+                <img
+                  id="appointment-left-image-mobile"
+                  src={siteImages.appointmentLeftSand || '/images/appointment-left-flower.png'}
+                  alt="Dried flower sprig casting delicate shadows on a warm neutral wall"
+                  className="w-full h-full object-cover object-center opacity-[0.45] hover:opacity-[0.65] transition-all duration-500"
+                  loading="lazy"
+                />
+              </div>
             </div>
-          </div>
 
-          {/* Mobile Right Image */}
-          <div className="flex lg:hidden w-full shrink-0 items-center justify-end pl-16 sm:pl-24 md:pl-32 pr-0 -mr-0 sm:-mr-4 md:-mr-6 order-3 mt-0 sm:mt-2">
-            <div className="w-full h-[280px] sm:h-[380px] md:h-[460px] overflow-hidden">
-              <img
-                id="appointment-right-image-mobile"
-                src={siteImages.appointmentRightPointing || 'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/7557312a-044d-4489-a9d1-6f43ee9888b1/Jennifer+A+-+Images+%2811%29.jpg'}
-                alt="Adult pointing at seashells in the sand with child on the beach"
-                className="w-full h-full object-cover object-[62%_center] hover:scale-[1.02] transition-transform duration-500"
-                loading="lazy"
-              />
+            {/* Mobile Right Image */}
+            <div className="w-full shrink-0 items-center justify-end pl-16 sm:pl-24 pr-0 -mr-0 sm:-mr-4 order-3 mt-0 sm:mt-2">
+              <div className="w-full h-[280px] sm:h-[380px] overflow-hidden">
+                <img
+                  id="appointment-right-image-mobile"
+                  src={siteImages.appointmentRightPointing || '/images/find-therapist-hands.jpg'}
+                  alt="Warm, compassionate therapeutic connection with supportive hands held together"
+                  className="w-full h-full object-cover object-[center_45%] hover:scale-[1.02] transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
             </div>
-          </div>
 
-          {/* Mobile Text & CTA */}
-          <div className="flex lg:hidden w-full flex-1 max-w-[720px] flex-col justify-center text-left pt-0 pb-4 sm:pt-2 sm:pb-6 px-6 sm:px-10 md:px-12 order-2">
-            {/* Eyebrow Label */}
-            <div className="mt-0 mb-6 sm:mb-8">
-              <span
-                id="appointment-eyebrow-mobile"
-                className="inline-block font-montserrat text-[13px] sm:text-[14px] uppercase tracking-[0.16em] font-medium text-[#756C67]"
+            {/* Mobile Text & CTA */}
+            <div className="w-full flex-1 max-w-[720px] flex-col justify-center text-left pt-0 pb-4 sm:pt-2 sm:pb-6 px-6 sm:px-10 order-2">
+              {/* Eyebrow Label */}
+              <div className="mt-0 mb-6 sm:mb-8">
+                <span
+                  id="appointment-eyebrow-mobile"
+                  className="inline-block font-montserrat text-[13px] sm:text-[14px] uppercase tracking-[0.16em] font-medium text-[#756C67]"
+                >
+                  {appointmentContent.eyebrow}
+                </span>
+              </div>
+
+              {/* Editorial Heading */}
+              <h2
+                id="appointment-heading-mobile"
+                className="font-playfair text-[32px] min-[420px]:text-[36px] sm:text-[42px] text-[#302A29] font-normal leading-[1.25] mb-6 sm:mb-8"
               >
-                {appointmentContent.eyebrow}
-              </span>
+                <span className="block">
+                  <span className="block">Find a therapist who is</span>
+                  <span className="block mt-1">
+                    <span className="inline-block mr-2.5 sm:mr-3">the right fit for</span>
+                    <span
+                      className="font-allura not-italic text-[#5A3E4B] text-[42px] min-[420px]:text-[48px] sm:text-[58px] leading-[0.8] inline-block select-none align-baseline"
+                    >
+                      you
+                    </span>
+                    <span className="text-[#302A29]">.</span>
+                  </span>
+                </span>
+              </h2>
+
+              {/* Body Paragraph 1 */}
+              <p
+                id="appointment-body-mobile"
+                className="font-montserrat text-[15px] sm:text-[16px] leading-[1.8] text-[#756C67] font-normal mb-5 sm:mb-6"
+              >
+                {appointmentContent.paragraph1}
+              </p>
+
+              {/* Body Prompt Paragraph 2 */}
+              {appointmentContent.prompt && (
+                <p
+                  id="appointment-prompt-mobile"
+                  className="font-montserrat text-[15px] sm:text-[16px] leading-[1.8] text-[#756C67] font-normal mb-6 whitespace-normal sm:whitespace-nowrap"
+                >
+                  {appointmentContent.prompt}
+                </p>
+              )}
+
+              {/* CTA Button */}
+              <div className="pt-4 sm:pt-6">
+                <button
+                  id="appointment-book-now-btn-mobile"
+                  type="button"
+                  onClick={onBookClick}
+                  className="inline-flex items-center justify-center px-6 py-2.5 sm:px-8 sm:py-3 rounded-[50%] border border-[#302A29] text-[11px] sm:text-[12px] tracking-[0.14em] text-[#302A29] bg-transparent hover:bg-[#302A29] hover:text-[#F7F5F1] transition-all duration-300 focus:outline-none cursor-pointer whitespace-nowrap"
+                  style={{ fontFamily: "'Source Sans 3', sans-serif" }}
+                >
+                  {appointmentContent.ctaText}
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* ========================================= */}
+          {/* TABLET VIEW ELEMENTS (768px - 1023px)    */}
+          {/* ========================================= */}
+          <div className="hidden md:flex lg:hidden w-full flex-row items-center justify-between gap-6 px-6 md:px-8 max-w-[1023px] mx-auto">
+            {/* Tablet Left Sand Image */}
+            <div className="w-[100px] h-[300px] flex-shrink-0 overflow-hidden self-end pb-2">
+              <img
+                id="appointment-left-image-tablet"
+                src={siteImages.appointmentLeftSand || '/images/appointment-left-flower.png'}
+                alt="Dried flower sprig casting delicate shadows on a warm neutral wall"
+                className="w-full h-full object-cover object-center opacity-[0.45] hover:opacity-[0.65] transition-all duration-500"
+                loading="lazy"
+              />
             </div>
 
-            {/* Editorial Heading */}
-            <h2
-              id="appointment-heading-mobile"
-              className="font-playfair text-[32px] min-[420px]:text-[36px] sm:text-[42px] md:text-[48px] text-[#302A29] font-normal leading-[1.25] mb-6 sm:mb-8"
-            >
-              <span className="block">
-                <span className="block">Find a therapist who is</span>
-                <span className="block mt-1">
-                  <span className="inline-block mr-2.5 sm:mr-3">the right fit for</span>
+            {/* Tablet Center Text & CTA */}
+            <div className="flex-1 min-w-0 max-w-[480px] flex flex-col justify-center text-left px-4">
+              <div className="mb-4">
+                <span
+                  id="appointment-eyebrow-tablet"
+                  className="inline-block font-montserrat text-[13px] uppercase tracking-[0.16em] font-medium text-[#756C67]"
+                >
+                  {appointmentContent.eyebrow}
+                </span>
+              </div>
+
+              <h2
+                id="appointment-heading-tablet"
+                className="font-playfair text-[32px] md:text-[36px] text-[#302A29] font-normal leading-[1.2] mb-5"
+              >
+                <span>Find a therapist who is</span>{' '}
+                <span className="block mt-0.5">
+                  <span className="mr-2">the right fit for</span>
                   <span
-                    className="font-allura not-italic text-[#5A3E4B] text-[42px] min-[420px]:text-[48px] sm:text-[58px] leading-[0.8] inline-block select-none align-baseline"
+                    className="font-allura not-italic text-[#5A3E4B] text-[46px] leading-[0.8] inline-block select-none align-baseline"
                   >
                     you
                   </span>
                   <span className="text-[#302A29]">.</span>
                 </span>
-              </span>
-            </h2>
+              </h2>
 
-            {/* Body Paragraph 1 */}
-            <p
-              id="appointment-body-mobile"
-              className="font-montserrat text-[15px] sm:text-[16px] leading-[1.8] text-[#756C67] font-normal mb-5 sm:mb-6"
-            >
-              {appointmentContent.paragraph1}
-            </p>
-
-            {/* Body Prompt Paragraph 2 */}
-            {appointmentContent.prompt && (
               <p
-                id="appointment-prompt-mobile"
-                className="font-montserrat text-[15px] sm:text-[16px] leading-[1.7] text-[#302A29] font-medium mb-6 whitespace-normal sm:whitespace-nowrap"
+                id="appointment-body-tablet"
+                className="font-montserrat text-[14.5px] leading-[1.75] text-[#756C67] font-normal mb-4"
               >
-                {appointmentContent.prompt}
+                {appointmentContent.paragraph1}
               </p>
-            )}
 
-            {/* CTA Button */}
-            <div className="pt-4 sm:pt-6">
-              <button
-                id="appointment-book-now-btn-mobile"
-                type="button"
-                onClick={onBookClick}
-                className="inline-flex items-center justify-center px-6 py-2.5 sm:px-8 sm:py-3 rounded-[50%] border border-[#302A29] text-[11px] sm:text-[12px] tracking-[0.14em] text-[#302A29] bg-transparent hover:bg-[#302A29] hover:text-[#F7F5F1] transition-all duration-300 focus:outline-none cursor-pointer whitespace-nowrap"
-                style={{ fontFamily: "'Source Sans 3', sans-serif" }}
-              >
-                {appointmentContent.ctaText}
-              </button>
+              {appointmentContent.prompt && (
+                <p
+                  id="appointment-prompt-tablet"
+                  className="font-montserrat text-[14.5px] leading-[1.75] text-[#756C67] font-normal mb-5"
+                >
+                  {appointmentContent.prompt}
+                </p>
+              )}
+
+              <div className="pt-2">
+                <button
+                  id="appointment-book-now-btn-tablet"
+                  type="button"
+                  onClick={onBookClick}
+                  className="inline-flex items-center justify-center px-7 py-3 rounded-[50%] border border-[#302A29] text-[11.5px] tracking-[0.14em] text-[#302A29] bg-transparent hover:bg-[#302A29] hover:text-[#F7F5F1] transition-all duration-300 focus:outline-none cursor-pointer whitespace-nowrap"
+                  style={{ fontFamily: "'Source Sans 3', sans-serif" }}
+                >
+                  {appointmentContent.ctaText}
+                </button>
+              </div>
+            </div>
+
+            {/* Tablet Right Image */}
+            <div className="w-[240px] md:w-[270px] h-[380px] md:h-[420px] flex-shrink-0 overflow-hidden self-center">
+              <img
+                id="appointment-right-image-tablet"
+                src={siteImages.appointmentRightPointing || '/images/find-therapist-hands.jpg'}
+                alt="Warm, compassionate therapeutic connection with supportive hands held together"
+                className="w-full h-full object-cover object-[center_45%] hover:scale-[1.02] transition-transform duration-500"
+                loading="lazy"
+              />
             </div>
           </div>
 
@@ -120,9 +204,9 @@ export const AppointmentSection: React.FC<AppointmentSectionProps> = ({
             <div className="w-full h-[340px] xl:h-[395px] 2xl:h-[435px] overflow-hidden">
               <img
                 id="appointment-left-image-desktop"
-                src={siteImages.appointmentLeftSand || 'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/1b9495e0-ce39-4826-9df9-e24de99da82f/Jennifer+A+-+Images+%2812%29.jpg'}
-                alt="A person picking up seashells on a sandy beach"
-                className="w-full h-full object-cover object-[48%_bottom] opacity-[0.68] contrast-[0.94] brightness-[1.03] hover:opacity-[0.85] transition-all duration-500"
+                src={siteImages.appointmentLeftSand || '/images/appointment-left-flower.png'}
+                alt="Dried flower sprig casting delicate shadows on a warm neutral wall"
+                className="w-full h-full object-cover object-center opacity-[0.45] hover:opacity-[0.65] transition-all duration-500"
                 loading="lazy"
               />
             </div>
@@ -133,9 +217,9 @@ export const AppointmentSection: React.FC<AppointmentSectionProps> = ({
             <div className="w-full h-[500px] xl:h-[530px] 2xl:h-[560px] overflow-hidden">
               <img
                 id="appointment-right-image-desktop"
-                src={siteImages.appointmentRightPointing || 'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/7557312a-044d-4489-a9d1-6f43ee9888b1/Jennifer+A+-+Images+%2811%29.jpg'}
-                alt="Adult pointing at seashells in the sand with child on the beach"
-                className="w-full h-full object-cover object-[62%_center] hover:scale-[1.02] transition-transform duration-500"
+                src={siteImages.appointmentRightPointing || '/images/find-therapist-hands.jpg'}
+                alt="Warm, compassionate therapeutic connection with supportive hands held together"
+                className="w-full h-full object-cover object-[center_45%] hover:scale-[1.02] transition-transform duration-500"
                 loading="lazy"
               />
             </div>
@@ -174,7 +258,7 @@ export const AppointmentSection: React.FC<AppointmentSectionProps> = ({
             {/* Body Paragraph 1 */}
             <p
               id="appointment-body-desktop"
-              className="desktop-body-long text-[#302A29] mb-6 lg:max-w-[580px] xl:max-w-[620px]"
+              className="font-montserrat text-[15px] lg:text-[16px] leading-[1.8] text-[#756C67] font-normal mb-6 lg:max-w-[580px] xl:max-w-[620px]"
             >
               {appointmentContent.paragraph1}
             </p>
@@ -183,7 +267,7 @@ export const AppointmentSection: React.FC<AppointmentSectionProps> = ({
             {appointmentContent.prompt && (
               <p
                 id="appointment-prompt-desktop"
-                className="desktop-body-long text-[#756C67] mb-6 sm:mb-8 lg:mb-12 lg:max-w-[580px] xl:max-w-[620px]"
+                className="font-montserrat text-[15px] lg:text-[16px] leading-[1.8] text-[#756C67] font-normal mb-6 sm:mb-8 lg:mb-12 lg:max-w-[580px] xl:max-w-[620px]"
               >
                 {appointmentContent.prompt}
               </p>

@@ -17,9 +17,9 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ onLearnMoreClick }) => {
       <div className="w-full px-6 sm:px-10 lg:pl-14 xl:pl-[120px] 2xl:pl-[140px] lg:pr-0">
         
         {/* ========================================= */}
-        {/* MOBILE VIEW ELEMENTS (< 1024px)         */}
+        {/* MOBILE VIEW ELEMENTS (< 768px)           */}
         {/* ========================================= */}
-        <div className="flex lg:hidden flex-col items-center justify-between gap-10">
+        <div className="flex md:hidden flex-col items-center justify-between gap-10">
           
           {/* Main Content */}
           <div className="w-full flex-1 flex flex-col justify-between pt-1 order-1">
@@ -37,7 +37,7 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ onLearnMoreClick }) => {
               {/* Main Headline: Playfair Display */}
               <h2
                 id="how-we-work-heading-mobile"
-                className="font-serif-heading text-[36px] sm:text-[44px] md:text-[52px] leading-[1.25] text-[#302A29] font-normal tracking-[-0.015em] mb-12 sm:mb-16 text-left"
+                className="font-serif-heading text-[36px] sm:text-[44px] leading-[1.25] text-[#302A29] font-normal tracking-[-0.015em] mb-12 sm:mb-16 text-left"
                 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
               >
                 <span className="block">A warm, collaborative,</span>
@@ -47,7 +47,7 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ onLearnMoreClick }) => {
 
               {/* Mobile-only Beach Photo */}
               <div className="flex w-full justify-center shrink-0 self-center mb-8 sm:mb-10">
-                <div className="w-full sm:w-[380px] md:w-[420px] h-[260px] sm:h-[340px] md:h-[400px] overflow-hidden">
+                <div className="w-full sm:w-[380px] h-[260px] sm:h-[340px] overflow-hidden">
                   <img
                     id="how-we-work-image-mobile"
                     src={siteImages.howWeWorkBeach}
@@ -70,7 +70,7 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ onLearnMoreClick }) => {
             </div>
 
             {/* Bottom CTA Link with shrink-and-disappear hover animation */}
-            <div className="pt-10 sm:pt-14 md:pt-18 pb-8 sm:pb-12 text-left">
+            <div className="pt-10 sm:pt-14 pb-8 sm:pb-12 text-left">
               <a
                 id="how-we-work-cta-mobile"
                 href="#about"
@@ -89,6 +89,69 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ onLearnMoreClick }) => {
                 <span className="h-[1.25px] bg-[#302A29] w-full group-hover:w-0 group-hover:opacity-0 transition-all duration-1000 ease-in-out mt-1.5" />
               </a>
             </div>
+          </div>
+        </div>
+
+        {/* ========================================= */}
+        {/* TABLET VIEW ELEMENTS (768px - 1023px)    */}
+        {/* ========================================= */}
+        <div className="hidden md:flex lg:hidden flex-row items-center justify-between gap-8 md:gap-10 max-w-[1023px] mx-auto px-4">
+          {/* Left Column: Text Content & CTA */}
+          <div className="flex-1 min-w-0 flex flex-col justify-start text-left">
+            <span
+              id="how-we-work-eyebrow-tablet"
+              className="font-montserrat text-[13.5px] leading-[22px] tracking-[0.14em] uppercase text-[#756C67] font-medium mb-5 block text-left"
+            >
+              {howWeWorkContent.eyebrow}
+            </span>
+
+            <h2
+              id="how-we-work-heading-tablet"
+              className="font-serif-heading text-[38px] md:text-[42px] leading-[1.18] text-[#302A29] font-normal tracking-[-0.015em] mb-6 text-left"
+              style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+            >
+              A warm, collaborative, and grounded approach.
+            </h2>
+
+            <div className="flex flex-col space-y-4 text-left">
+              <p className="font-montserrat text-[14.5px] leading-[26px] text-[#756C67] font-normal">
+                {howWeWorkContent.paragraphs[0]}
+              </p>
+              <p className="font-montserrat text-[14.5px] leading-[26px] text-[#756C67] font-normal">
+                {howWeWorkContent.paragraphs[1]}
+              </p>
+            </div>
+
+            <div className="pt-7 pb-2 text-left">
+              <a
+                id="how-we-work-cta-tablet"
+                href="#about"
+                onClick={(e) => {
+                  if (onLearnMoreClick) {
+                    e.preventDefault();
+                    onLearnMoreClick();
+                  }
+                }}
+                className="group inline-flex flex-col items-start bg-transparent border-0 p-0 cursor-pointer select-none"
+                style={{ fontFamily: "'Source Sans 3', sans-serif" }}
+              >
+                <span className="font-sans text-[12px] uppercase tracking-[0.16em] text-[#302A29] font-medium group-hover:text-[#5A3E4B] transition-colors duration-200">
+                  {howWeWorkContent.ctaText}
+                </span>
+                <span className="h-[1.25px] bg-[#302A29] w-full group-hover:w-0 group-hover:opacity-0 transition-all duration-1000 ease-in-out mt-1.5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Right Column: Beach Photograph */}
+          <div className="w-[320px] md:w-[350px] h-[480px] md:h-[510px] overflow-hidden flex-shrink-0 self-center shadow-sm">
+            <img
+              id="how-we-work-image-tablet"
+              src={siteImages.howWeWorkBeach}
+              alt="Dr. Maya Reynolds in a warm and collaborative therapy session"
+              className="w-full h-full object-cover object-[32%_center] select-none"
+              loading="lazy"
+            />
           </div>
         </div>
 

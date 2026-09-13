@@ -9,9 +9,9 @@ export const HonoringSection: React.FC = () => {
       className="relative w-full py-12 sm:py-16 md:py-20 lg:py-28 xl:py-32 bg-[#F7F5F1] lg:bg-[#F7F5F1] overflow-hidden"
     >
       {/* ========================================= */}
-      {/* MOBILE VIEW ELEMENTS (< 1024px)         */}
+      {/* MOBILE VIEW ELEMENTS (< 768px)           */}
       {/* ========================================= */}
-      <div className="w-full flex lg:hidden flex-col items-center justify-between">
+      <div className="w-full flex md:hidden flex-col items-center justify-between">
         
         {/* Image Column: Padded on mobile as before, flush-left on web view */}
         <div className="w-full flex-shrink-0 pl-6 sm:pl-10 pr-0 pb-0">
@@ -20,7 +20,7 @@ export const HonoringSection: React.FC = () => {
               id="honoring-family-image-mobile"
               src={siteImages.honoringFamily}
               alt="Books on the healing process and restoring yourself beside an armchair in warm sunlight"
-              className="block w-full h-[300px] sm:h-[400px] md:h-[480px] object-cover object-[center_38%] select-none shadow-sm"
+              className="block w-full h-[300px] sm:h-[400px] object-cover object-[center_38%] select-none shadow-sm"
               loading="lazy"
             />
           </div>
@@ -52,6 +52,47 @@ export const HonoringSection: React.FC = () => {
           </div>
         </div>
 
+      </div>
+
+      {/* ========================================= */}
+      {/* TABLET VIEW ELEMENTS (768px - 1023px)    */}
+      {/* ========================================= */}
+      <div className="hidden md:flex lg:hidden w-full flex-row items-center justify-between gap-8 max-w-[1023px] mx-auto px-6 md:px-10">
+        {/* Left Column: Armchair Image */}
+        <div className="w-[48%] max-w-[450px] h-[380px] md:h-[420px] overflow-hidden shadow-sm flex-shrink-0">
+          <img
+            id="honoring-family-image-tablet"
+            src={siteImages.honoringFamily}
+            alt="Books on the healing process and restoring yourself beside an armchair in warm sunlight"
+            className="w-full h-full object-cover object-[center_38%] select-none"
+            loading="lazy"
+          />
+        </div>
+
+        {/* Right Column: Heading */}
+        <div className="flex-1 min-w-0 flex flex-col justify-center text-left pl-2">
+          <h2
+            id="honoring-heading-tablet"
+            className="font-playfair font-normal not-italic tracking-[-0.01em] text-[#302A29] text-left text-[32px] md:text-[36px] leading-[1.2]"
+          >
+            <span className="block">
+              <span>Helping you understand</span>{' '}
+              <span className="block mt-1">what’s happening and move</span>{' '}
+              <span className="block mt-1">toward a more sustainable</span>{' '}
+              <span className="inline-flex items-baseline whitespace-nowrap mt-1">
+                <span>way of</span>{' '}
+                <span
+                  id="honoring-living-tablet"
+                  className="font-allura not-italic text-[#5A3E4B] ml-2.5 inline-block select-none transform translate-y-[-2px] text-[42px] md:text-[48px] leading-[1]"
+                  style={{ fontFamily: "'Allura', cursive", color: '#5A3E4B' }}
+                >
+                  living
+                </span>
+                <span className="text-[#302A29]">.</span>
+              </span>
+            </span>
+          </h2>
+        </div>
       </div>
 
       {/* ========================================= */}

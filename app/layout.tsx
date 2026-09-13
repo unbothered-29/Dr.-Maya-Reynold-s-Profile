@@ -18,7 +18,12 @@ export const metadata: Metadata = {
       'Dr. Maya Reynolds, PsyD is a licensed clinical psychologist in Santa Monica offering therapy for adults navigating anxiety, panic, trauma, stress, burnout, and perfectionism, with in-person and secure telehealth sessions in California.',
   },
   icons: {
-    icon: '/logo-trimmed.png',
+    icon: [
+      { url: '/favicon.png', type: 'image/png' },
+      { url: '/favicon.ico' },
+    ],
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
   },
 };
 

@@ -134,7 +134,16 @@ body {
     font-weight: 400 !important;
     line-height: 1.05 !important;
   }
+}
 
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .desktop-h1 {
+    font-size: 46px !important;
+    line-height: 1.1 !important;
+  }
+}
+
+@media (min-width: 1024px) {
   /* ALL MAIN SECTION HEADINGS: 56-62px, Cormorant Garamond, weight 400, line-height 1.05-1.12 */
   .desktop-section-heading {
     font-family: 'Cormorant Garamond', Georgia, serif !important;
@@ -190,9 +199,9 @@ body {
     letter-spacing: 0.14em !important;
   }
 
-  /* LEARN MORE CTA LINKS: slightly increased for web view (14px) */
+  /* LEARN MORE CTA LINKS: decreased for web view (12px) */
   .desktop-btn-learn-more {
-    font-size: 14px !important;
+    font-size: 12px !important;
     letter-spacing: 0.15em !important;
   }
 
@@ -208,6 +217,16 @@ body {
     text-transform: uppercase !important;
     letter-spacing: 0.14em !important;
   }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .desktop-nav-link {
+    font-size: 11px !important;
+    letter-spacing: 0.10em !important;
+  }
+}
+
+@media (min-width: 1024px) {
 
   /* FOOTER HEADINGS: 13-14px */
   .desktop-footer-heading {

@@ -6,9 +6,9 @@ export const OurOfficeSection: React.FC = () => {
     <section className="w-full bg-[#F7F5F1] py-16 md:pt-20 md:pb-24 lg:pt-24 lg:pb-28 overflow-hidden">
       
       {/* Tablet & Desktop Layout (md and up) */}
-      <div className="hidden md:flex w-full max-w-[1600px] mx-auto items-center pl-[6.5vw] lg:pl-[10.5vw] pr-[6.5vw] lg:pr-[10.5vw]">
+      <div className="hidden md:flex w-full max-w-[1600px] mx-auto items-center pl-8 md:pl-10 lg:pl-[10.5vw] pr-8 md:pr-10 lg:pr-[10.5vw]">
         {/* Images Column */}
-        <div className="w-[55%] lg:w-[58%] flex-shrink-0 mr-[65px] lg:mr-[85px] relative flex flex-col justify-start">
+        <div className="w-[48%] lg:w-[58%] flex-shrink-0 mr-8 md:mr-10 lg:mr-[85px] relative flex flex-col justify-start">
           <div className="w-full flex flex-col">
             {/* Large Image (Image 1) */}
             <div className="relative w-[85%] lg:w-[80%] aspect-video z-10">
@@ -40,7 +40,7 @@ export const OurOfficeSection: React.FC = () => {
           <h2 className="desktop-section-heading text-[#302A29] mb-5 lg:mb-6 leading-tight">
             Our Office
           </h2>
-          <p className="desktop-body-long text-[#302A29] mb-6 lg:mb-8 lg:max-w-[560px] xl:max-w-[600px]">
+          <p className="font-montserrat text-[15px] lg:text-[16px] leading-[1.8] text-[#756C67] font-normal mb-6 lg:mb-8 lg:max-w-[560px] xl:max-w-[600px]">
             My office is a quiet, private space designed to feel calm and grounding, with natural light and a comfortable, uncluttered environment. Clients often share that the space itself helps them feel more at ease when they arrive.
           </p>
           
@@ -65,7 +65,7 @@ export const OurOfficeSection: React.FC = () => {
           <h2 className="font-serif text-[44px] sm:text-[48px] text-[#302A29] mb-4 leading-tight">
             Our Office
           </h2>
-          <p className="font-sans text-[16px] sm:text-[17px] text-[#302A29] leading-[1.8]">
+          <p className="font-montserrat text-[15px] sm:text-[16px] leading-[1.8] text-[#756C67] font-normal">
             My office is a quiet, private space designed to feel calm and grounding, with natural light and a comfortable, uncluttered environment. Clients often share that the space itself helps them feel more at ease when they arrive.
           </p>
         </div>

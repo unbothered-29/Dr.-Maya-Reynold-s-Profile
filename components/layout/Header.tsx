@@ -15,7 +15,7 @@ export const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
   return (
     <header
       id="main-header"
-      className="w-full bg-[#E7DED4] relative z-40 transition-colors lg:mb-12"
+      className="w-full bg-[#E7DED4] relative z-40 transition-colors lg:mb-6 xl:mb-12"
     >
       {/* Top 3px Deep Plum Accent Line running full viewport width */}
       <div
@@ -24,27 +24,27 @@ export const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
       />
 
       {/* Header Content Container - balanced vertical padding matching reference */}
-      <div className="w-full max-w-[1690px] mx-auto px-6 sm:px-10 lg:px-0 lg:w-[calc(100%-208px)] pt-5 pb-4 lg:py-[22px] xl:py-[24px] flex items-center justify-between">
+      <div className="w-full max-w-[1690px] mx-auto px-6 sm:px-10 md:px-12 lg:px-8 xl:px-0 lg:w-full xl:w-[calc(100%-208px)] pt-5 pb-4 lg:py-[20px] xl:py-[24px] flex items-center justify-between">
         {/* Brand Header */}
         <a
           id="site-logo"
           href="#"
           className="header-title-logo group block text-left select-none flex-shrink-0 transition-opacity hover:opacity-85"
         >
-          <span className="block font-serif text-[22px] sm:text-[24px] lg:text-[32px] xl:text-[33px] font-normal lg:font-[500] leading-tight lg:leading-[1.1] text-[#302A29] tracking-normal lg:tracking-[-0.015em]">
+          <span className="block font-serif text-[22px] sm:text-[24px] md:text-[26px] lg:text-[25px] xl:text-[33px] font-normal lg:font-[500] leading-tight lg:leading-[1.1] text-[#302A29] tracking-normal lg:tracking-[-0.015em]">
             Dr. Maya Reynolds, PsyD
           </span>
-          <span className="block font-sans text-[10.5px] sm:text-[11px] lg:text-[11.5px] xl:text-[12px] uppercase tracking-[0.18em] lg:tracking-[0.20em] text-[#756C67] font-medium mt-0.5 lg:mt-1">
+          <span className="block font-sans text-[10.5px] sm:text-[11px] md:text-[11.5px] lg:text-[11px] xl:text-[12px] uppercase tracking-[0.18em] lg:tracking-[0.20em] text-[#756C67] font-medium mt-0.5 lg:mt-1">
             LICENSED CLINICAL PSYCHOLOGIST
           </span>
         </a>
 
         {/* Desktop Navigation & Pill Outlined Contact Button */}
-        <div className="hidden lg:flex items-center gap-8 xl:gap-11 pt-1.5">
+        <div className="hidden lg:flex items-center gap-5 xl:gap-11 pt-1.5">
           <nav
             id="desktop-navigation"
             aria-label="Main Navigation"
-            className="flex items-center gap-7 xl:gap-9"
+            className="flex items-center gap-5 xl:gap-9"
           >
             {navItems.map((item) => (
               <a
@@ -62,7 +62,7 @@ export const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
             id="header-contact-btn"
             type="button"
             onClick={onContactClick}
-            className="w-[124px] h-[50px] rounded-[50%] border border-[#302A29] bg-transparent flex items-center justify-center font-sans text-[12.5px] uppercase tracking-[0.14em] text-[#302A29] font-medium hover:bg-[#302A29] hover:border-[#302A29] hover:text-[#F7F5F1] transition-all duration-300 cursor-pointer select-none"
+            className="w-[110px] xl:w-[124px] h-[44px] xl:h-[50px] rounded-[50%] border border-[#302A29] bg-transparent flex items-center justify-center font-sans text-[11.5px] xl:text-[12.5px] uppercase tracking-[0.14em] text-[#302A29] font-medium hover:bg-[#302A29] hover:border-[#302A29] hover:text-[#F7F5F1] transition-all duration-300 cursor-pointer select-none"
             style={{ fontFamily: "'Source Sans 3', sans-serif" }}
           >
             CONTACT

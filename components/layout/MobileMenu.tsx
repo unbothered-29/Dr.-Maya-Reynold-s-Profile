@@ -48,16 +48,16 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
       />
 
       {/* Header row in mobile menu matching main header */}
-      <div className="w-full px-7 min-[390px]:px-9 sm:px-10 pt-[22px] pb-4 flex items-center justify-between">
+      <div className="w-full px-7 min-[390px]:px-9 sm:px-10 md:px-16 pt-[22px] pb-4 flex items-center justify-between">
         <a
           href="#"
           onClick={onClose}
           className="header-title-logo group block text-left select-none flex-shrink-0"
         >
-          <span className="block font-serif text-[21px] min-[390px]:text-[23px] sm:text-[25px] font-normal leading-tight text-[#302A29] tracking-normal">
+          <span className="block font-serif text-[21px] min-[390px]:text-[23px] sm:text-[25px] md:text-[28px] font-normal leading-tight text-[#302A29] tracking-normal">
             Dr. Maya Reynolds, PsyD
           </span>
-          <span className="block font-sans text-[10px] min-[390px]:text-[10.5px] sm:text-[11px] uppercase tracking-[0.18em] text-[#756C67] font-medium mt-0.5">
+          <span className="block font-sans text-[10px] min-[390px]:text-[10.5px] sm:text-[11px] md:text-[12px] uppercase tracking-[0.18em] text-[#756C67] font-medium mt-0.5">
             LICENSED CLINICAL PSYCHOLOGIST
           </span>
         </a>
@@ -70,21 +70,21 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
           aria-label="Close navigation menu"
           className="p-1 text-[#302A29] hover:text-[#5A3E4B] transition-colors focus:outline-none cursor-pointer flex items-center justify-center translate-y-[-1px]"
         >
-          <X className="w-[22px] h-[22px] min-[390px]:w-[24px] min-[390px]:h-[24px] stroke-[1.25]" />
+          <X className="w-[22px] h-[22px] min-[390px]:w-[24px] min-[390px]:h-[24px] md:w-[28px] md:h-[28px] stroke-[1.25]" />
         </button>
       </div>
 
       {/* Navigation list matching reference screenshot */}
       <nav
         aria-label="Mobile Navigation"
-        className="w-full px-7 min-[390px]:px-9 sm:px-10 mt-[100px] min-[375px]:mt-[112px] min-[390px]:mt-[124px] min-[430px]:mt-[136px] flex flex-col items-start text-left space-y-[40px] min-[375px]:space-y-[44px] min-[390px]:space-y-[48px] min-[430px]:space-y-[52px]"
+        className="w-full px-7 min-[390px]:px-9 sm:px-10 md:px-16 mt-[100px] min-[375px]:mt-[112px] min-[390px]:mt-[124px] min-[430px]:mt-[136px] md:mt-[120px] flex flex-col items-start text-left space-y-[40px] min-[375px]:space-y-[44px] min-[390px]:space-y-[48px] min-[430px]:space-y-[52px] md:space-y-[48px]"
       >
         {mobileMenuItems.map((item) => (
           <a
             key={item.label}
             href={item.href}
             onClick={onClose}
-            className="group flex items-center text-[30px] min-[375px]:text-[33px] min-[390px]:text-[35px] min-[430px]:text-[38px] uppercase tracking-[0.03em] text-[#302A29] font-[400] hover:text-[#5A3E4B] transition-colors select-none leading-none"
+            className="group flex items-center text-[30px] min-[375px]:text-[33px] min-[390px]:text-[35px] min-[430px]:text-[38px] md:text-[42px] uppercase tracking-[0.03em] text-[#302A29] font-[400] hover:text-[#5A3E4B] transition-colors select-none leading-none"
             style={{ fontFamily: "'Source Sans 3', sans-serif" }}
           >
             <span>{item.label}</span>

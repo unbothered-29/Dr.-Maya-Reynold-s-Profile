@@ -23,12 +23,12 @@ export const ExpertiseSection: React.FC = () => {
           <div className="pt-1 sm:pt-2">
             <h2
               id="areas-of-expertise-title-mobile"
-              className="font-serif-heading text-[38px] sm:text-[46px] md:text-[56px] font-normal leading-[1.2] tracking-tight text-[#302A29] text-left"
+              className="font-serif-heading text-[38px] sm:text-[46px] md:text-[48px] font-normal leading-[1.2] tracking-tight text-[#302A29] text-left"
               style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
             >
               <span>Our areas of</span>
               <span
-                className="inline-block ml-3 sm:ml-4 font-script-accent font-normal text-[#5A3E4B] not-italic text-[48px] sm:text-[58px] md:text-[68px]"
+                className="inline-block ml-3 sm:ml-4 font-script-accent font-normal text-[#5A3E4B] not-italic text-[48px] sm:text-[58px] md:text-[60px]"
                 style={{ fontFamily: "'Allura', cursive" }}
               >
                 support

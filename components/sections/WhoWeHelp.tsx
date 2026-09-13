@@ -10,17 +10,17 @@ export const WhoWeHelp: React.FC = () => {
       {/* ========================================= */}
       {/* MOBILE VIEW ELEMENTS (< 1024px)         */}
       {/* ========================================= */}
-      <div className="w-full max-w-[1500px] mx-auto px-[6vw] md:px-[4vw] lg:hidden">
+      <div className="w-full max-w-[1500px] mx-auto px-[6vw] md:px-10 lg:hidden">
         {/* Section Title: "Who we" in Playfair + "help" in Allura script #5A3E4B */}
-        <div className="mb-10 sm:mb-12 md:mb-16">
+        <div className="mb-10 sm:mb-12 md:mb-14">
           <h2
             id="who-we-help-title-mobile"
-            className="font-serif-heading text-[38px] sm:text-[46px] md:text-[56px] font-normal leading-[1.2] tracking-tight text-[#302A29] text-left"
+            className="font-serif-heading text-[38px] sm:text-[46px] md:text-[48px] font-normal leading-[1.2] tracking-tight text-[#302A29] text-left"
             style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
           >
             <span>Who I</span>
             <span
-              className="inline-block ml-4 sm:ml-5 md:ml-7 font-script-accent font-normal text-[#5A3E4B] not-italic text-[48px] sm:text-[58px] md:text-[68px]"
+              className="inline-block ml-4 sm:ml-5 md:ml-6 font-script-accent font-normal text-[#5A3E4B] not-italic text-[48px] sm:text-[58px] md:text-[60px]"
               style={{ fontFamily: "'Allura', cursive" }}
             >
               help
@@ -29,7 +29,7 @@ export const WhoWeHelp: React.FC = () => {
         </div>
 
         {/* 3-Card Grid */}
-        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-16 sm:gap-20 md:gap-8 items-start">
+        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-16 sm:gap-20 md:gap-6 items-start">
           {whoWeHelpItems.map((item) => {
             return (
               <article
@@ -38,16 +38,18 @@ export const WhoWeHelp: React.FC = () => {
                 className="flex flex-col text-left"
               >
                 {/* Image card with rounded-sm, mb-6 */}
-                <div className="w-[98%] max-w-[420px] md:w-full md:max-w-none mx-auto md:mx-0 overflow-hidden mb-10">
+                <div className="w-[98%] max-w-[420px] md:w-full md:max-w-none mx-auto md:mx-0 overflow-hidden mb-10 md:mb-6">
                   <div className="w-full aspect-[10/9] overflow-hidden rounded-sm bg-[#D9C9C9]/50 shadow-sm">
                     <img
                       src={item.imageUrl}
                       alt={item.imageAlt}
                       className={`w-full h-full object-cover opacity-95 transition-transform duration-500 hover:scale-[1.02] hover:opacity-100 ${
                         item.id === 'adults'
-                          ? 'object-[50%_65%]'
-                          : item.id === 'children-teens'
-                          ? 'object-[50%_55%]'
+                          ? 'object-[center_15%]'
+                          : item.id === 'professionals'
+                          ? 'object-[center_20%]'
+                          : item.id === 'trauma'
+                          ? 'object-center'
                           : 'object-center'
                       }`}
                       loading="lazy"
@@ -58,7 +60,7 @@ export const WhoWeHelp: React.FC = () => {
 
                 {/* H3 Title in Playfair Display */}
                 <h3
-                  className="font-serif-heading text-2xl md:text-3xl font-normal leading-snug text-[#302A29] tracking-normal mb-6"
+                  className="font-serif-heading text-2xl md:text-[22px] font-normal leading-snug text-[#302A29] tracking-normal mb-6 md:mb-3.5"
                   style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
                 >
                   {item.title}
@@ -66,7 +68,7 @@ export const WhoWeHelp: React.FC = () => {
 
                 {/* Paragraph in Montserrat Taupe Gray */}
                 <p
-                  className="font-sans-body text-base leading-[1.7] text-[#756C67] font-normal"
+                  className="font-sans-body text-base md:text-[14px] leading-[1.7] md:leading-[1.65] text-[#756C67] font-normal"
                   style={{ fontFamily: "'Source Sans 3', sans-serif" }}
                 >
                   {item.description}
@@ -114,9 +116,11 @@ export const WhoWeHelp: React.FC = () => {
                       alt={item.imageAlt}
                       className={`w-full h-full object-cover transition-transform duration-500 hover:scale-[1.02] ${
                         item.id === 'adults'
-                          ? 'object-[50%_65%]'
-                          : item.id === 'children-teens'
-                          ? 'object-[50%_55%]'
+                          ? 'object-[center_15%]'
+                          : item.id === 'professionals'
+                          ? 'object-[center_20%]'
+                          : item.id === 'trauma'
+                          ? 'object-center'
                           : 'object-center'
                       }`}
                       loading="lazy"

@@ -14,11 +14,11 @@ export const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
   return (
     <>
       {/* ========================================= */}
-      {/* MOBILE VIEW ELEMENTS (< 1024px)         */}
+      {/* MOBILE VIEW ELEMENTS (< 768px)           */}
       {/* ========================================= */}
       <footer
         id="main-footer-mobile"
-        className="w-full bg-[#392831] text-[#F7F5F1] lg:hidden"
+        className="w-full bg-[#392831] text-[#F7F5F1] block md:hidden"
       >
         {/* Main Footer Container */}
         <div className="w-full mx-auto pl-16 sm:pl-20 md:pl-24 pr-6 sm:pr-8 md:pr-10 pt-24 sm:pt-28 pb-24 sm:pb-28">
@@ -106,15 +106,103 @@ export const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
       </footer>
 
       {/* ========================================= */}
-      {/* WEB VIEW ELEMENTS (lg and above)        */}
+      {/* TABLET VIEW ELEMENTS (768px - 1279px)    */}
+      {/* ========================================= */}
+      <footer
+        id="main-footer-tablet"
+        className="w-full bg-[#392831] text-[#F7F5F1] hidden md:block xl:hidden"
+      >
+        <div className="w-full max-w-[1100px] mx-auto px-8 md:px-12 pt-20 pb-20">
+          <div className="flex flex-row justify-between items-start gap-8">
+            {/* Part 1: Narrative Unit */}
+            <div className="w-[42%] max-w-[360px] flex-shrink-0 text-left">
+              <h2 className="font-serif text-[30px] text-[#F7F5F1] mb-2">
+                Dr. Maya Reynolds, PsyD
+              </h2>
+              <p className="font-sans text-[16px] text-[#D9C9C9] font-light mb-6">
+                Licensed Clinical Psychologist
+              </p>
+              <p className="font-sans text-[15px] leading-[1.8] text-[#F7F5F1] font-normal">
+                <span className="block mb-4">Therapy for adults in Santa Monica, California.</span>
+                <span className="block">In-person therapy and secure telehealth throughout California.</span>
+              </p>
+            </div>
+
+            {/* Part 2: Navigation Unit with 3 columns */}
+            <div className="flex-1 flex flex-row items-start justify-between gap-6 text-left pl-2">
+              {/* Column 1: NAVIGATE */}
+              <div>
+                <h4 className="font-sans text-[13px] uppercase tracking-[0.18em] font-semibold text-[#B88B89] mb-5">
+                  NAVIGATE
+                </h4>
+                <ul className="list-none p-0 m-0 space-y-2">
+                  {footerNavigateLinks.map((link) => (
+                    <li key={link.label}>
+                      <a
+                        href={link.href}
+                        onClick={link.label === 'Contact' ? (e) => { e.preventDefault(); onContactClick(); } : undefined}
+                        className="font-sans text-[14.5px] text-[#F7F5F1] hover:text-[#B88B89] font-normal transition-colors inline-block"
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Column 2: CONTACT */}
+              <div id="contact-tablet">
+                <h4 className="font-sans text-[13px] uppercase tracking-[0.18em] font-semibold text-[#B88B89] mb-5">
+                  CONTACT
+                </h4>
+                <div className="font-sans text-[14.5px] text-[#F7F5F1] font-normal space-y-1">
+                  {contactInfo.addressLines.map((line, idx) => (
+                    <div key={idx} className="leading-[1.7]">{line}</div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Column 3: PRACTICE */}
+              <div id="practice-tablet">
+                <h4 className="font-sans text-[13px] uppercase tracking-[0.18em] font-semibold text-[#B88B89] mb-5">
+                  PRACTICE
+                </h4>
+                <ul className="list-none p-0 m-0 space-y-1">
+                  <li className="font-sans text-[14.5px] text-[#F7F5F1] font-normal leading-[1.7]">
+                    In-person therapy in Santa Monica
+                  </li>
+                  <li className="font-sans text-[14.5px] text-[#F7F5F1] font-normal leading-[1.7]">
+                    Secure telehealth throughout California
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Sub-Footer */}
+        <div className="w-full bg-[#392831] border-t border-[#F7F5F1]/10 py-4 px-8 md:px-12">
+          <div className="max-w-[1100px] mx-auto text-left">
+            <p className="font-sans text-[#D9C9C9] text-[13px] font-light tracking-wide">
+              <a href="#terms" className="hover:underline">Terms</a><span className="mx-3 text-[#B88B89]">|</span>
+              <a href="#privacy" className="hover:underline">Privacy Policy</a><span className="mx-3 text-[#B88B89]">|</span>
+              <a href="#disclaimer" className="hover:underline">Disclaimer</a><span className="mx-3 text-[#B88B89]">|</span>
+              <a href="https://walkerstrategyco.com" target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-[#B88B89] transition-colors">Website by Walker Strategy Co.</a>
+            </p>
+          </div>
+        </div>
+      </footer>
+
+      {/* ========================================= */}
+      {/* WEB VIEW ELEMENTS (xl and above)        */}
       {/* ========================================= */}
       <footer
         id="main-footer-desktop"
-        className="w-full bg-[#392831] text-[#F7F5F1] hidden lg:block"
+        className="w-full bg-[#392831] text-[#F7F5F1] hidden xl:block"
       >
         {/* Main Footer Container */}
-        <div className="w-full mx-auto px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20 pt-20 lg:pt-24 pb-24 lg:pb-[145px] xl:pb-[155px]">
-          <div className="mx-auto w-fit max-w-full flex flex-col lg:flex-row justify-center items-start gap-16 xl:gap-32">
+        <div className="w-full mx-auto px-6 sm:px-10 md:px-12 lg:px-8 xl:px-20 pt-20 lg:pt-24 pb-24 lg:pb-[145px] xl:pb-[155px]">
+          <div className="mx-auto w-fit max-w-full flex flex-col lg:flex-row justify-center items-start gap-12 lg:gap-10 xl:gap-32">
             
             {/* Part 1: Narrative Unit */}
             <div className="w-auto max-w-[480px] xl:max-w-[500px] flex-shrink-0 text-left">
@@ -131,7 +219,7 @@ export const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
             </div>
 
             {/* Part 2: Navigation Unit */}
-            <div className="w-auto flex flex-row items-start gap-14 lg:gap-[104px] xl:gap-[146px] 2xl:gap-[164px] text-left mt-2 lg:ml-8 xl:ml-16">
+            <div className="w-auto flex flex-row items-start gap-10 lg:gap-8 xl:gap-[146px] 2xl:gap-[164px] text-left mt-2 lg:ml-4 xl:ml-16">
               
               {/* Column 1: NAVIGATE */}
               <div className="flex-shrink-0">

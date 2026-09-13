@@ -5,22 +5,22 @@ export const HopeSection: React.FC = () => {
   return (
     <>
       {/* ========================================= */}
-      {/* MOBILE VIEW ELEMENTS (< 1024px)         */}
+      {/* MOBILE VIEW ELEMENTS (< 768px)           */}
       {/* ========================================= */}
       <section
         id="about-mobile"
-        className="relative w-full bg-[#F7F5F1] overflow-hidden pt-12 sm:pt-16 pb-12 sm:pb-16 md:py-24 lg:hidden"
+        className="relative w-full bg-[#F7F5F1] overflow-hidden pt-12 sm:pt-16 pb-12 sm:pb-16 md:hidden"
       >
-        <div className="w-full max-w-[1500px] mx-auto px-[6vw] md:px-[4vw]">
+        <div className="w-full max-w-[1500px] mx-auto px-[6vw]">
           <div className="flex flex-col text-left">
             <h2
               id="mobile-hope-headline"
-              className="font-serif-heading text-[clamp(32px,8.8vw,42px)] sm:text-[46px] md:text-[52px] leading-[1.25] text-[#302A29] font-normal tracking-[-0.01em]"
+              className="font-serif-heading text-[clamp(32px,8.8vw,42px)] sm:text-[46px] leading-[1.25] text-[#302A29] font-normal tracking-[-0.01em]"
               style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
             >
               <span>You’re not alone in feeling this</span>{' '}
               <span
-                className="inline-block ml-1 font-script-accent font-normal text-[#5A3E4B] not-italic text-[48px] sm:text-[58px] md:text-[68px]"
+                className="inline-block ml-1 font-script-accent font-normal text-[#5A3E4B] not-italic text-[48px] sm:text-[58px]"
                 style={{ fontFamily: "'Allura', cursive" }}
               >
                 way
@@ -52,6 +52,63 @@ export const HopeSection: React.FC = () => {
             >
               {hopeContent.paragraph2}
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================= */}
+      {/* TABLET VIEW ELEMENTS (768px - 1023px)    */}
+      {/* ========================================= */}
+      <section
+        id="about-tablet"
+        className="relative w-full bg-[#F7F5F1] overflow-hidden py-16 md:py-20 hidden md:block lg:hidden"
+      >
+        <div className="w-full max-w-[1023px] mx-auto px-8 md:px-12">
+          <div className="flex flex-col text-left">
+            <h2
+              id="tablet-hope-headline"
+              className="font-serif-heading text-[38px] md:text-[44px] leading-[1.2] text-[#302A29] font-normal tracking-[-0.01em]"
+              style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+            >
+              <span>You’re not alone in feeling this</span>{' '}
+              <span
+                className="inline-block ml-2 font-script-accent font-normal text-[#5A3E4B] not-italic text-[52px] md:text-[58px]"
+                style={{ fontFamily: "'Allura', cursive" }}
+              >
+                way
+              </span>
+              <span className="text-[#302A29]">.</span>
+            </h2>
+
+            <div className="mt-8 md:mt-10 flex flex-row items-start justify-between gap-8 md:gap-10">
+              {/* Left Column: Two Paragraphs */}
+              <div className="w-[54%] flex flex-col space-y-5 text-left">
+                <p
+                  id="tablet-hope-paragraph-1"
+                  className="font-sans text-[15px] md:text-[15.5px] font-normal leading-[1.8] text-[#756C67]"
+                >
+                  {hopeContent.paragraph1}
+                </p>
+                <p
+                  id="tablet-hope-paragraph-2"
+                  className="font-sans text-[15px] md:text-[15.5px] font-normal leading-[1.8] text-[#756C67]"
+                >
+                  {hopeContent.paragraph2}
+                </p>
+              </div>
+
+              {/* Right Column: Ocean Photograph */}
+              <div className="w-[46%] h-[350px] md:h-[380px] overflow-hidden rounded-sm shadow-sm flex-shrink-0">
+                <img
+                  id="tablet-hope-ocean-image"
+                  src={siteImages.hopeOcean}
+                  alt="Young woman in thoughtful contemplation"
+                  className="w-full h-full object-cover object-center select-none opacity-90 hover:opacity-100 transition-opacity duration-500"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>

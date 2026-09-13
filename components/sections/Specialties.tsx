@@ -62,7 +62,7 @@ export const Specialties: React.FC<SpecialtiesProps> = ({ onLearnMore }) => {
 
             {/* Columns 2 & 3: 2x2 Grid of Specialties */}
             <div className="w-full">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-14 sm:gap-y-18 md:gap-y-24">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-x-12 gap-y-14 sm:gap-y-18 md:gap-y-16">
                 {specialtiesContent.items.map((item) => {
                   const isRightCol = item.id === 'emdr' || item.id === 'special-needs-parenting';
                   return (
@@ -74,13 +74,13 @@ export const Specialties: React.FC<SpecialtiesProps> = ({ onLearnMore }) => {
                       <div>
                         <h4
                           id={`specialty-title-mobile-${item.id}`}
-                          className="font-playfair text-[22px] sm:text-[24px] leading-[28px] sm:leading-[32px] text-[#302A29] font-normal tracking-normal not-italic"
+                          className="font-playfair text-[22px] sm:text-[24px] md:text-[23px] leading-[28px] sm:leading-[32px] text-[#302A29] font-normal tracking-normal not-italic"
                         >
                           {item.title}
                         </h4>
 
                         <div
-                          className="font-montserrat text-[15px] sm:text-[17px] leading-[28px] sm:leading-[30px] text-[#756C67] font-normal not-italic mt-8 sm:mt-10"
+                          className="font-montserrat text-[15px] sm:text-[17px] md:text-[15px] leading-[28px] sm:leading-[30px] md:leading-[26px] text-[#756C67] font-normal not-italic mt-8 sm:mt-10 md:mt-6"
                         >
                           {formattedSpecialtyLines[item.id] ? (
                             <>
@@ -101,13 +101,13 @@ export const Specialties: React.FC<SpecialtiesProps> = ({ onLearnMore }) => {
                         </div>
                       </div>
 
-                      <div className="mt-16 sm:mt-20 md:mt-24">
+                      <div className="mt-16 sm:mt-20 md:mt-10">
                         <button
                           type="button"
                           onClick={() => onLearnMore && onLearnMore(item.id)}
                           className="group inline-flex flex-col items-start bg-transparent border-0 p-0 cursor-pointer select-none text-left focus:outline-none"
                         >
-                          <span className="font-montserrat text-[12px] sm:text-[13px] md:text-[13.5px] uppercase tracking-[0.16em] text-[#5A3E4B] font-semibold group-hover:text-[#392831] transition-colors duration-200">
+                          <span className="font-montserrat text-[12px] sm:text-[13px] md:text-[13px] uppercase tracking-[0.16em] text-[#5A3E4B] font-semibold group-hover:text-[#392831] transition-colors duration-200">
                             LEARN MORE
                           </span>
                           <span className="h-[1.25px] bg-[#5A3E4B] w-full group-hover:w-0 group-hover:opacity-0 transition-all duration-1000 ease-in-out mt-1" />
