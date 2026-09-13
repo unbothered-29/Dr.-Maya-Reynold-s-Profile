@@ -12,7 +12,7 @@
   "dependencies": {
     "lucide-react": "^0.546.0",
     "motion": "^12.23.24",
-    "next": "15.2.0",
+    "next": "^15.2.9",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
@@ -24,5 +24,8 @@
     "postcss": "^8.4.49",
     "tailwindcss": "^4.1.14",
     "typescript": "~5.8.2"
+  },
+  "allowScripts": {
+    "sharp@0.33.5": true
   }
 }
