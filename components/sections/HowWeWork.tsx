@@ -86,7 +86,7 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ onLearnMoreClick }) => {
                 <span className="font-sans text-[12.5px] sm:text-[13px] uppercase tracking-[0.16em] text-[#302A29] font-medium group-hover:text-[#5A3E4B] transition-colors duration-200">
                   {howWeWorkContent.ctaText}
                 </span>
-                <span className="h-[1.25px] bg-[#302A29] w-full group-hover:w-0 group-hover:opacity-0 transition-all duration-600 ease-in-out mt-1.5" />
+                <span className="h-[1.25px] bg-[#302A29] w-full group-hover:w-0 group-hover:opacity-0 transition-all duration-1000 ease-in-out mt-1.5" />
               </a>
             </div>
           </div>
@@ -153,7 +153,7 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ onLearnMoreClick }) => {
                 <span className="font-sans desktop-btn-text desktop-btn-learn-more text-[#302A29] font-medium group-hover:text-[#5A3E4B] transition-colors duration-200">
                   {howWeWorkContent.ctaText}
                 </span>
-                <span className="h-[1.25px] bg-[#302A29] w-full group-hover:w-0 group-hover:opacity-0 transition-all duration-600 ease-in-out mt-1.5" />
+                <span className="h-[1.25px] bg-[#302A29] w-full group-hover:w-0 group-hover:opacity-0 transition-all duration-1000 ease-in-out mt-1.5" />
               </a>
             </div>
           </div>

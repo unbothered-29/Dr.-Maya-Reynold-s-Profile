@@ -110,7 +110,7 @@ export const Specialties: React.FC<SpecialtiesProps> = ({ onLearnMore }) => {
                           <span className="font-montserrat text-[12px] sm:text-[13px] md:text-[13.5px] uppercase tracking-[0.16em] text-[#5A3E4B] font-semibold group-hover:text-[#392831] transition-colors duration-200">
                             LEARN MORE
                           </span>
-                          <span className="h-[1.25px] bg-[#5A3E4B] w-full group-hover:w-0 group-hover:opacity-0 transition-all duration-600 ease-in-out mt-1" />
+                          <span className="h-[1.25px] bg-[#5A3E4B] w-full group-hover:w-0 group-hover:opacity-0 transition-all duration-1000 ease-in-out mt-1" />
                         </button>
                       </div>
                     </div>
@@ -186,13 +186,15 @@ export const Specialties: React.FC<SpecialtiesProps> = ({ onLearnMore }) => {
                         <button
                           type="button"
                           onClick={() => onLearnMore && onLearnMore(item.id)}
-                          className="group inline-block desktop-btn-text desktop-btn-learn-more text-[#302A29] border-b border-[#756C67] pb-[2px] hover:text-[#5A3E4B] hover:border-[#5A3E4B] transition-colors duration-200 cursor-pointer text-left focus:outline-none"
+                          className="group inline-flex flex-col items-start bg-transparent border-0 p-0 cursor-pointer select-none text-left focus:outline-none"
                           style={{
                             fontFamily: "'Source Sans 3', sans-serif",
-                            color: 'rgb(43, 43, 43)',
                           }}
                         >
-                          LEARN MORE
+                          <span className="desktop-btn-text desktop-btn-learn-more text-[#302A29] font-medium group-hover:text-[#5A3E4B] transition-colors duration-200">
+                            LEARN MORE
+                          </span>
+                          <span className="h-[1.25px] bg-[#302A29] w-full group-hover:w-0 group-hover:opacity-0 transition-all duration-1000 ease-in-out mt-1.5" />
                         </button>
                       </div>
                     </div>

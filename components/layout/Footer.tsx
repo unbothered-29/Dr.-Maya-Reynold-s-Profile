@@ -131,10 +131,10 @@ export const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
             </div>
 
             {/* Part 2: Navigation Unit */}
-            <div className="w-auto grid grid-cols-3 gap-12 xl:gap-20 text-left mt-2">
+            <div className="w-auto flex flex-row items-start gap-14 lg:gap-[104px] xl:gap-[146px] 2xl:gap-[164px] text-left mt-2 lg:ml-8 xl:ml-16">
               
               {/* Column 1: NAVIGATE */}
-              <div>
+              <div className="flex-shrink-0">
                 <h4 className="desktop-footer-heading font-sans text-[#B88B89] mb-6">
                   NAVIGATE
                 </h4>
@@ -154,7 +154,7 @@ export const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
               </div>
 
               {/* Column 2: CONTACT */}
-              <div id="contact-desktop">
+              <div id="contact-desktop" className="flex-shrink-0">
                 <h4 className="desktop-footer-heading font-sans text-[#B88B89] mb-6">
                   CONTACT
                 </h4>
@@ -166,7 +166,7 @@ export const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
               </div>
 
               {/* Column 3: PRACTICE */}
-              <div id="practice-desktop">
+              <div id="practice-desktop" className="flex-shrink-0">
                 <h4 className="desktop-footer-heading font-sans text-[#B88B89] mb-6">
                   PRACTICE
                 </h4>

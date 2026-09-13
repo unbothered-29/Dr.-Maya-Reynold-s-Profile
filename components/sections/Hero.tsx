@@ -80,10 +80,10 @@ export const Hero: React.FC<HeroProps> = ({ onBookClick }) => {
               className="group inline-flex flex-col items-start bg-transparent border-0 p-0 cursor-pointer select-none"
               style={{ fontFamily: "'Source Sans 3', sans-serif" }}
             >
-              <span className="font-sans text-[12.5px] lg:text-[11.5px] xl:text-[12px] uppercase tracking-[0.18em] text-[#302A29] font-medium group-hover:text-[#5A3E4B] transition-colors duration-200">
+              <span className="font-sans lg:text-[10px] xl:text-[10.5px] uppercase tracking-[0.20em] text-[#302A29] font-medium group-hover:text-[#5A3E4B] transition-colors duration-200">
                 {heroContent.ctaText}
               </span>
-              <span className="h-[1.25px] bg-[#302A29] w-full group-hover:w-0 group-hover:opacity-0 transition-all duration-600 ease-in-out mt-1.5" />
+              <span className="h-[1px] bg-[#302A29] w-full group-hover:w-0 group-hover:opacity-0 transition-all duration-1000 ease-in-out mt-1" />
             </button>
           </div>
         </div>
@@ -161,7 +161,7 @@ export const Hero: React.FC<HeroProps> = ({ onBookClick }) => {
             <span className="font-sans text-[12.5px] sm:text-[13px] uppercase tracking-[0.16em] text-[#302A29] font-medium group-hover:text-[#5A3E4B] transition-colors duration-200">
               {heroContent.ctaText}
             </span>
-            <span className="h-[1.25px] bg-[#302A29] w-full group-hover:w-0 group-hover:opacity-0 transition-all duration-600 ease-in-out mt-1.5" />
+            <span className="h-[1.25px] bg-[#302A29] w-full group-hover:w-0 group-hover:opacity-0 transition-all duration-1000 ease-in-out mt-1.5" />
           </button>
         </div>
 
