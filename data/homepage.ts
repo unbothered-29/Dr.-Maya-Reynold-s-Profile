@@ -20,11 +20,7 @@ export const siteImages: SiteImages = {
   // Honoring Where You've Been: Books on healing and cozy therapy armchair
   honoringFamily: '/images/honoring-healing-process.jpg',
 
-  // Specialties section: wide coastal family / peaceful beach shoreline
-  specialtiesBeach: 'https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10/80513bd1-30ee-4a2d-aaf6-782d9be095ce/Jennifer%2BA%2B-%2BImages%2B%2866%29.jpg',
-
-  // Appointment / Final CTA: serene vast Pacific beach shoreline
-  appointmentBeach: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80',
+  // Appointment / Final CTA decorative assets
   appointmentLeftSand: '/images/appointment-left-flower.png',
   appointmentRightPointing: '/images/find-therapist-hands.jpg',
 };
@@ -157,8 +153,6 @@ export const contactInfo: ContactInfo = {
   phone: '',
   serviceAreas: '',
 };
-
-export const teamMembers: string[] = []; // Removed per new requirements
 
 export const footerNavigateLinks = [
   { label: 'Home', href: '#' },

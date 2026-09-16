@@ -19,7 +19,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [serviceType, setServiceType] = useState(initialInterest);
-  const [preferredFormat, setPreferredFormat] = useState('In-Person (Newbury Park)');
+  const [preferredFormat, setPreferredFormat] = useState('In-Person (Santa Monica)');
   const [message, setMessage] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -98,7 +98,9 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                 Schedule a Consultation
               </h3>
               <p className="font-montserrat text-[13.5px] text-[#756C67] mt-2">
-                Office: {contactInfo.phone} • {contactInfo.email}
+                {contactInfo.phone && contactInfo.email
+                  ? `Office: ${contactInfo.phone} • ${contactInfo.email}`
+                  : 'In-person therapy in Santa Monica & secure telehealth across California'}
               </p>
             </div>
 
@@ -140,7 +142,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                     type="tel"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    placeholder="(805) 000-0000"
+                    placeholder="(310) 000-0000"
                     className="w-full px-3.5 py-2.5 bg-[#F7F5F1] border border-[#D9C9C9] rounded-lg font-montserrat text-[14px] text-[#302A29] focus:outline-none focus:border-[#5A3E4B] transition-colors"
                   />
                 </div>
@@ -156,12 +158,12 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                     onChange={(e) => setServiceType(e.target.value)}
                     className="w-full px-3.5 py-2.5 bg-[#F7F5F1] border border-[#D9C9C9] rounded-lg font-montserrat text-[13.5px] text-[#302A29] focus:outline-none focus:border-[#5A3E4B] transition-colors"
                   >
-                    <option value="Adult Therapy">Adults</option>
-                    <option value="Couples Therapy">Couples</option>
-                    <option value="Children & Teens">Children & Teens</option>
+                    <option value="Adult Therapy">Adult Therapy</option>
+                    <option value="Anxiety & Panic">Anxiety & Panic</option>
                     <option value="Trauma / EMDR">Trauma / EMDR</option>
-                    <option value="Dissociation">Dissociation</option>
-                    <option value="Special Needs Parenting">Special Needs Parenting</option>
+                    <option value="Burnout & Perfectionism">Burnout & Perfectionism</option>
+                    <option value="Mindfulness & Stress">Mindfulness & Stress</option>
+                    <option value="General Inquiry">General Inquiry</option>
                   </select>
                 </div>
 
@@ -174,7 +176,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                     onChange={(e) => setPreferredFormat(e.target.value)}
                     className="w-full px-3.5 py-2.5 bg-[#F7F5F1] border border-[#D9C9C9] rounded-lg font-montserrat text-[13.5px] text-[#302A29] focus:outline-none focus:border-[#5A3E4B] transition-colors"
                   >
-                    <option value="In-Person (Newbury Park)">In-Person (Newbury Park)</option>
+                    <option value="In-Person (Santa Monica)">In-Person (Santa Monica)</option>
                     <option value="Virtual (Anywhere in CA)">Virtual (Anywhere in CA)</option>
                     <option value="Either">Either</option>
                   </select>

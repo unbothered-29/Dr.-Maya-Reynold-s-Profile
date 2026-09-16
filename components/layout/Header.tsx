@@ -1,8 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Menu } from 'lucide-react';
-import { navItems, siteImages } from '@/data/homepage';
+import { navItems } from '@/data/homepage';
 import { MobileMenu } from './MobileMenu';
 
 interface HeaderProps {

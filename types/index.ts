@@ -37,8 +37,8 @@ export interface SiteImages {
   childrenBeach: string;
   howWeWorkBeach: string;
   honoringFamily?: string;
-  specialtiesBeach: string;
-  appointmentBeach: string;
+  specialtiesBeach?: string;
+  appointmentBeach?: string;
   appointmentLeftSand?: string;
   appointmentRightPointing?: string;
 }

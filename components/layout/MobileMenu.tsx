@@ -2,7 +2,6 @@
 
 import React, { useEffect } from 'react';
 import { X } from 'lucide-react';
-import { siteImages } from '@/data/homepage';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -22,6 +21,7 @@ const mobileMenuItems = [
 export const MobileMenu: React.FC<MobileMenuProps> = ({
   isOpen,
   onClose,
+  onContactClick,
 }) => {
   useEffect(() => {
     if (isOpen) {
